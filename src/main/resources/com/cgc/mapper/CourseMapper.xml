@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.CourseMapper">
+    <resultMap id="course" type="com.cgc.bean.Course">
+        <id column="courseNo" property="courseNo" />
+        <result column="courseName" property="courseName"/>
+        <result column="coursePriorNo" property="coursePriorNo"/>
+        <result column="courseCredit" property="courseCredit"/>
+    </resultMap>
+    <select id="selectAllCourse" resultMap="java.util.List">
+        SELECT courseNo,courseName,coursePriorNo,courseCredit FROM course
+    </select>
+
+    <!--按条件查询-->
+    <select id="selectCourse" parameterType="com.cgc.bean.Course" resultMap="java.util.List">
+        SELECT * FROM course WHERE 1=1
+        <where>
+            <if test="courseNo!=null and !&quot;&quot;.equals(courseNo.trim())">
+                AND courseNo LIKE '%' #{courseNo} '%'
+            </if>
+            <if test="courseName!=null and !&quot;&quot;.equals(courseName.trim())">
+                AND courseName LIKE '%' #{courseName} '%'
+            </if>
+            <if test="coursePriorNo!=null and !&quot;&quot;.equals(coursePriorNo.trim())">
+                AND coursePriorNo LIKE '%' #{coursePriorNo} '%'
+            </if>
+        </where>
+        ORDER BY courseNo
+    </select>
+
+    <insert id="insertCourses" parameterType="java.util.List">
+        INSERT INTO course VALUES
+            <foreach collection="list" item="item" separator=",">
+                (#{item.courseNo},#{item.courseName},#{item.coursePriorNo},#{item.courseCredit})
+            </foreach>
+    </insert>
+
+    <delete id="delectCoursesById" parameterType="java.util.List">
+        <foreach collection="list" item="item" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

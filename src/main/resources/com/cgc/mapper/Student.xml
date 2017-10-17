@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.StudentMapper">
+    <resultMap id="student" type="com.cgc.bean.Teacher">
+        <id column="studentNo" property="studentNo"/>
+        <result column="studentName" property="studentName"/>
+        <result column="studentSex" property="studentSex"/>
+        <result column="studentAge" property="studentAge"/>
+        <result column="departmentNo" property="departmentNo"/>
+    </resultMap>
+    <select id="selectAllStudents" resultMap="java.util.List">
+        SELECT * FROM student
+    </select>
+
+    <!--按条件查询-->
+    <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="java.util.List">
+        SELECT * FROM student WHERE 1=1
+        <where>
+            <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
+                AND studentNo LIKE '%' #{studentNo} '%'
+            </if>
+            <if test="studentName!=null and !&quot;&quot;.equals(studentName.trim())">
+                AND studentName LIKE '%' #{studentName} '%'
+            </if>
+            <if test="studentSex!=null and !&quot;&quot;.equals(studentSex.trim())">
+                AND studentSex LIKE '%' #{studentSex} '%'
+            </if>
+            #学生年龄
+            <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
+                AND departmentNo LIKE '%' #{departmentNo} '%'
+            </if>
+        </where>
+        ORDER BY studentNo
+    </select>
+
+    <insert id="insertStudents" parameterType="java.util.List">
+        INSERT INTO student VALUES
+            <foreach collection="list" item="item" separator=",">
+                (#{item.studentNo},#{item.studentName},#{item.studentSex},#{item.studentAge},#{item.departmentNo})
+            </foreach>
+    </insert>
+
+    <delete id="deleteStudentsById" parameterType="java.lang.Integer">
+        DELETE FROM student WHERE studentNo IN (
+                <foreach collection="list" item="item" separator=",">
+                    #{item}
+                </foreach>
+        )
+    </delete>
+</mapper>
