@@ -5,8 +5,7 @@ import com.cgc.bean.Department;
 import java.util.List;
 
 public interface DepartmentMapper {
-    /*查询所有系别*/
-    List<Department> selectAllDepartment();
+
     /*按条件查询*/
     List<Department> selectDepartment(Department department);
     /*录入系别信息*/

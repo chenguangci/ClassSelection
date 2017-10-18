@@ -5,8 +5,7 @@ import com.cgc.bean.Course;
 import java.util.List;
 
 public interface CourseMapper {
-    /*查询所有课表*/
-    List<Course> selectAllCourse();
+
     /*按条件查询*/
     List<Course> selectCourse(Course course);
     /*录入课表信息*/

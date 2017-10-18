@@ -8,13 +8,11 @@
         <result column="coursePriorNo" property="coursePriorNo"/>
         <result column="courseCredit" property="courseCredit"/>
     </resultMap>
-    <select id="selectAllCourse" resultMap="java.util.List">
-        SELECT courseNo,courseName,coursePriorNo,courseCredit FROM course
-    </select>
+
 
     <!--按条件查询-->
     <select id="selectCourse" parameterType="com.cgc.bean.Course" resultMap="java.util.List">
-        SELECT * FROM course WHERE 1=1
+        SELECT * FROM course
         <where>
             <if test="courseNo!=null and !&quot;&quot;.equals(courseNo.trim())">
                 AND courseNo LIKE '%' #{courseNo} '%'

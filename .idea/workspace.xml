@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca20b655-7457-4013-9d25-d62475bf384c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ClassSelection_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ClassSelection_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClassSelection.iml" afterPath="$PROJECT_DIR$/ClassSelection.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,7 +48,19 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="classselectionmanagement@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="classselectionmanagement" type="e3449647:DbNodeDescriptor" />
-        <item name="course" type="e3449647:DbNodeDescriptor" />
+        <item name="selectcourse" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="classselectionmanagement@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="classselectionmanagement" type="e3449647:DbNodeDescriptor" />
+        <item name="student" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="classselectionmanagement@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="classselectionmanagement" type="e3449647:DbNodeDescriptor" />
+        <item name="teacher" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -46,6 +71,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -61,27 +87,41 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bean/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bean/Department.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bean/SelectCourse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bean/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bean/Teacher.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/Teacher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/SelectCourse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/RealTeacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/CourseIdToName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/NoToName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/NumberToNameMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/Configration.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/db/DBAccess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/NumberToNameDao.java" />
       </list>
     </option>
   </component>
@@ -110,7 +150,9 @@
     <option name="width" value="1370" />
     <option name="height" value="735" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -169,6 +211,40 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cgc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
@@ -304,12 +380,12 @@
       <updated>1508154201672</updated>
       <workItem from="1508154204438" duration="14056000" />
       <workItem from="1508236930171" duration="599000" />
-      <workItem from="1508248882737" duration="43000" />
+      <workItem from="1508248882737" duration="6972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14698000" />
+    <option name="totallyTimeSpent" value="21627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -356,14 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a6a9c5fb-5c2a-4313-b298-691cc53bc1fd/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -372,107 +440,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <marker date="1508167669642" expanded="true" signature="995:1016" ph="SELECT * FRO... teacher" />
-            <marker date="1508167669642" expanded="true" signature="1154:1175" ph="SELECT * FRO... teacher" />
-            <marker date="1508167669642" expanded="true" signature="1154:1185" ph="SELECT * FRO... teacher" />
-            <marker date="1508167669642" expanded="true" signature="1154:2564" ph="SELECT * FRO... teacher" />
-            <marker date="1508167669642" expanded="true" signature="2660:2686" ph="INSERT INTO teacher... " />
-            <marker date="1508167669642" expanded="true" signature="3079:3254" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <marker date="1508167669622" expanded="true" signature="651:672" ph="SELECT * FRO... student" />
-            <marker date="1508167669622" expanded="true" signature="810:841" ph="SELECT * FRO... student" />
-            <marker date="1508167669622" expanded="true" signature="810:1571" ph="SELECT * FRO... student" />
-            <marker date="1508167669622" expanded="true" signature="1659:1685" ph="INSERT INTO student... " />
-            <marker date="1508167669622" expanded="true" signature="1984:2159" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <marker date="1508167231992" expanded="true" signature="592:645" ph="SELECT stude... selectcourse" />
-            <marker date="1508167231992" expanded="true" signature="738:769" ph="INSERT INTO selectcourse... " />
-            <marker date="1508167231992" expanded="true" signature="1090:1126" ph="SELECT * FRO... selectcourse" />
-            <marker date="1508167231992" expanded="true" signature="1090:1135" ph="SELECT * FRO... selectcourse" />
-            <marker date="1508167231992" expanded="true" signature="1090:1653" ph="SELECT * FRO... selectcourse" />
-            <marker date="1508167231992" expanded="true" signature="1812:1930" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <marker date="1508166999293" expanded="true" signature="544:602" ph="SELECT depar... department" />
-            <marker date="1508166999293" expanded="true" signature="693:722" ph="INSERT INTO department... " />
-            <marker date="1508166999293" expanded="true" signature="1032:1066" ph="SELECT * FRO... department" />
-            <marker date="1508166999293" expanded="true" signature="1032:1607" ph="SELECT * FRO... department" />
-            <marker date="1508166999293" expanded="true" signature="1032:1609" ph="SELECT * FRO... department" />
-            <marker date="1508166999293" expanded="true" signature="1704:1885" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -497,31 +464,273 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/RealTeacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding>
+            <element signature="e#355#356#0" expanded="false" />
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#625#626#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#917#918#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#1177#1178#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Course.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1508252575852" expanded="true" signature="1015:1036" ph="SELECT * FRO... teacher" />
+            <marker date="1508252575852" expanded="true" signature="1015:2502" ph="SELECT * FRO... teacher" />
+            <marker date="1508252575852" expanded="true" signature="2598:2624" ph="INSERT INTO teacher... " />
+            <marker date="1508252575852" expanded="true" signature="3017:3192" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding>
+            <marker date="1508252575979" expanded="true" signature="703:724" ph="SELECT * FRO... student" />
+            <marker date="1508252575979" expanded="true" signature="703:1536" ph="SELECT * FRO... student" />
+            <marker date="1508252575979" expanded="true" signature="1624:1650" ph="INSERT INTO student... " />
+            <marker date="1508252575979" expanded="true" signature="1949:2124" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <marker date="1508252576028" expanded="true" signature="595:626" ph="INSERT INTO selectcourse... " />
+            <marker date="1508252576028" expanded="true" signature="947:973" ph="SELECT * FRO... selectcourse" />
+            <marker date="1508252576028" expanded="true" signature="947:982" ph="SELECT * FRO... selectcourse" />
+            <marker date="1508252576028" expanded="true" signature="947:1500" ph="SELECT * FRO... selectcourse" />
+            <marker date="1508252576028" expanded="true" signature="1659:1777" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <marker date="1508252576101" expanded="true" signature="547:576" ph="INSERT INTO department... " />
+            <marker date="1508252576101" expanded="true" signature="886:910" ph="SELECT * FRO... department" />
+            <marker date="1508252576101" expanded="true" signature="886:1451" ph="SELECT * FRO... department" />
+            <marker date="1508252576101" expanded="true" signature="886:1453" ph="SELECT * FRO... department" />
+            <marker date="1508252576101" expanded="true" signature="1548:1729" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        <state relative-caret-position="168">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding>
-            <marker date="1508167719043" expanded="true" signature="590:655" ph="SELECT cours... course" />
-            <marker date="1508167719043" expanded="true" signature="790:820" ph="SELECT * FRO... course" />
-            <marker date="1508167719043" expanded="true" signature="790:1366" ph="SELECT * FRO... course" />
-            <marker date="1508167719043" expanded="true" signature="1453:1478" ph="INSERT INTO course... " />
+            <marker date="1508252666346" expanded="true" signature="642:662" ph="SELECT * FRO... course" />
+            <marker date="1508252666346" expanded="true" signature="642:1208" ph="SELECT * FRO... course" />
+            <marker date="1508252666346" expanded="true" signature="1295:1320" ph="INSERT INTO course... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/db/DBAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#487#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#450#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="78" column="56" lean-forward="false" selection-start-line="78" selection-start-column="56" selection-end-line="78" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#433#441#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#457#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <marker date="1508250882411" expanded="true" signature="278:316" ph="SELECT cours... course" />
+            <marker date="1508250882411" expanded="true" signature="402:452" ph="SELECT depar... department" />
+            <marker date="1508250882411" expanded="true" signature="535:576" ph="SELECT teach... teacher" />
+            <marker date="1508250882411" expanded="true" signature="659:700" ph="SELECT stude... student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/NumberToNameMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/NumberToNameDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#383#399#0" expanded="true" />
+            <element signature="e#982#998#0" expanded="true" />
+            <element signature="e#1587#1603#0" expanded="true" />
+            <element signature="e#2183#2199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

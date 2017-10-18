@@ -9,13 +9,10 @@
         <result column="studentAge" property="studentAge"/>
         <result column="departmentNo" property="departmentNo"/>
     </resultMap>
-    <select id="selectAllStudents" resultMap="java.util.List">
-        SELECT * FROM student
-    </select>
 
     <!--按条件查询-->
     <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="java.util.List">
-        SELECT * FROM student WHERE 1=1
+        SELECT * FROM student
         <where>
             <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
                 AND studentNo LIKE '%' #{studentNo} '%'
@@ -26,7 +23,9 @@
             <if test="studentSex!=null and !&quot;&quot;.equals(studentSex.trim())">
                 AND studentSex LIKE '%' #{studentSex} '%'
             </if>
-            #学生年龄
+            <if test="studentAge">
+                AND studentAge = #{studentAge}
+            </if>
             <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
                 AND departmentNo LIKE '%' #{departmentNo} '%'
             </if>

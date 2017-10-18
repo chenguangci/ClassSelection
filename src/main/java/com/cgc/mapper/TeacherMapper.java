@@ -5,8 +5,6 @@ import com.cgc.bean.Teacher;
 import java.util.List;
 
 public interface TeacherMapper {
-    /*查询所有教师信息*/
-    List<Teacher> selectAllTeachers();
     /*按条件查询*/
     List<Teacher> selectTeachers(Teacher teacher);
     /*录入教师信息*/

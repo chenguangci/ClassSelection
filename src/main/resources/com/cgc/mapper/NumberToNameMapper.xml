@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.NumberToNameMapper">
+    <select id="CourseNoToName" resultMap="java.util.Map">
+        SELECT courseNo,courseName FROM course
+    </select>
+    <select id="DepartmentNoToName" resultMap="java.util.Map">
+        SELECT departmentNo,departmentName FROM department
+    </select>
+    <select id="TeacherNoToName" resultMap="java.util.Map">
+        SELECT teacherNo,teacherName FROM teacher
+    </select>
+    <select id="StudentNoToName" resultMap="java.util.Map">
+        SELECT studentNo,studentName FROM student
+    </select>
+</mapper>

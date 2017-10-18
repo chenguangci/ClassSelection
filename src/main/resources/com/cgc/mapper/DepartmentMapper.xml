@@ -7,9 +7,6 @@
         <result column="departmentName" property="departmentName"/>
         <result column="manager" property="manager"/>
     </resultMap>
-    <select id="selectAllDepartment" resultMap="java.util.List">
-        SELECT departmentNo,departmentName,manager FROM department
-    </select>
 
     <insert id="insertDepartments" parameterType="java.util.List">
         INSERT INTO department VALUES
@@ -20,7 +17,7 @@
 
     <!--按条件查询-->
     <select id="selectDepartment" parameterType="com.cgc.bean.Department" resultMap="java.util.List">
-        SELECT * FROM department WHERE 1=1
+        SELECT * FROM department
         <where>
             <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
                 AND departmentNo '%' #{departmentNo} '%'

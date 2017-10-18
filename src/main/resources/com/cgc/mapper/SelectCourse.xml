@@ -8,9 +8,6 @@
         <result column="teacherNo" property="teacherNo"/>
         <result column="grade" property="grade"/>
     </resultMap>
-    <select id="selectAllSelectCourse" resultMap="java.util.List">
-        SELECT studentNo,courseNo,teacherNo FROM selectcourse
-    </select>
 
     <insert id="insertSelectCourses" parameterType="java.util.List">
         INSERT INTO selectcourse VALUES
@@ -21,7 +18,7 @@
 
     <!--按条件查询-->
     <select id="selectSelectCourse" parameterType="com.cgc.bean.SelectCourse" resultMap="java.util.List">
-        SELECT * FROM selectcourse WHERE 1=1
+        SELECT * FROM selectcourse
         <where>
             <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
                 AND studentNo LIKE '%' #{studentNo} '%'

@@ -5,8 +5,6 @@ import com.cgc.bean.Student;
 import java.util.List;
 
 public interface StudentMapper {
-    /*查询所有学生信息*/
-    List<Student> selectAllStudents();
     /*按条件查询*/
     List<Student> selectStudents(Student student);
     /*录入学生信息*/
