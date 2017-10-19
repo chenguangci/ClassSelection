@@ -3,6 +3,7 @@ package com.cgc.mapper;
 import com.cgc.bean.Student;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StudentMapper {
     /*按条件查询*/
@@ -12,5 +13,5 @@ public interface StudentMapper {
     /*删除学生信息*/
     void deleteStudentsById(List<Integer> ids);
     /*更新学生信息*/
-    void updateStudent(Student student);
+    void updateStudent(Map<String,Object> student);
 }

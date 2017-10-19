@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class DepartmentDao {
     DBAccess dbAccess = new DBAccess();
@@ -71,7 +72,7 @@ public class DepartmentDao {
     /**
      * 更新系信息
      */
-    public void updateDepartment(Department department){
+    public void updateDepartment(Map<String,Object> department){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();

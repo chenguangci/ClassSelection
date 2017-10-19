@@ -68,7 +68,7 @@ public class SelectCourseDao {
     }
 
     /**
-     * 更新选课信息
+     * 更新选课信息,没有主键可以标识，后面在修改
      */
     public void updateSelectCourse(SelectCourse selectCourse){
         SqlSession sqlSession = null;

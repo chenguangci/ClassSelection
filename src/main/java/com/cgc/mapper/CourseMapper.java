@@ -3,6 +3,7 @@ package com.cgc.mapper;
 import com.cgc.bean.Course;
 
 import java.util.List;
+import java.util.Map;
 
 public interface CourseMapper {
 
@@ -11,7 +12,7 @@ public interface CourseMapper {
     /*录入课表信息*/
     void insertCourses(List<Course> courses);
     /*删除课表信息*/
-    void delectCoursesById(List<Integer> ids);
+    void deleteCoursesById(List<String> ids);
     /*更新课表信息*/
-    void updateCourse(Course course);
+    void updateCourse(Map<String,Object> course);
 }

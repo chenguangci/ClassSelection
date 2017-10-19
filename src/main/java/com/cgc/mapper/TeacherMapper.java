@@ -1,8 +1,10 @@
 package com.cgc.mapper;
 
 import com.cgc.bean.Teacher;
+import com.sun.corba.se.spi.ior.ObjectKey;
 
 import java.util.List;
+import java.util.Map;
 
 public interface TeacherMapper {
     /*按条件查询*/
@@ -12,5 +14,5 @@ public interface TeacherMapper {
     /*删除教师信息*/
     void deleteTeachersById(List<Integer> ids);
     /*更新教师信息*/
-    void updateTeacher(Teacher teacher);
+    void updateTeacher(Map<String,Object> teacher);
 }

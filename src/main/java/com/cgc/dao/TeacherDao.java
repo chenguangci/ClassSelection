@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class TeacherDao {
     private static DBAccess dbAccess = new DBAccess();
@@ -51,7 +52,7 @@ public class TeacherDao {
     }
 
     /**
-     * 删除学生信息
+     * 删除教师信息
      */
     public void deleteTeachersById(List<Integer> ids){
         SqlSession sqlSession = null;
@@ -69,9 +70,10 @@ public class TeacherDao {
     }
 
     /**
-     * 更新学生信息
+     * 更新教师信息
+     * @param teacher
      */
-    public void updateTeacher(Teacher teacher){
+    public void updateTeacher(Map<String, Object> teacher){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
@@ -85,4 +87,5 @@ public class TeacherDao {
             }
         }
     }
+
 }
