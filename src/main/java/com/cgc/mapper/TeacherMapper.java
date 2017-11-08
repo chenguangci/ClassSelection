@@ -12,7 +12,7 @@ public interface TeacherMapper {
     /*录入教师信息*/
     void insertTeachers(List<Teacher> teachers);
     /*删除教师信息*/
-    void deleteTeachersById(List<Integer> ids);
+    void deleteTeachersById(List<String> ids);
     /*更新教师信息*/
     void updateTeacher(Map<String,Object> teacher);
 }

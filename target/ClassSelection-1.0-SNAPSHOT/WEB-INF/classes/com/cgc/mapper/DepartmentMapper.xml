@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.DepartmentMapper">
+    <resultMap id="department" type="com.cgc.bean.Department">
+        <id column="departmentNo" property="departmentNo"/>
+        <result column="departmentName" property="departmentName"/>
+        <result column="manager" property="manager"/>
+    </resultMap>
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
+    <insert id="insertDepartments" parameterType="java.util.List">
+        INSERT INTO department VALUES
+            <foreach collection="list" item="item" separator=",">
+                (#{item.departmentNo},#{item.departmentName},#{item.manager})
+            </foreach>
+    </insert>
+
+    <!--按条件查询-->
+    <select id="selectDepartment" parameterType="com.cgc.bean.Department" resultType="com.cgc.bean.Department">
+        SELECT * FROM department
+        <where>
+            <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
+                AND departmentNo '%' #{departmentNo} '%'
+            </if>
+            <if test="departmentName!=null and !&quot;&quot;.equals(departmentName.trim())">
+                AND departmentName '%' #{departmentName} '%'
+            </if>
+            <if test="manager!=null and !&quot;&quot;.equals(manager.trim())">
+                AND manager '%' #{manager} '%'
+            </if>
+        </where>
+        ORDER BY departmentNo
+    </select>
+
+    <delete id="deleteDepartmentsById" parameterType="java.util.List">
+        DELETE FROM department WHERE departmentNo IN (
+                <foreach collection="list" item="item" separator=",">
+                    #{item}
+                </foreach>
+        )
+    </delete>
+
+    <update id="updateDepartment" parameterType="java.util.Map">
+        UPDATE department SET
+            <foreach collection="_parameter" item="value" index="key" separator=",">
+                ${key} = #{value}
+            </foreach>
+        WHERE departmentNo = #{departmentNo}
+    </update>
+</mapper>

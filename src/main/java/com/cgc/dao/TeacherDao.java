@@ -36,14 +36,15 @@ public class TeacherDao {
     /**
      * 录入教师信息
      */
-    public void insertTeachers(List<Teacher> teachers){
+    public boolean insertTeachers(List<Teacher> teachers){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
             teacherMapper.insertTeachers(teachers);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         }finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -54,14 +55,15 @@ public class TeacherDao {
     /**
      * 删除教师信息
      */
-    public void deleteTeachersById(List<Integer> ids){
+    public boolean deleteTeachersById(List<String> ids){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
             teacherMapper.deleteTeachersById(ids);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         }finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -73,14 +75,15 @@ public class TeacherDao {
      * 更新教师信息
      * @param teacher
      */
-    public void updateTeacher(Map<String, Object> teacher){
+    public boolean updateTeacher(Map<String, Object> teacher){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
             teacherMapper.updateTeacher(teacher);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         }finally {
             if (sqlSession!=null){
                 sqlSession.close();

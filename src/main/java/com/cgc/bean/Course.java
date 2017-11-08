@@ -1,6 +1,9 @@
 package com.cgc.bean;
 
-public class Course {
+import java.io.Serializable;
+
+public class Course implements Serializable{
+    private static final long serialVersionUID = 6320941908222932112L;
     private String courseNo;
     private String courseName;
     private String coursePriorNo;

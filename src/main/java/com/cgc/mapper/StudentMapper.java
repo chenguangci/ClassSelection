@@ -11,7 +11,7 @@ public interface StudentMapper {
     /*录入学生信息*/
     void insertStudents(List<Student> students);
     /*删除学生信息*/
-    void deleteStudentsById(List<Integer> ids);
+    void deleteStudentsById(List<String> ids);
     /*更新学生信息*/
     void updateStudent(Map<String,Object> student);
 }

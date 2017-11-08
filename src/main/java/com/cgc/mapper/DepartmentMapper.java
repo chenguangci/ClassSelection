@@ -12,7 +12,7 @@ public interface DepartmentMapper {
     /*录入系别信息*/
     void insertDepartments(List<Department> departments);
     /*删除系别信息*/
-    void deleteDepartmentsById(List<Integer> ids);
+    void deleteDepartmentsById(List<String> ids);
     /*更新系别信息*/
     void updateDepartment(Map<String,Object> department);
 }

@@ -2,32 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgc.mapper.StudentMapper">
-    <resultMap id="student" type="com.cgc.bean.Teacher">
+    <resultMap id="student" type="com.cgc.bean.Student">
         <id column="studentNo" property="studentNo"/>
         <result column="studentName" property="studentName"/>
         <result column="studentSex" property="studentSex"/>
         <result column="studentAge" property="studentAge"/>
         <result column="departmentNo" property="departmentNo"/>
     </resultMap>
-
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <!--按条件查询-->
-    <select id="selectStudents" parameterType="com.cgc.bean.Student" resultType="com.cgc.bean.Student">
-        SELECT * FROM student
+    <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
+        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo FROM student a
         <where>
             <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
-                AND studentNo LIKE '%' #{studentNo} '%'
+                AND a.studentNo LIKE '%' #{studentNo} '%'
             </if>
             <if test="studentName!=null and !&quot;&quot;.equals(studentName.trim())">
-                AND studentName LIKE '%' #{studentName} '%'
+                AND a.studentName LIKE '%' #{studentName} '%'
             </if>
             <if test="studentSex!=null and !&quot;&quot;.equals(studentSex.trim())">
-                AND studentSex LIKE '%' #{studentSex} '%'
+                AND a.studentSex LIKE '%' #{studentSex} '%'
             </if>
             <if test="studentAge">
-                AND studentAge = #{studentAge}
+                AND a.studentAge = #{studentAge}
             </if>
             <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
-                AND departmentNo LIKE '%' #{departmentNo} '%'
+                AND a.departmentNo LIKE '%' #{departmentNo} '%'
             </if>
         </where>
         ORDER BY studentNo
@@ -40,7 +40,7 @@
             </foreach>
     </insert>
 
-    <delete id="deleteStudentsById" parameterType="java.lang.Integer">
+    <delete id="deleteStudentsById" parameterType="java.lang.String">
         DELETE FROM student WHERE studentNo IN (
                 <foreach collection="list" item="item" separator=",">
                     #{item}

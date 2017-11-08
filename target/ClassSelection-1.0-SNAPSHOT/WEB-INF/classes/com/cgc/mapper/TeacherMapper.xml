@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.TeacherMapper">
+    <resultMap id="teacher" type="com.cgc.bean.Teacher">
+        <id column="teacherNo" property="teacherNo"/>
+        <result column="teacherName" property="teacherName"/>
+        <result column="teacherSex" property="teacherSex"/>
+        <result column="teacherAge" property="teacherAge"/>
+        <result column="education" property="education"/>
+        <result column="professionalTitle" property="professionalTitle"/>
+        <result column="courseNo1" property="courseNo1"/>
+        <result column="courseNo2" property="courseNo2"/>
+        <result column="courseNo3" property="courseNo3"/>
+    </resultMap>
+    <!--接口式编程时，id为接口内的方法名，parameterType为方法传递的参数，resultMap为方法的返回值类型-->
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
+    <!--按条件查询-->
+    <select id="selectTeachers" parameterType="com.cgc.bean.Teacher" resultType="com.cgc.bean.Teacher">
+        SELECT * FROM teacher
+        <where>
+            <if test="teacherNo!=null and !&quot;&quot;.equals(teacherNo.trim())">
+                AND teacherNo LIKE '%' #{teacherNo} '%'
+            </if>
+            <if test="teacherName!=null and !&quot;&quot;.equals(teacherName.trim())">
+                AND teacherName LIKE '%' #{teacherName} '%'
+            </if>
+            <if test="teacherSex!=null and !&quot;&quot;.equals(teacherSex.trim())">
+                AND teacherSex LIKE '%' #{teacherSex} '%'
+            </if>
+            <if test="teacherAge!=null">
+                AND teacherAge = #{teacherAge}
+            </if>
+            <if test="education!=null and !&quot;&quot;.equals(education.trim())">
+                AND education LIKE '%' #{education} '%'
+            </if>
+            <if test="professionalTitle!=null and !&quot;&quot;.equals(professionalTitle.trim())">
+                AND professionalTitle LIKE '%' #{professionalTitle} '%'
+            </if>
+            <if test="courseNo1!=null and !&quot;&quot;.equals(courseNo1.trim())">
+                AND courseNo1 LIKE '%' #{courseNo1} '%'
+            </if>
+            <if test="courseNo2!=null and !&quot;&quot;.equals(courseNo2.trim())">
+                AND courseNo2 LIKE '%' #{courseNo2} '%'
+            </if>
+            <if test="courseNo3!=null and !&quot;&quot;.equals(courseNo3.trim())">
+                AND courseNo3 LIKE '%' #{courseNo3} '%'
+            </if>
+        </where>
+        ORDER BY teacherNo
+    </select>
+        
+    <insert id="insertTeachers" parameterType="java.util.List">
+        INSERT INTO teacher VALUES
+            <foreach collection="list" item="item" separator=",">
+                (#{item.teacherNo},#{item.teacherName},#{item.teacherSex},#{item.teacherAge},
+                #{item.education},#{item.professionalTitle},#{item.courseNo1},#{item.courseNo2},#{item.courseNo3})
+            </foreach>
+    </insert>
+
+    <delete id="deleteTeachersById" parameterType="java.lang.Integer">
+        DELETE FROM teacher WHERE teacherNo IN (
+                <foreach collection="list" item="item" separator=",">
+                    #{item}
+                </foreach>
+        )
+    </delete>
+
+    <update id="updateTeacher" parameterType="java.util.Map">
+        UPDATE teacher SET
+            <foreach collection="_parameter" index="key" item="value" separator=",">
+                ${key} = #{value}
+            </foreach>
+        WHERE teacherNo = #{teacherNo}
+    </update>
+</mapper>

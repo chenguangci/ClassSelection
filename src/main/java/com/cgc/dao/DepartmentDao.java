@@ -36,16 +36,18 @@ public class DepartmentDao {
     /**
      * 录入系信息
      */
-    public void insertDepartments(List<Department> departments){
+    public boolean insertDepartments(List<Department> departments){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
             departmentMapper.insertDepartments(departments);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
+                sqlSession.commit();
                 sqlSession.close();
             }
         }
@@ -54,16 +56,18 @@ public class DepartmentDao {
     /**
      * 删除系信息
      */
-    public void deleteDepartmentsById(List<Integer> ids){
+    public boolean deleteDepartmentsById(List<String> ids){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
             departmentMapper.deleteDepartmentsById(ids);
+            return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            return false;
         } finally {
             if (sqlSession!=null){
+                sqlSession.commit();
                 sqlSession.close();
             }
         }
@@ -72,16 +76,18 @@ public class DepartmentDao {
     /**
      * 更新系信息
      */
-    public void updateDepartment(Map<String,Object> department){
+    public boolean updateDepartment(Map<String,Object> department){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
             departmentMapper.updateDepartment(department);
+            return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            return false;
         } finally {
             if (sqlSession!=null){
+                sqlSession.commit();
                 sqlSession.close();
             }
         }

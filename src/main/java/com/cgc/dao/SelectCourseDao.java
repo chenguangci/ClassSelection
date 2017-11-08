@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SelectCourseDao {
-    DBAccess dbAccess = new DBAccess();
+    private DBAccess dbAccess = new DBAccess();
     /**
      * 查询选课信息
      */
@@ -34,14 +34,15 @@ public class SelectCourseDao {
     /**
      * 录入选课信息
      */
-    public void insertSelectCourses(List<SelectCourse> selectCourses) {
+    public boolean insertSelectCourses(List<SelectCourse> selectCourses) {
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
             selectCourseMapper.insertSelectCourses(selectCourses);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -52,14 +53,15 @@ public class SelectCourseDao {
     /**
      * 删除选课信息
      */
-    public void deleteSelectCourses(List<SelectCourse> selectCourses){
+    public boolean deleteSelectCourses(List<SelectCourse> selectCourses){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
             selectCourseMapper.deleteSelectCourses(selectCourses);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -70,14 +72,15 @@ public class SelectCourseDao {
     /**
      * 更新选课信息,没有主键可以标识，后面在修改
      */
-    public void updateSelectCourse(SelectCourse selectCourse){
+    public boolean updateSelectCourse(SelectCourse selectCourse){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
             selectCourseMapper.updateSelectCourse(selectCourse);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();

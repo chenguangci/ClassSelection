@@ -24,6 +24,6 @@ public class DBAccess {
 
     }
     public SqlSession getSqlSession() throws IOException{
-        return sqlSessionFactory.openSession();
+        return sqlSessionFactory.openSession(true);
     }
 }

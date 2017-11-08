@@ -1,6 +1,9 @@
 package com.cgc.bean;
 
-public class Teacher {
+import java.io.Serializable;
+
+public class Teacher implements Serializable {
+    private static final long serialVersionUID = 6320941908222932112L;
     private String teacherNo;
     private String teacherName;
     private String teacherSex;

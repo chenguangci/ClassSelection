@@ -6,6 +6,7 @@ import com.cgc.mapper.StudentMapper;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -35,14 +36,15 @@ public class StudentDao {
     /**
      * 录入学生信息
      */
-    public void insertStudents(List<Student> students){
+    public boolean insertStudents(List<Student> students){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
             studentMapper.insertStudents(students);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -53,14 +55,15 @@ public class StudentDao {
     /**
      * 删除学生信息
      */
-    public void deleteStudentsById(List<Integer> ids){
+    public boolean deleteStudentsById(List<String> ids){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
             studentMapper.deleteStudentsById(ids);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();
@@ -71,14 +74,15 @@ public class StudentDao {
     /**
      * 更改学生信息
      */
-    public void updateStudent(Map<String,Object> student){
+    public boolean updateStudent(Map<String,Object> student){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
             studentMapper.updateStudent(student);
-        } catch (IOException e) {
-            e.printStackTrace();
+            return true;
+        } catch (Exception e) {
+            return false;
         } finally {
             if (sqlSession!=null){
                 sqlSession.close();

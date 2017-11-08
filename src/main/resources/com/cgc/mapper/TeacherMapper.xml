@@ -13,8 +13,8 @@
         <result column="courseNo2" property="courseNo2"/>
         <result column="courseNo3" property="courseNo3"/>
     </resultMap>
-    <!--接口式编程时，id为接口内的方法名，parameterType为方法传递的参数，resultMap为方法的返回值类型-->
-
+    <!--接口式编程时，id为接口内的方法名，parameterType为方法传递的参数，resultType为方法的返回值类型-->
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <!--按条件查询-->
     <select id="selectTeachers" parameterType="com.cgc.bean.Teacher" resultType="com.cgc.bean.Teacher">
         SELECT * FROM teacher
@@ -38,13 +38,7 @@
                 AND professionalTitle LIKE '%' #{professionalTitle} '%'
             </if>
             <if test="courseNo1!=null and !&quot;&quot;.equals(courseNo1.trim())">
-                AND courseNo1 LIKE '%' #{courseNo1} '%'
-            </if>
-            <if test="courseNo2!=null and !&quot;&quot;.equals(courseNo2.trim())">
-                AND courseNo2 LIKE '%' #{courseNo2} '%'
-            </if>
-            <if test="courseNo3!=null and !&quot;&quot;.equals(courseNo3.trim())">
-                AND courseNo3 LIKE '%' #{courseNo3} '%'
+                AND (courseNo1 LIKE '%' #{courseNo1} '%' OR courseNo2 LIKE '%' #{courseNo1} '%' OR courseNo3 LIKE '%' #{courseNo1} '%')
             </if>
         </where>
         ORDER BY teacherNo
@@ -58,7 +52,7 @@
             </foreach>
     </insert>
 
-    <delete id="deleteTeachersById" parameterType="java.lang.Integer">
+    <delete id="deleteTeachersById" parameterType="java.lang.String">
         DELETE FROM teacher WHERE teacherNo IN (
                 <foreach collection="list" item="item" separator=",">
                     #{item}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.StudentMapper">
+    <resultMap id="student" type="com.cgc.bean.Student">
+        <id column="studentNo" property="studentNo"/>
+        <result column="studentName" property="studentName"/>
+        <result column="studentSex" property="studentSex"/>
+        <result column="studentAge" property="studentAge"/>
+        <result column="departmentNo" property="department.departmentNo"/>
+        <result column="departmentName" property="department.departmentName"/>
+        <result column="manager" property="department.manager"/>
+    </resultMap>
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
+    <!--按条件查询-->
+    <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
+        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,b.departmentName departmentName FROM student a,department b
+        <where>
+            <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
+                AND a.studentNo LIKE '%' #{studentNo} '%'
+            </if>
+            <if test="studentName!=null and !&quot;&quot;.equals(studentName.trim())">
+                AND a.studentName LIKE '%' #{studentName} '%'
+            </if>
+            <if test="studentSex!=null and !&quot;&quot;.equals(studentSex.trim())">
+                AND a.studentSex LIKE '%' #{studentSex} '%'
+            </if>
+            <if test="studentAge">
+                AND a.studentAge = #{studentAge}
+            </if>
+            <if test="department.departmentNo!=null and !&quot;&quot;.equals(department.departmentNo.trim())">
+                AND a.departmentNo LIKE '%' #{department.departmentNo} '%'
+            </if>
+            <if test="true">
+                AND a.departmentNo = b.departmentNo
+            </if>
+        </where>
+        ORDER BY studentNo
+    </select>
+
+    <insert id="insertStudents" parameterType="java.util.List">
+        INSERT INTO student VALUES
+            <foreach collection="list" item="item" separator=",">
+                (#{item.studentNo},#{item.studentName},#{item.studentSex},#{item.studentAge},#{item.departmentNo})
+            </foreach>
+    </insert>
+
+    <delete id="deleteStudentsById" parameterType="java.lang.Integer">
+        DELETE FROM student WHERE studentNo IN (
+                <foreach collection="list" item="item" separator=",">
+                    #{item}
+                </foreach>
+        )
+    </delete>
+
+    <update id="updateStudent" parameterType="java.util.Map">
+        UPDATE student SET
+            <foreach collection="_parameter" index="key" item="value" separator=",">
+                ${key} = #{value}
+            </foreach>
+        WHERE studentNo = #{studentNo}
+    </update>
+</mapper>

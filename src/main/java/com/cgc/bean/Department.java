@@ -1,6 +1,9 @@
 package com.cgc.bean;
 
-public class Department {
+import java.io.Serializable;
+
+public class Department implements Serializable {
+    private static final long serialVersionUID = 6320941908222932112L;
     private String departmentNo;
     private String departmentName;
     private String manager;

@@ -7,7 +7,7 @@
         <result column="departmentName" property="departmentName"/>
         <result column="manager" property="manager"/>
     </resultMap>
-
+    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <insert id="insertDepartments" parameterType="java.util.List">
         INSERT INTO department VALUES
             <foreach collection="list" item="item" separator=",">
@@ -20,13 +20,13 @@
         SELECT * FROM department
         <where>
             <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
-                AND departmentNo '%' #{departmentNo} '%'
+                AND departmentNo LIKE '%' #{departmentNo} '%'
             </if>
             <if test="departmentName!=null and !&quot;&quot;.equals(departmentName.trim())">
-                AND departmentName '%' #{departmentName} '%'
+                AND departmentName LIKE '%' #{departmentName} '%'
             </if>
             <if test="manager!=null and !&quot;&quot;.equals(manager.trim())">
-                AND manager '%' #{manager} '%'
+                AND manager LIKE '%' #{manager} '%'
             </if>
         </where>
         ORDER BY departmentNo

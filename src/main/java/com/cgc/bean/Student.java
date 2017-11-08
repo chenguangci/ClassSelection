@@ -1,11 +1,15 @@
 package com.cgc.bean;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
+//    配置了缓存，需要序列化
+    private static final long serialVersionUID = 6320941908222932112L;
     private String studentNo;
     private String studentName;
     private String studentSex;
     private Integer studentAge;
-    private String departmentNo;
+    private String  departmentNo ;
 
     public String getStudentNo() {
         return studentNo;
