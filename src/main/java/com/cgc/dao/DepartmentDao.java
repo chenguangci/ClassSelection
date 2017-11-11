@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DepartmentDao {
-    DBAccess dbAccess = new DBAccess();
+    DBAccess dbAccess = DBAccess.getInstance();
 
     /**
      * 查询系信息

@@ -1,7 +1,6 @@
 package com.cgc.servlet.course;
 
 import com.cgc.service.CourseService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

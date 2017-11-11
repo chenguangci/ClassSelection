@@ -1,10 +1,7 @@
 package com.cgc.test;
 
 import com.cgc.bean.Course;
-import com.cgc.service.CourseService;
-import com.cgc.service.DepartmentService;
-import com.cgc.service.StudentService;
-import com.cgc.service.TeacherService;
+import com.cgc.service.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -51,11 +48,11 @@ public class ForTest {
 
     @Test
     public void studentTest(){
-        String[][] info = {{"20153112","小胡","男","19","0001"},{"20153111","小红","女","19","0001"}};
-        List<String> ids = new ArrayList<String>();
-        ids.add("20150001");
-        ids.add("20150002");
-        ids.add("20150003");
+        String[][] info = {{"20153112","碧池","男","19","0001"},{"20153111","小红","女","19","0001"}};
+//        List<String> ids = new ArrayList<String>();
+//        ids.add("20150001");
+//        ids.add("20150002");
+//        ids.add("20150003");
 
         StudentService service = new StudentService();
         System.out.println(service.updateStudent(info[0]));
@@ -71,6 +68,16 @@ public class ForTest {
         ids.add("200001");
         //System.out.println(service.deleteTeachersById(ids));
         System.out.println(service.selectTeachers(info[1]));
+    }
+
+    @Test
+    public void userTest(){
+        String[] info = {"snow","123","5"};
+        UserService service = new UserService();
+        System.out.println(service.insertUser(info));
+        String username = "snow";
+        String password = "120";
+        System.out.println(service.checkUser(username,password));
     }
 
 }

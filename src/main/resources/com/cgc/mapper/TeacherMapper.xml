@@ -14,7 +14,6 @@
         <result column="courseNo3" property="courseNo3"/>
     </resultMap>
     <!--接口式编程时，id为接口内的方法名，parameterType为方法传递的参数，resultType为方法的返回值类型-->
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <!--按条件查询-->
     <select id="selectTeachers" parameterType="com.cgc.bean.Teacher" resultType="com.cgc.bean.Teacher">
         SELECT * FROM teacher

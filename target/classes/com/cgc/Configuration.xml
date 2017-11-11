@@ -25,5 +25,6 @@
         <mapper resource="com/cgc/mapper/SelectCourse.xml"/>
         <mapper resource="com/cgc/mapper/Student.xml"/>
         <mapper resource="com/cgc/mapper/TeacherMapper.xml"/>
+        <mapper resource="com/cgc/mapper/UserMapper.xml"/>
     </mappers>
 </configuration>

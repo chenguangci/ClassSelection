@@ -2,17 +2,20 @@ package com.cgc.service;
 
 import com.cgc.bean.Department;
 import com.cgc.dao.DepartmentDao;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Service(value = "departmentService")
 public class DepartmentService {
     private DepartmentDao departmentDao = new DepartmentDao();
     /**
      * 查询系信息
      */
+    @Cacheable(cacheNames = "selectDepartment")
     public List<Department> selectDepartment(String[] Info){
         Department department = new Department();
         department.setDepartmentNo(Info[0]);

@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class StudentDao {
-    private DBAccess dbAccess = new DBAccess();
+    private DBAccess dbAccess = DBAccess.getInstance();
     /**
      * 获取学生信息
      */

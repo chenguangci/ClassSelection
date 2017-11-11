@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SelectCourseDao {
-    private DBAccess dbAccess = new DBAccess();
+    private DBAccess dbAccess = DBAccess.getInstance();
     /**
      * 查询选课信息
      */

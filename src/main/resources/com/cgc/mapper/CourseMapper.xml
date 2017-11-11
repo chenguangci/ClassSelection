@@ -8,7 +8,6 @@
         <result column="coursePriorNo" property="coursePriorNo"/>
         <result column="courseCredit" property="courseCredit"/>
     </resultMap>
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
 
     <!--按条件查询-->
     <select id="selectCourse" parameterType="com.cgc.bean.Course" resultType="com.cgc.bean.Course">

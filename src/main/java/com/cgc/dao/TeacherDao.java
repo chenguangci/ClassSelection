@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class TeacherDao {
-    private static DBAccess dbAccess = new DBAccess();
+    private static DBAccess dbAccess = DBAccess.getInstance();
     /**
      * 获取教师信息
      */

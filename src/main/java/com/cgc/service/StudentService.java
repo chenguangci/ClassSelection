@@ -2,17 +2,20 @@ package com.cgc.service;
 
 import com.cgc.bean.Student;
 import com.cgc.dao.StudentDao;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Service(value = "studentService")
 public class StudentService {
     private StudentDao studentDao = new StudentDao();
     /**
      * 获取学生信息
      */
+    @Cacheable(cacheNames = "selectStudent")
     public List<Student> selectStudents(String[] Info){
         Student student = new Student();
         student.setStudentNo(Info[0]);

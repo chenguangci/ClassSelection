@@ -9,7 +9,6 @@
         <result column="studentAge" property="studentAge"/>
         <result column="departmentNo" property="departmentNo"/>
     </resultMap>
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <!--按条件查询-->
     <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
         SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo FROM student a

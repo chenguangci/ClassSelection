@@ -2,15 +2,18 @@ package com.cgc.service;
 
 import com.cgc.bean.SelectCourse;
 import com.cgc.dao.SelectCourseDao;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service(value = "selectCourseService")
 public class SelectCourseService {
     private SelectCourseDao selectCourseDao = new SelectCourseDao();
     /**
      * 查询选课信息
      */
+    @Cacheable(cacheNames = "selectSelectCourse")
     public List<SelectCourse> selectSelectCourse(String[] Info){
         SelectCourse selectCourse = new SelectCourse();
         selectCourse.setStudentNo(Info[0]);

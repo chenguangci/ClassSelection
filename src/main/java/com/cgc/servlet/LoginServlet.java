@@ -1,5 +1,8 @@
 package com.cgc.servlet;
 
+import com.cgc.bean.User;
+import com.cgc.service.UserService;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,11 +13,20 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if ("123".equals(request.getParameter("username"))&&"123".equals(request.getParameter("password"))) {
-            HttpSession session = request.getSession();
-            session.setAttribute("username","123");
-            session.setAttribute("password","123");
-            response.sendRedirect("/begin.action");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        if (username!=null && password!=null && !"".equals(username.trim()) && !"".equals(password.trim())) {
+            UserService service = new UserService();
+            Integer role = service.checkUser(username,password);
+            if (role!=null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username",username);
+                session.setAttribute("password",password);
+                session.setAttribute("role",role);
+                response.sendRedirect("/begin.action");
+            } else {
+                request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request,response);
+            }
         } else {
             request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request,response);
         }

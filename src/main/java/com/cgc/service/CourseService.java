@@ -3,12 +3,14 @@ package com.cgc.service;
 import com.cgc.bean.Course;
 import com.cgc.dao.CourseDao;
 import com.cgc.dao.NumberToNameDao;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Service(value = "courseService")
 public class CourseService {
     private CourseDao courseDao = new CourseDao();
     private Map<String,String> maps;
@@ -44,6 +46,7 @@ public class CourseService {
     /**
      * 查询课表信息
      */
+    @Cacheable(cacheNames = "selectCourse")
     public List<Course> selectCourse(String[] dates) {
         Course course = new Course();
         /*为实体赋值*/

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cgc.mapper.UserMapper">
+    <resultMap id="user" type="com.cgc.bean.User">
+        <id property="username" column="user_name"/>
+        <result property="password" column="user_password"/>
+        <result property="role" column="role"/>
+    </resultMap>
+    <select id="checkUser" resultType="java.lang.Integer">
+        SELECT role FROM the_user WHERE user_name = #{username} AND user_password = #{password}
+    </select>
+    <select id="selectUser" resultMap="user">
+        SELECT user_name,user_password,role FROM the_user
+    </select>
+    <insert id="insertUser" parameterType="com.cgc.bean.User">
+        INSERT INTO the_user VALUES (#{username},#{password},#{role})
+    </insert>
+    <delete id="deleteUser" parameterType="String">
+        DELETE FROM the_user WHERE user_name = #{name}
+    </delete>
+    <update id="updateUser">
+        UPDATE the_user SET
+        user_name = #{user.username},user_password = #{user.password},role = #{user.role}
+        WHERE user_name = #{oldName}
+    </update>
+</mapper>

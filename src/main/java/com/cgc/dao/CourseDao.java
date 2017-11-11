@@ -12,7 +12,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 public class CourseDao {
-    private DBAccess dbAccess = new DBAccess();
+    private DBAccess dbAccess = DBAccess.getInstance();
 
     /**
      * 查询课表信息
