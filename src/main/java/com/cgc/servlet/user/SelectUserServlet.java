@@ -20,10 +20,7 @@ public class SelectUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService service = new UserService();
-        JSONArray array = JSONArray.fromObject(service.selectUser());
-        PrintWriter out = resp.getWriter();
-        out.write(array.toString());
-        out.flush();
-        out.close();
+        req.setAttribute("users",service.selectUser());
+        req.getRequestDispatcher("WEB-INF/jsp/user/user.jsp").forward(req,resp);
     }
 }

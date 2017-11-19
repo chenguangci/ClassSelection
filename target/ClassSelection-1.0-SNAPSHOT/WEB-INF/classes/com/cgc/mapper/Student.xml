@@ -7,14 +7,11 @@
         <result column="studentName" property="studentName"/>
         <result column="studentSex" property="studentSex"/>
         <result column="studentAge" property="studentAge"/>
-        <result column="departmentNo" property="department.departmentNo"/>
-        <result column="departmentName" property="department.departmentName"/>
-        <result column="manager" property="department.manager"/>
+        <result column="departmentNo" property="departmentNo"/>
     </resultMap>
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <!--按条件查询-->
     <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
-        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,b.departmentName departmentName FROM student a,department b
+        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo FROM student a
         <where>
             <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
                 AND a.studentNo LIKE '%' #{studentNo} '%'
@@ -28,11 +25,8 @@
             <if test="studentAge">
                 AND a.studentAge = #{studentAge}
             </if>
-            <if test="department.departmentNo!=null and !&quot;&quot;.equals(department.departmentNo.trim())">
-                AND a.departmentNo LIKE '%' #{department.departmentNo} '%'
-            </if>
-            <if test="true">
-                AND a.departmentNo = b.departmentNo
+            <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
+                AND a.departmentNo LIKE '%' #{departmentNo} '%'
             </if>
         </where>
         ORDER BY studentNo
@@ -45,7 +39,7 @@
             </foreach>
     </insert>
 
-    <delete id="deleteStudentsById" parameterType="java.lang.Integer">
+    <delete id="deleteStudentsById" parameterType="java.lang.String">
         DELETE FROM student WHERE studentNo IN (
                 <foreach collection="list" item="item" separator=",">
                     #{item}

@@ -18,16 +18,19 @@ public class SelectDepartment extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getParameter("insert")!=null){
+            request.getRequestDispatcher("WEB-INF/jsp/department/insertDepartment.jsp").forward(request,response);
+        }
         String[] Info = new String[3];
         Info[0] = request.getParameter("departmentNo");
         Info[1] = request.getParameter("departmentName");
         Info[2] = request.getParameter("manager");
         DepartmentService service = new DepartmentService();
-        JSONArray array = JSONArray.fromObject(service.selectDepartment(Info));
-        PrintWriter out = resp.getWriter();
-        out.write(array.toString());
-        out.flush();
-        out.close();
+        request.setAttribute("departments",service.selectDepartment(Info));
+        if (request.getParameter("update")!=null) {
+            request.getRequestDispatcher("WEB-INF/jsp/department/updateDepartment.jsp").forward(request,response);
+        }
+        request.getRequestDispatcher("WEB-INF/jsp/department/department.jsp").forward(request,response);
     }
 }

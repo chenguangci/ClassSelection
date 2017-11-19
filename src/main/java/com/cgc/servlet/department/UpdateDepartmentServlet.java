@@ -17,14 +17,14 @@ public class UpdateDepartmentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] Info = new String[3];
         Info[0] = request.getParameter("departmentNo");
         Info[1] = request.getParameter("departmentName");
         Info[2] = request.getParameter("manager");
         DepartmentService service = new DepartmentService();
         if(service.updateDepartment(Info)) {
-            //成功
+            response.sendRedirect("/selectDepartment.action");
         } else {
             //失败
         }

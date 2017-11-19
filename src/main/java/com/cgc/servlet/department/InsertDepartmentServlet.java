@@ -16,12 +16,12 @@ public class InsertDepartmentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        String[][] Info = new String[100][3];
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] no = request.getParameterValues("departmentNo");
         String[] name = request.getParameterValues("departmentName");
         String[] manager = request.getParameterValues("manager");
         int len = no.length;
+        String[][] Info = new String[len][3];
         for (int i=0;i<len;i++){
             Info[i][0] = no[i];
             Info[i][1] = name[i];
@@ -29,7 +29,7 @@ public class InsertDepartmentServlet extends HttpServlet {
         }
         DepartmentService service = new DepartmentService();
         if (service.insertDepartments(Info)) {
-            //插入成功
+            response.sendRedirect("/selectDepartment.action");
         } else {
             //失败
         }

@@ -27,14 +27,9 @@ public class UpdateStudentServlet extends HttpServlet {
         Info[4] = request.getParameter("departmentNo");
         StudentService service = new StudentService();
         if (service.updateStudent(Info)) {
-            //成功
+            response.sendRedirect("/selectStudent.action");
         } else {
             //失败
         }
-        PrintWriter out = response.getWriter();
-        out.write("");
-        out.flush();
-        out.close();
-
     }
 }

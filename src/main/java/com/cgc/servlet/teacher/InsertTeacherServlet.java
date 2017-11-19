@@ -17,8 +17,7 @@ public class InsertTeacherServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        String[][] Info = new String[100][9];
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] no = request.getParameterValues("teacherNo");
         String[] name = request.getParameterValues("teacherName");
         String[] sex = request.getParameterValues("teacherSex");
@@ -29,6 +28,7 @@ public class InsertTeacherServlet extends HttpServlet {
         String[] course2 = request.getParameterValues("courseNo2");
         String[] course3 = request.getParameterValues("courseNo3");
         int len = no.length;
+        String[][] Info = new String[len][9];
         for (int i=0;i<len;i++){
             Info[i][0] = no[i];
             Info[i][1] = name[i];
@@ -42,7 +42,7 @@ public class InsertTeacherServlet extends HttpServlet {
         }
         TeacherService service = new TeacherService();
         if (service.insertTeachers(Info)) {
-
+            response.sendRedirect("/selectTeacher.action");
         } else {
 
         }

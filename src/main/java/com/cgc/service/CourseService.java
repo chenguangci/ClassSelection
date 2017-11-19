@@ -54,7 +54,7 @@ public class CourseService {
         course.setCourseName(dates[1]);
         /*根据传递过来的课程名，找到对应的课程编号*/
         course.setCoursePriorNo(dates[2]);
-        if (dates[3]!=null)
+        if (dates[3]!=null&&!"".equals(dates[3].trim()))
             course.setCourseCredit(Integer.parseInt(dates[3]));
         else
             course.setCourseCredit(null);
@@ -73,7 +73,7 @@ public class CourseService {
             course.setCourseNo(date[0]);
             course.setCourseName(date[1]);
             course.setCoursePriorNo(getCourseNoByName(date[2]));
-            if (date[3]!=null)
+            if (date[3]!=null&&!"".equals(date[3].trim()))
                 course.setCourseCredit(Integer.parseInt(date[3]));
             else
                 course.setCourseCredit(null);

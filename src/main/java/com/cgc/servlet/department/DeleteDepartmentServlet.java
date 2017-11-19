@@ -19,12 +19,12 @@ public class DeleteDepartmentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] id = request.getParameterValues("departmentNo");
         List<String> ids = Arrays.asList(id);
         DepartmentService service = new DepartmentService();
         if(service.deleteDepartmentsById(ids)) {
-            //成功
+            response.sendRedirect("/selectDepartment.action");
         }else {
             //失败
         }

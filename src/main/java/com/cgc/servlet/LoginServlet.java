@@ -1,14 +1,15 @@
 package com.cgc.servlet;
 
-import com.cgc.bean.User;
 import com.cgc.service.UserService;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+@WebServlet(value = "/login.action")
 public class LoginServlet extends HttpServlet {
 
     @Override
@@ -23,7 +24,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("username",username);
                 session.setAttribute("password",password);
                 session.setAttribute("role",role);
-                response.sendRedirect("/begin.action");
+                request.getRequestDispatcher("/WEB-INF/jsp/begin.jsp").forward(request,response);
             } else {
                 request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request,response);
             }

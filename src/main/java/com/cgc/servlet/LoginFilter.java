@@ -19,13 +19,14 @@ public class LoginFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest)req;
         HttpServletResponse response = (HttpServletResponse)resp;
         HttpSession session = request.getSession();
+        req.setCharacterEncoding("utf-8");
         if (request.getRequestURI().contains("/login.action")){
             chain.doFilter(req, resp);
         }
         if (session.getAttribute("username")!=null&&session.getAttribute("password")!=null){
             chain.doFilter(req, resp);
         } else {
-            response.sendRedirect("/login.action");
+            request.getRequestDispatcher("/login.action").forward(request,response);
         }
 
     }

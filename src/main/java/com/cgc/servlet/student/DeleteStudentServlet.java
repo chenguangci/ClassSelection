@@ -18,12 +18,12 @@ public class DeleteStudentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String[] id = req.getParameterValues("studentNo");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String[] id = request.getParameterValues("studentNo");
         List<String> ids = Arrays.asList(id);
         StudentService service = new StudentService();
         if (service.deleteStudentsById(ids)) {
-            //成功
+            response.sendRedirect("/selectStudent.action");
         } else {
             //失败
         }

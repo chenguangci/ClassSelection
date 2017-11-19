@@ -17,13 +17,13 @@ public class InsertSelectServlet extends HttpServlet{
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        String[][] Info = new String[100][4];
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] student = request.getParameterValues("studentNo");
         String[] course = request.getParameterValues("courseNo");
         String[] teacher = request.getParameterValues("teacherNo");
         String[] grade = request.getParameterValues("grade");
         int len = student.length;
+        String[][] Info = new String[len][4];
         for (int i=0;i<len;i++) {
             Info[i][1] = course[i];
             Info[i][2] = teacher[i];
@@ -32,7 +32,7 @@ public class InsertSelectServlet extends HttpServlet{
         }
         SelectCourseService service = new SelectCourseService();
         if (service.insertSelectCourses(Info)) {
-
+            response.sendRedirect("/selectSelectCourse.action");
         } else {
 
         }

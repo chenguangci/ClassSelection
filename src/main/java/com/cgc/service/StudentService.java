@@ -21,7 +21,7 @@ public class StudentService {
         student.setStudentNo(Info[0]);
         student.setStudentName(Info[1]);
         student.setStudentSex(Info[2]);
-        if (Info[3]!=null&&"".equals(Info[3].trim()))
+        if (Info[3]!=null&&!"".equals(Info[3].trim()))
             student.setStudentAge(Integer.parseInt(Info[3]));
         student.setDepartmentNo(Info[4]);
         return studentDao.selectStudents(student);
@@ -36,7 +36,7 @@ public class StudentService {
             student.setStudentNo(info1[0]);
             student.setStudentName(info1[1]);
             student.setStudentSex(info1[2]);
-            if (info1[3]!=null)
+            if (info1[3]!=null&&!"".equals(info1[3].trim()))
                 student.setStudentAge(Integer.parseInt(info1[3]));
             else
                 student.setStudentAge(null);
@@ -59,7 +59,7 @@ public class StudentService {
         student.put("studentNo",Info[0]);
         student.put("studentName",Info[1]);
         student.put("studentSex",Info[2]);
-        if (Info[3]!=null)
+        if (Info[3]!=null&&!"".equals(Info[3].trim()))
             student.put("studentAge",Integer.parseInt(Info[3]));
         else
             student.put("studentAge",null);

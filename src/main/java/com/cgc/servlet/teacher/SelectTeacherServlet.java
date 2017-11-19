@@ -1,6 +1,5 @@
 package com.cgc.servlet.teacher;
 
-import com.cgc.bean.Teacher;
 import com.cgc.service.TeacherService;
 import net.sf.json.JSONArray;
 
@@ -19,7 +18,10 @@ public class SelectTeacherServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getParameter("insert")!=null){
+            request.getRequestDispatcher("WEB-INF/jsp/teacher/insertTeacher.jsp").forward(request,response);
+        }
         String[] Info = new String[7];
         Info[0] = request.getParameter("teacherNo");
         Info[1] = request.getParameter("teacherName");
@@ -29,7 +31,10 @@ public class SelectTeacherServlet extends HttpServlet {
         Info[5] = request.getParameter("title");
         Info[6] = request.getParameter("course");
         TeacherService service = new TeacherService();
-        JSONArray array = JSONArray.fromObject(service.selectTeachers(Info));
-        array.toString();
+        request.setAttribute("teachers",service.selectTeachers(Info));
+        if (request.getParameter("update")!=null) {
+            request.getRequestDispatcher("WEB-INF/jsp/student/updateTeacher.jsp").forward(request,response);
+        }
+        request.getRequestDispatcher("WEB-INF/jsp/teacher/teacher.jsp").forward(request,response);
     }
 }

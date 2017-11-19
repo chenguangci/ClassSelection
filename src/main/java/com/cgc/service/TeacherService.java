@@ -21,7 +21,7 @@ public class TeacherService {
         teacher.setTeacherNo(Info[0]);
         teacher.setTeacherName(Info[1]);
         teacher.setTeacherSex(Info[2]);
-        if (Info[3]!=null)
+        if (Info[3]!=null&&!"".equals(Info[3].trim()))
             teacher.setTeacherAge(Integer.parseInt(Info[3]));
         else
             teacher.setTeacherAge(null);
@@ -40,7 +40,7 @@ public class TeacherService {
             teacher.setTeacherNo(info[0]);
             teacher.setTeacherName(info[1]);
             teacher.setTeacherSex(info[2]);
-            if (info[3]!=null)
+            if (info[3]!=null&&!"".equals(info[3].trim()))
                 teacher.setTeacherAge(Integer.parseInt(info[3]));
             else
                 teacher.setTeacherAge(null);
@@ -69,7 +69,7 @@ public class TeacherService {
         teacher.put("teacherNo",Info[0]);
         teacher.put("teacherName",Info[1]);
         teacher.put("teacherSex",Info[2]);
-        if (Info[3]!=null)
+        if (Info[3]!=null&&!"".equals(Info[3].trim()))
             teacher.put("teacherAge",Integer.parseInt(Info[3]));
         else
             teacher.put("teacherAge",null);

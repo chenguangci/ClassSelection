@@ -22,7 +22,7 @@ public class DeleteCourseServlet extends HttpServlet {
         List<String> ids = Arrays.asList(id);
         CourseService service = new CourseService();
         if (service.deleteCoursesById(ids)) {
-
+            response.sendRedirect("/selectCourse.action");
         } else {
 
         }

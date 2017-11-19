@@ -13,6 +13,9 @@ import java.io.IOException;
 public class SelectStudentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getParameter("insert")!=null){
+            request.getRequestDispatcher("WEB-INF/jsp/student/insertStudent.jsp").forward(request,response);
+        }
         String[] Info = new String[5];
         Info[0] = request.getParameter("studentNo");
         Info[1] = request.getParameter("name");
@@ -20,9 +23,10 @@ public class SelectStudentServlet extends HttpServlet {
         Info[3] = request.getParameter("age");
         Info[4] = request.getParameter("departmentNo");
         StudentService service = new StudentService();
-        JSONArray array = JSONArray.fromObject(service.selectStudents(Info));
-
-        System.out.println(array.toString());
+        request.setAttribute("students",service.selectStudents(Info));
+        if (request.getParameter("update")!=null) {
+            request.getRequestDispatcher("WEB-INF/jsp/student/updateStudent.jsp").forward(request,response);
+        }
         request.getRequestDispatcher("WEB-INF/jsp/student/student.jsp").forward(request,response);
     }
 

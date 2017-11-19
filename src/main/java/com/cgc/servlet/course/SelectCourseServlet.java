@@ -19,16 +19,19 @@ public class SelectCourseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getParameter("insert")!=null){
+            request.getRequestDispatcher("WEB-INF/jsp/course/insertCourse.jsp").forward(request,response);
+        }
         String[] Info = new String[4];
         Info[0] = request.getParameter("courseNo");
         Info[1] = request.getParameter("courseName");
         Info[2] = request.getParameter("coursePriorNo");
         Info[3] = request.getParameter("courseCredit");
         CourseService service = new CourseService();
-        JSONArray array = JSONArray.fromObject(service.selectCourse(Info));
-        PrintWriter out = response.getWriter();
-        out.write(array.toString());
-        out.flush();
-        out.close();
+        request.setAttribute("courses",service.selectCourse(Info));
+        if (request.getParameter("update")!=null) {
+            request.getRequestDispatcher("WEB-INF/jsp/course/updateCourse.jsp").forward(request,response);
+        }
+        request.getRequestDispatcher("WEB-INF/jsp/course/course.jsp").forward(request,response);
     }
 }

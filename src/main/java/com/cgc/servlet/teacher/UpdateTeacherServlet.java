@@ -16,7 +16,7 @@ public class UpdateTeacherServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] Info = new String[9];
         Info[0] = request.getParameter("teacherNo");
         Info[1] = request.getParameter("teacherName");
@@ -29,7 +29,7 @@ public class UpdateTeacherServlet extends HttpServlet {
         Info[8] = request.getParameter("course3");
         TeacherService service = new TeacherService();
         if (service.updateTeacher(Info)) {
-
+            response.sendRedirect("/selectTeacher.action");
         } else {
 
         }

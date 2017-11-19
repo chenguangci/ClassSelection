@@ -17,12 +17,12 @@ public class DeleteSelectServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        String[][] Info = new String[100][3];
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] student = request.getParameterValues("studentNo");
         String[] course = request.getParameterValues("courseNo");
         String[] teacher = request.getParameterValues("teacherNo");
         int len = student.length;
+        String[][] Info = new String[100][3];
         for (int i=0;i<len;i++) {
             Info[i][1] = course[i];
             Info[i][2] = teacher[i];
@@ -30,7 +30,7 @@ public class DeleteSelectServlet extends HttpServlet {
         }
         SelectCourseService service = new SelectCourseService();
         if (service.deleteSelectCourses(Info)) {
-
+            response.sendRedirect("/selectSelectCourse.action");
         } else {
 
         }

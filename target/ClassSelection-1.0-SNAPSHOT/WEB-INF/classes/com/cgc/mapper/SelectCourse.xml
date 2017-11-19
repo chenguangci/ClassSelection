@@ -8,7 +8,6 @@
         <result column="teacherNo" property="teacherNo"/>
         <result column="grade" property="grade"/>
     </resultMap>
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <insert id="insertSelectCourses" parameterType="java.util.List">
         INSERT INTO selectcourse VALUES
             <foreach collection="list" item="item" separator=",">

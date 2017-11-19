@@ -7,7 +7,6 @@
         <result column="departmentName" property="departmentName"/>
         <result column="manager" property="manager"/>
     </resultMap>
-    <cache eviction="FIFO" flushInterval="60000" readOnly="false" size="128"/>
     <insert id="insertDepartments" parameterType="java.util.List">
         INSERT INTO department VALUES
             <foreach collection="list" item="item" separator=",">

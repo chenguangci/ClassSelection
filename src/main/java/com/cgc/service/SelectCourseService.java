@@ -19,7 +19,7 @@ public class SelectCourseService {
         selectCourse.setStudentNo(Info[0]);
         selectCourse.setCourseNo(Info[1]);
         selectCourse.setTeacherNo(Info[2]);
-        if (Info[3]!=null) {
+        if (Info[3]!=null&&!"".equals(Info[3].trim())) {
             selectCourse.setGrade(Integer.parseInt(Info[3]));
         } else {
             selectCourse.setGrade(null);
@@ -36,11 +36,12 @@ public class SelectCourseService {
             selectCourse.setStudentNo(info[0]);
             selectCourse.setCourseNo(info[1]);
             selectCourse.setTeacherNo(info[2]);
-            if (info[3]!=null){
+            if (info[3]!=null&&!"".equals(info[3].trim())){
                 selectCourse.setGrade(Integer.parseInt(info[3]));
             } else {
                 selectCourse.setGrade(null);
             }
+            selectCourses.add(selectCourse);
         }
         return selectCourseDao.insertSelectCourses(selectCourses);
     }
@@ -65,7 +66,7 @@ public class SelectCourseService {
         selectCourse.setStudentNo(Info[0]);
         selectCourse.setCourseNo(Info[1]);
         selectCourse.setTeacherNo(Info[2]);
-        if (Info[3]!=null) {
+        if (Info[3]!=null&&!"".equals(Info[3].trim())) {
             selectCourse.setGrade(Integer.parseInt(Info[3]));
         } else {
             selectCourse.setGrade(null);
