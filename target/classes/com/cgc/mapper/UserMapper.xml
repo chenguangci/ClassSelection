@@ -7,6 +7,10 @@
         <result property="password" column="user_password"/>
         <result property="role" column="role"/>
     </resultMap>
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
     <select id="checkUser" resultType="java.lang.Integer">
         SELECT role FROM the_user WHERE user_name = #{username} AND user_password = #{password}
     </select>

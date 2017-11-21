@@ -1,6 +1,7 @@
 package com.cgc.test;
 
 import com.cgc.bean.Course;
+import com.cgc.bean.Page;
 import com.cgc.service.*;
 import org.junit.Test;
 
@@ -13,8 +14,8 @@ public class ForTest {
         CourseService courseService = new CourseService();
 
         //查找
-        String[] da = {"0001",null,null,null};
-        List<Course> courses = courseService.selectCourse(da);
+        String[] da = {null,null,null,null};
+        List<Course> courses = courseService.selectCourse(da,0);
         for (Course course : courses){
             System.out.println(course.getCourseName());
         }
@@ -67,7 +68,7 @@ public class ForTest {
         List<String> ids = new ArrayList<String>();
         ids.add("200001");
         //System.out.println(service.deleteTeachersById(ids));
-        System.out.println(service.selectTeachers(info[1]));
+        //System.out.println(service.selectTeachers(info[1]));
     }
 
     @Test
@@ -78,6 +79,13 @@ public class ForTest {
         String username = "snow";
         String password = "120";
         System.out.println(service.checkUser(username,password));
+    }
+
+    @Test
+    public void pageTest() {
+        //分页操作
+        Page page = new Page(18,5);
+        System.out.println(page.getLimitNumber(2)+"   "+page.getTotalPage());
     }
 
 }

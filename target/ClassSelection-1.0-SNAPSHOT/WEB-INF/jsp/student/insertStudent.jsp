@@ -20,8 +20,14 @@
             });
         })
     </script>
+    <%
+        if (request.getParameter("error")!=null){
+            out.print("<script type=\"text/javascript\">function a(){alert(\"执行操作失败，请查看输入数据是否合法\");} a();</script>");
+        }
+    %>
 </head>
 <body>
+<a href="selectStudent.action">返回</a>
 <form method="post" action="insertStudent.action">
     <table id="table1">
         <tr>

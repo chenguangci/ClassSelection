@@ -13,34 +13,64 @@
         <result column="courseNo2" property="courseNo2"/>
         <result column="courseNo3" property="courseNo3"/>
     </resultMap>
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
     <!--接口式编程时，id为接口内的方法名，parameterType为方法传递的参数，resultType为方法的返回值类型-->
+    <select id="teacherNumber" resultType="java.lang.Integer">
+        SELECT count(*) FROM teacher
+        <where>
+            <if test="teacher.teacherNo!=null and !&quot;&quot;.equals(teacher.teacherNo.trim())">
+                AND teacherNo LIKE '%' #{teacher.teacherNo} '%'
+            </if>
+            <if test="teacher.teacherName!=null and !&quot;&quot;.equals(teacher.teacherName.trim())">
+                AND teacherName LIKE '%' #{teacher.teacherName} '%'
+            </if>
+            <if test="teacher.teacherSex!=null and !&quot;&quot;.equals(teacher.teacherSex.trim())">
+                AND teacherSex LIKE '%' #{teacher.teacherSex} '%'
+            </if>
+            <if test="teacher.teacherAge!=null">
+                AND teacherAge = #{teacher.teacherAge}
+            </if>
+            <if test="teacher.education!=null and !&quot;&quot;.equals(teacher.education.trim())">
+                AND education LIKE '%' #{teacher.education} '%'
+            </if>
+            <if test="teacher.professionalTitle!=null and !&quot;&quot;.equals(teacher.professionalTitle.trim())">
+                AND professionalTitle LIKE '%' #{teacher.professionalTitle} '%'
+            </if>
+            <if test="teacher.courseNo1!=null and !&quot;&quot;.equals(teacher.courseNo1.trim())">
+                AND (courseNo1 LIKE '%' #{teacher.courseNo1} '%' OR courseNo2 LIKE '%' #{teacher.courseNo1} '%' OR courseNo3 LIKE '%' #{teacher.courseNo1} '%')
+            </if>
+        </where>
+    </select>
     <!--按条件查询-->
     <select id="selectTeachers" parameterType="com.cgc.bean.Teacher" resultType="com.cgc.bean.Teacher">
         SELECT * FROM teacher
         <where>
-            <if test="teacherNo!=null and !&quot;&quot;.equals(teacherNo.trim())">
-                AND teacherNo LIKE '%' #{teacherNo} '%'
+            <if test="teacher.teacherNo!=null and !&quot;&quot;.equals(teacher.teacherNo.trim())">
+                AND teacherNo LIKE '%' #{teacher.teacherNo} '%'
             </if>
-            <if test="teacherName!=null and !&quot;&quot;.equals(teacherName.trim())">
-                AND teacherName LIKE '%' #{teacherName} '%'
+            <if test="teacher.teacherName!=null and !&quot;&quot;.equals(teacher.teacherName.trim())">
+                AND teacherName LIKE '%' #{teacher.teacherName} '%'
             </if>
-            <if test="teacherSex!=null and !&quot;&quot;.equals(teacherSex.trim())">
-                AND teacherSex LIKE '%' #{teacherSex} '%'
+            <if test="teacher.teacherSex!=null and !&quot;&quot;.equals(teacher.teacherSex.trim())">
+                AND teacherSex LIKE '%' #{teacher.teacherSex} '%'
             </if>
-            <if test="teacherAge!=null">
-                AND teacherAge = #{teacherAge}
+            <if test="teacher.teacherAge!=null">
+                AND teacherAge = #{teacher.teacherAge}
             </if>
-            <if test="education!=null and !&quot;&quot;.equals(education.trim())">
-                AND education LIKE '%' #{education} '%'
+            <if test="teacher.education!=null and !&quot;&quot;.equals(teacher.education.trim())">
+                AND education LIKE '%' #{teacher.education} '%'
             </if>
-            <if test="professionalTitle!=null and !&quot;&quot;.equals(professionalTitle.trim())">
-                AND professionalTitle LIKE '%' #{professionalTitle} '%'
+            <if test="teacher.professionalTitle!=null and !&quot;&quot;.equals(teacher.professionalTitle.trim())">
+                AND professionalTitle LIKE '%' #{teacher.professionalTitle} '%'
             </if>
-            <if test="courseNo1!=null and !&quot;&quot;.equals(courseNo1.trim())">
-                AND (courseNo1 LIKE '%' #{courseNo1} '%' OR courseNo2 LIKE '%' #{courseNo1} '%' OR courseNo3 LIKE '%' #{courseNo1} '%')
+            <if test="teacher.courseNo1!=null and !&quot;&quot;.equals(teacher.courseNo1.trim())">
+                AND (courseNo1 LIKE '%' #{teacher.courseNo1} '%' OR courseNo2 LIKE '%' #{teacher.courseNo1} '%' OR courseNo3 LIKE '%' #{teacher.courseNo1} '%')
             </if>
         </where>
-        ORDER BY teacherNo
+        ORDER BY teacherNo LIMIT #{limit},10
     </select>
         
     <insert id="insertTeachers" parameterType="java.util.List">

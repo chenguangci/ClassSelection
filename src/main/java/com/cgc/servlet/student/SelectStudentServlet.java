@@ -1,5 +1,6 @@
 package com.cgc.servlet.student;
 
+import com.cgc.bean.Page;
 import com.cgc.service.StudentService;
 import net.sf.json.JSONArray;
 
@@ -22,8 +23,31 @@ public class SelectStudentServlet extends HttpServlet {
         Info[2] = request.getParameter("sex");
         Info[3] = request.getParameter("age");
         Info[4] = request.getParameter("departmentNo");
+        request.setAttribute("studentNo",Info[0]);
+        request.setAttribute("name",Info[1]);
+        request.setAttribute("sex",Info[2]);
+        request.setAttribute("age",Info[3]);
+        request.setAttribute("departmentNo",Info[4]);
         StudentService service = new StudentService();
-        request.setAttribute("students",service.selectStudents(Info));
+        //分页操作
+        //获取页码
+        String str = request.getParameter("page");
+        int newPage;
+        if (str != null) {
+            newPage = Integer.valueOf(str);
+        } else {
+            newPage = 1;
+        }
+        int total = service.studentNumber(Info);
+        Page page = new Page(total, 20);
+        int totalPage = page.getTotalPage();
+        //当前页是否大于总页数
+        newPage = newPage > totalPage ? totalPage : newPage;
+        //当前页是否小于1
+        newPage = newPage < 1 ? 1 : newPage;
+        request.setAttribute("page", newPage);
+        request.setAttribute("total", totalPage);
+        request.setAttribute("students",service.selectStudents(Info,page.getLimitNumber(newPage)));
         if (request.getParameter("update")!=null) {
             request.getRequestDispatcher("WEB-INF/jsp/student/updateStudent.jsp").forward(request,response);
         }

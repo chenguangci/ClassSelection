@@ -11,16 +11,32 @@ import java.util.List;
 
 public class SelectCourseDao {
     private DBAccess dbAccess = DBAccess.getInstance();
+    public int selectNumber(SelectCourse selectCourse) {
+        int number = 0;
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
+            number = selectCourseMapper.selectNumber(selectCourse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (sqlSession!=null){
+                sqlSession.close();
+            }
+        }
+        return number;
+    }
     /**
      * 查询选课信息
      */
-    public List<SelectCourse> selectSelectCourse(SelectCourse selectCourse) {
+    public List<SelectCourse> selectSelectCourse(SelectCourse selectCourse, int limit) {
         List<SelectCourse> selectCourses = new ArrayList<SelectCourse>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
-            selectCourses = selectCourseMapper.selectSelectCourse(selectCourse);
+            selectCourses = selectCourseMapper.selectSelectCourse(selectCourse, limit);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

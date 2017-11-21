@@ -12,19 +12,29 @@ import java.util.Map;
 @Service(value = "studentService")
 public class StudentService {
     private StudentDao studentDao = new StudentDao();
-    /**
-     * 获取学生信息
-     */
-    @Cacheable(cacheNames = "selectStudent")
-    public List<Student> selectStudents(String[] Info){
+    public int studentNumber(String[] Info) {
         Student student = new Student();
         student.setStudentNo(Info[0]);
         student.setStudentName(Info[1]);
         student.setStudentSex(Info[2]);
-        if (Info[3]!=null&&!"".equals(Info[3].trim()))
+        if (Info[3]!=null&&!"".equals(Info[3].trim())&&Info[3].matches("^\\d+$"))
             student.setStudentAge(Integer.parseInt(Info[3]));
         student.setDepartmentNo(Info[4]);
-        return studentDao.selectStudents(student);
+        return studentDao.studentNumber(student);
+    }
+    /**
+     * 获取学生信息
+     */
+    @Cacheable(cacheNames = "selectStudent")
+    public List<Student> selectStudents(String[] Info, int limit){
+        Student student = new Student();
+        student.setStudentNo(Info[0]);
+        student.setStudentName(Info[1]);
+        student.setStudentSex(Info[2]);
+        if (Info[3]!=null&&!"".equals(Info[3].trim())&&Info[3].matches("^\\d+$"))
+            student.setStudentAge(Integer.parseInt(Info[3]));
+        student.setDepartmentNo(Info[4]);
+        return studentDao.selectStudents(student,limit);
     }
     /**
      * 录入学生信息
@@ -36,7 +46,7 @@ public class StudentService {
             student.setStudentNo(info1[0]);
             student.setStudentName(info1[1]);
             student.setStudentSex(info1[2]);
-            if (info1[3]!=null&&!"".equals(info1[3].trim()))
+            if (info1[3]!=null&&!"".equals(info1[3].trim())&&info1[3].matches("^\\d+$"))
                 student.setStudentAge(Integer.parseInt(info1[3]));
             else
                 student.setStudentAge(null);

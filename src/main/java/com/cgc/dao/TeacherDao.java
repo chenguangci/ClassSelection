@@ -12,20 +12,35 @@ import java.util.Map;
 
 public class TeacherDao {
     private static DBAccess dbAccess = DBAccess.getInstance();
+    public int teacherNumber(Teacher teacher) {
+        SqlSession sqlSession = null;
+        int number = 0;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
+            number = teacherMapper.teacherNumber(teacher);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (sqlSession!=null){
+                sqlSession.close();
+            }
+        }
+        return number;
+    }
     /**
      * 获取教师信息
      */
-    public List<Teacher> selectTeachers(Teacher teacher){
+    public List<Teacher> selectTeachers(Teacher teacher, int limit){
         List<Teacher> teachers = new ArrayList<Teacher>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
-            teachers = teacherMapper.selectTeachers(teacher);
+            teachers = teacherMapper.selectTeachers(teacher,limit);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             if (sqlSession!=null){
                 sqlSession.close();
             }

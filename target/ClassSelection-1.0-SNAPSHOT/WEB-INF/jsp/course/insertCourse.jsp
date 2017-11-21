@@ -24,10 +24,22 @@
                     "</tr>";
                 $("#table1").append(tr);
             });
-        })
+        });
+        function getError() {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                document.getElementById("error").innerHTML=xmlHttp.responseText;
+            }
+        }
     </script>
+    <%
+        if (request.getParameter("error")!=null){
+            out.print("<script type=\"text/javascript\">function a(){alert(\"执行操作失败，请查看输入数据是否合法\");} a();</script>");
+        }
+    %>
 </head>
 <body>
+<a href="selectCourse.action">返回</a>
 <form method="post" action="insertCourse.action">
     <table id="table1">
         <tr>
@@ -43,8 +55,9 @@
             <td><input type="text" name="courseCredit"></td>
         </tr>
     </table>
-    <input type="button" value="增加" id="addTable"/>
-    <input type="submit" value="提交">&nbsp;&nbsp;
+    <div id="error" style="color: red"><h3></h3></div>
+    <input type="button" value="增加" id="addTable"/><br>
+    <input type="submit" value="提交" onclick="getError()">&nbsp;&nbsp;
     <input type="reset" value="重置">
 
 </form>

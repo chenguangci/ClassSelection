@@ -20,7 +20,7 @@
         课程号：<%=course.getCourseNo()%><br>
         课程名称：<input type="text" name="courseName" value="<%=course.getCourseName()%>"><br>
         先修课程号：<input type="text" name="coursePriorNo" value="<%=course.getCoursePriorNo()%>"><br>
-        课程学分：<input type="text" name="courseCredit" value="<%=course.getCoursePriorNo()%>"><br>
+        课程学分：<input type="text" name="courseCredit" value="<%=course.getCourseCredit()%>"><br>
         <input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
     </form>
 </body>

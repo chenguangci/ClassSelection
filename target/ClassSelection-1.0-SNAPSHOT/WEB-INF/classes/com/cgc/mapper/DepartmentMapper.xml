@@ -7,28 +7,45 @@
         <result column="departmentName" property="departmentName"/>
         <result column="manager" property="manager"/>
     </resultMap>
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
     <insert id="insertDepartments" parameterType="java.util.List">
         INSERT INTO department VALUES
             <foreach collection="list" item="item" separator=",">
                 (#{item.departmentNo},#{item.departmentName},#{item.manager})
             </foreach>
     </insert>
-
+    <select id="departmentNumber" resultType="java.lang.Integer">
+        SELECT count(*) FROM department
+        <where>
+            <if test="department.departmentNo!=null and !&quot;&quot;.equals(department.departmentNo.trim())">
+                AND departmentNo LIKE '%' #{department.departmentNo} '%'
+            </if>
+            <if test="department.departmentName!=null and !&quot;&quot;.equals(department.departmentName.trim())">
+                AND departmentName LIKE '%' #{department.departmentName} '%'
+            </if>
+            <if test="department.manager!=null and !&quot;&quot;.equals(department.manager.trim())">
+                AND manager LIKE '%' #{department.manager} '%'
+            </if>
+        </where>
+    </select>
     <!--按条件查询-->
     <select id="selectDepartment" parameterType="com.cgc.bean.Department" resultType="com.cgc.bean.Department">
         SELECT * FROM department
         <where>
-            <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
-                AND departmentNo LIKE '%' #{departmentNo} '%'
+            <if test="department.departmentNo!=null and !&quot;&quot;.equals(department.departmentNo.trim())">
+                AND departmentNo LIKE '%' #{department.departmentNo} '%'
             </if>
-            <if test="departmentName!=null and !&quot;&quot;.equals(departmentName.trim())">
-                AND departmentName LIKE '%' #{departmentName} '%'
+            <if test="department.departmentName!=null and !&quot;&quot;.equals(department.departmentName.trim())">
+                AND departmentName LIKE '%' #{department.departmentName} '%'
             </if>
-            <if test="manager!=null and !&quot;&quot;.equals(manager.trim())">
-                AND manager LIKE '%' #{manager} '%'
+            <if test="department.manager!=null and !&quot;&quot;.equals(department.manager.trim())">
+                AND manager LIKE '%' #{department.manager} '%'
             </if>
         </where>
-        ORDER BY departmentNo
+        ORDER BY departmentNo LIMIT #{limit},5
     </select>
 
     <delete id="deleteDepartmentsById" parameterType="java.util.List">

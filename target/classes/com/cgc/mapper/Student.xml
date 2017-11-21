@@ -9,27 +9,51 @@
         <result column="studentAge" property="studentAge"/>
         <result column="departmentNo" property="departmentNo"/>
     </resultMap>
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
+    <select id="studentNumber" resultType="java.lang.Integer">
+        SELECT count(*) FROM student
+        <where>
+            <if test="student.studentNo!=null and !&quot;&quot;.equals(student.studentNo.trim())">
+                AND studentNo LIKE '%' #{student.studentNo} '%'
+            </if>
+            <if test="student.studentName!=null and !&quot;&quot;.equals(student.studentName.trim())">
+                AND studentName LIKE '%' #{student.studentName} '%'
+            </if>
+            <if test="student.studentSex!=null and !&quot;&quot;.equals(student.studentSex.trim())">
+                AND studentSex LIKE '%' #{student.studentSex} '%'
+            </if>
+            <if test="student.studentAge">
+                AND studentAge = #{student.studentAge}
+            </if>
+            <if test="student.departmentNo!=null and !&quot;&quot;.equals(student.departmentNo.trim())">
+                AND departmentNo LIKE '%' #{student.departmentNo} '%'
+            </if>
+        </where>
+    </select>
     <!--按条件查询-->
     <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
         SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo FROM student a
         <where>
-            <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
-                AND a.studentNo LIKE '%' #{studentNo} '%'
+            <if test="student.studentNo!=null and !&quot;&quot;.equals(student.studentNo.trim())">
+                AND a.studentNo LIKE '%' #{student.studentNo} '%'
             </if>
-            <if test="studentName!=null and !&quot;&quot;.equals(studentName.trim())">
-                AND a.studentName LIKE '%' #{studentName} '%'
+            <if test="student.studentName!=null and !&quot;&quot;.equals(student.studentName.trim())">
+                AND a.studentName LIKE '%' #{student.studentName} '%'
             </if>
-            <if test="studentSex!=null and !&quot;&quot;.equals(studentSex.trim())">
-                AND a.studentSex LIKE '%' #{studentSex} '%'
+            <if test="student.studentSex!=null and !&quot;&quot;.equals(student.studentSex.trim())">
+                AND a.studentSex LIKE '%' #{student.studentSex} '%'
             </if>
-            <if test="studentAge">
-                AND a.studentAge = #{studentAge}
+            <if test="student.studentAge">
+                AND a.studentAge = #{student.studentAge}
             </if>
-            <if test="departmentNo!=null and !&quot;&quot;.equals(departmentNo.trim())">
-                AND a.departmentNo LIKE '%' #{departmentNo} '%'
+            <if test="student.departmentNo!=null and !&quot;&quot;.equals(student.departmentNo.trim())">
+                AND a.departmentNo LIKE '%' #{student.departmentNo} '%'
             </if>
         </where>
-        ORDER BY studentNo
+        ORDER BY studentNo LIMIT #{limit},20
     </select>
 
     <insert id="insertStudents" parameterType="java.util.List">

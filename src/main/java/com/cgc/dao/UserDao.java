@@ -3,7 +3,6 @@ package com.cgc.dao;
 import com.cgc.bean.User;
 import com.cgc.db.DBAccess;
 import com.cgc.mapper.UserMapper;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;

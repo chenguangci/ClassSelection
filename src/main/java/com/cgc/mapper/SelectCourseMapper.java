@@ -1,13 +1,14 @@
 package com.cgc.mapper;
 
 import com.cgc.bean.SelectCourse;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface SelectCourseMapper {
-
+    int selectNumber(@Param("selectCourse") SelectCourse selectCourse);
     /*按条件查询*/
-    List<SelectCourse> selectSelectCourse(SelectCourse selectCourse);
+    List<SelectCourse> selectSelectCourse(@Param("selectCourse") SelectCourse selectCourse, @Param("limit") int limit);
     /*录入选课信息*/
     void insertSelectCourses(List<SelectCourse> selectCourses);
     /*删除选课信息*/

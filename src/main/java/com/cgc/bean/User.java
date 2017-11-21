@@ -1,6 +1,9 @@
 package com.cgc.bean;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = 6320941908222932112L;
     private String username;
     private String password;
     private Integer role = 0;

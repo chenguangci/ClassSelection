@@ -21,6 +21,7 @@
     </script>
 </head>
 <body>
+<a href="selectSelectCourse.action">返回</a>
 <form method="post" action="insertSelectCourse.action">
     <table id="table1">
         <tr>

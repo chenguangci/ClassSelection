@@ -19,6 +19,7 @@ public class DeleteCourseServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] id = request.getParameterValues("courseNo");
+        System.out.println("课程号为："+id[0]);
         List<String> ids = Arrays.asList(id);
         CourseService service = new CourseService();
         if (service.deleteCoursesById(ids)) {

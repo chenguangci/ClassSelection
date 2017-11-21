@@ -12,23 +12,37 @@ import java.util.Map;
 @Service(value = "teacherService")
 public class TeacherService {
     private TeacherDao teacherDao  = new TeacherDao();
-    /**
-     * 查询
-     */
-    @Cacheable(cacheNames = "selectTeacher")
-    public List<Teacher> selectTeachers(String[] Info){
+    public int teacherNumber(String[] Info) {
         Teacher teacher = new Teacher();
         teacher.setTeacherNo(Info[0]);
         teacher.setTeacherName(Info[1]);
         teacher.setTeacherSex(Info[2]);
-        if (Info[3]!=null&&!"".equals(Info[3].trim()))
+        if (Info[3]!=null&&!"".equals(Info[3].trim())&&Info[3].matches("^\\d+$"))
             teacher.setTeacherAge(Integer.parseInt(Info[3]));
         else
             teacher.setTeacherAge(null);
         teacher.setEducation(Info[4]);
         teacher.setProfessionalTitle(Info[5]);
         teacher.setCourseNo1(Info[6]);
-        return teacherDao.selectTeachers(teacher);
+        return teacherDao.teacherNumber(teacher);
+    }
+    /**
+     * 查询
+     */
+    @Cacheable(cacheNames = "selectTeacher")
+    public List<Teacher> selectTeachers(String[] Info,int limit){
+        Teacher teacher = new Teacher();
+        teacher.setTeacherNo(Info[0]);
+        teacher.setTeacherName(Info[1]);
+        teacher.setTeacherSex(Info[2]);
+        if (Info[3]!=null&&!"".equals(Info[3].trim())&&Info[3].matches("^\\d+$"))
+            teacher.setTeacherAge(Integer.parseInt(Info[3]));
+        else
+            teacher.setTeacherAge(null);
+        teacher.setEducation(Info[4]);
+        teacher.setProfessionalTitle(Info[5]);
+        teacher.setCourseNo1(Info[6]);
+        return teacherDao.selectTeachers(teacher,limit);
     }
     /**
      * 插入
@@ -40,7 +54,7 @@ public class TeacherService {
             teacher.setTeacherNo(info[0]);
             teacher.setTeacherName(info[1]);
             teacher.setTeacherSex(info[2]);
-            if (info[3]!=null&&!"".equals(info[3].trim()))
+            if (info[3]!=null&&!"".equals(info[3].trim())&&info[3].matches("^\\d+$"))
                 teacher.setTeacherAge(Integer.parseInt(info[3]));
             else
                 teacher.setTeacherAge(null);

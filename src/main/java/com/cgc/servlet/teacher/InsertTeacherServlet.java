@@ -44,7 +44,7 @@ public class InsertTeacherServlet extends HttpServlet {
         if (service.insertTeachers(Info)) {
             response.sendRedirect("/selectTeacher.action");
         } else {
-
+            request.getRequestDispatcher("WEB-INF/jsp/teacher/insertTeacher.jsp").forward(request,response);
         }
     }
 }

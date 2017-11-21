@@ -39,6 +39,7 @@ public class InsertStudentServlet extends HttpServlet {
             response.sendRedirect("/selectStudent.action");
         } else {
             //失败
+            request.getRequestDispatcher("WEB-INF/jsp/student/insertStudent.jsp").forward(request,response);
         }
     }
 }

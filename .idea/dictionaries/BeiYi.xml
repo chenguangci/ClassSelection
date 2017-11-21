@@ -2,6 +2,7 @@
   <dictionary name="BeiYi">
     <words>
       <w>classselectionmanagement</w>
+      <w>onreadystatechange</w>
     </words>
   </dictionary>
 </component>

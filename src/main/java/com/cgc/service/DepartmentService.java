@@ -12,16 +12,23 @@ import java.util.Map;
 @Service(value = "departmentService")
 public class DepartmentService {
     private DepartmentDao departmentDao = new DepartmentDao();
-    /**
-     * 查询系信息
-     */
-    @Cacheable(cacheNames = "selectDepartment")
-    public List<Department> selectDepartment(String[] Info){
+    public int departmentNumber(String[] Info) {
         Department department = new Department();
         department.setDepartmentNo(Info[0]);
         department.setDepartmentName(Info[1]);
         department.setManager(Info[2]);
-        return departmentDao.selectDepartment(department);
+        return departmentDao.departmentNumber(department);
+    }
+    /**
+     * 查询系信息
+     */
+    @Cacheable(cacheNames = "selectDepartment")
+    public List<Department> selectDepartment(String[] Info, int limit){
+        Department department = new Department();
+        department.setDepartmentNo(Info[0]);
+        department.setDepartmentName(Info[1]);
+        department.setManager(Info[2]);
+        return departmentDao.selectDepartment(department, limit);
     }
     /**
      * 录入系信息

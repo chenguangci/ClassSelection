@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet(value = "/insertCourse.action")
 public class InsertCourseServlet extends HttpServlet {
     @Override
@@ -23,17 +25,22 @@ public class InsertCourseServlet extends HttpServlet {
         String[] credit = request.getParameterValues("courseCredit");
         int len = no.length;
         String[][] Info = new String[len][4];
+        boolean isNull = false;
         for (int i=0;i<len;i++){
+            if (no[i]==null||"".equals(no[i].trim())||name[i]==null||"".equals(name[i].trim())||credit[i]==null||"".equals(credit[i].trim())){
+                isNull = true;
+                break;
+            }
             Info[i][0] = no[i];
             Info[i][1] = name[i];
             Info[i][2] = pNo[i];
             Info[i][3] = credit[i];
         }
         CourseService service = new CourseService();
-        if (service.insertCourses(Info)) {
-            response.sendRedirect("/selectCourse.action");
+        if (isNull||!service.insertCourses(Info)) {
+            request.getRequestDispatcher("WEB-INF/jsp/course/insertCourse.jsp?error=1").forward(request,response);
         } else {
-
+            response.sendRedirect("/selectCourse.action");
         }
     }
 }

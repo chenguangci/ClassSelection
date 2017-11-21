@@ -15,6 +15,19 @@ public class CourseService {
     private CourseDao courseDao = new CourseDao();
     private Map<String,String> maps;
 
+    public int courseNumber(String[] info) {
+        Course course = new Course();
+        /*为实体赋值*/
+        course.setCourseNo(info[0]);
+        course.setCourseName(info[1]);
+        /*根据传递过来的课程名，找到对应的课程编号*/
+        course.setCoursePriorNo(info[2]);
+        if (info[3]!=null&&!"".equals(info[3].trim())&&info[3].matches("^\\d+$"))
+            course.setCourseCredit(Integer.parseInt(info[3]));
+        else
+            course.setCourseCredit(null);
+        return courseDao.courseNumber(course);
+    }
     /**
      * 获取编号和名称
      * @param name 课程名
@@ -47,18 +60,18 @@ public class CourseService {
      * 查询课表信息
      */
     @Cacheable(cacheNames = "selectCourse")
-    public List<Course> selectCourse(String[] dates) {
+    public List<Course> selectCourse(String[] dates, int limitNumber) {
         Course course = new Course();
         /*为实体赋值*/
         course.setCourseNo(dates[0]);
         course.setCourseName(dates[1]);
         /*根据传递过来的课程名，找到对应的课程编号*/
         course.setCoursePriorNo(dates[2]);
-        if (dates[3]!=null&&!"".equals(dates[3].trim()))
+        if (dates[3]!=null&&!"".equals(dates[3].trim())&&dates[3].matches("^\\d+$"))
             course.setCourseCredit(Integer.parseInt(dates[3]));
         else
             course.setCourseCredit(null);
-        return courseDao.selectCourse(course);
+        return courseDao.selectCourse(course,limitNumber);
     }
     /**
      * 录入课表信息
@@ -72,8 +85,8 @@ public class CourseService {
             /*为实体赋值*/
             course.setCourseNo(date[0]);
             course.setCourseName(date[1]);
-            course.setCoursePriorNo(getCourseNoByName(date[2]));
-            if (date[3]!=null&&!"".equals(date[3].trim()))
+            course.setCoursePriorNo(date[2]);
+            if (date[3]!=null&&!"".equals(date[3].trim())&&date[3].matches("^\\d+$"))
                 course.setCourseCredit(Integer.parseInt(date[3]));
             else
                 course.setCourseCredit(null);
@@ -96,7 +109,7 @@ public class CourseService {
         course.put("courseNo",dates[0]);
         course.put("courseName",dates[1]);
         course.put("coursePriorNo",dates[2]);
-        if (dates[3]!=null)
+        if (dates[3]!=null&&dates[3].matches("^\\d+$"))
             course.put("courseCredit",dates[3]);
         else
             course.put("courseCredit",null);

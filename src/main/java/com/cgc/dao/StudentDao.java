@@ -13,16 +13,28 @@ import java.util.Map;
 
 public class StudentDao {
     private DBAccess dbAccess = DBAccess.getInstance();
+    public int studentNumber(Student student) {
+        SqlSession sqlSession = null;
+        int number = 0;
+        try {
+            sqlSession = dbAccess.getSqlSession();
+            StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+            number = studentMapper.studentNumber(student);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return number;
+    }
     /**
      * 获取学生信息
      */
-    public List<Student> selectStudents(Student student){
+    public List<Student> selectStudents(Student student, int limit){
         List<Student> students = new ArrayList<Student>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            students = studentMapper.selectStudents(student);
+            students = studentMapper.selectStudents(student,limit);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

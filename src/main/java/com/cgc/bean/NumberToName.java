@@ -1,11 +1,13 @@
 package com.cgc.bean;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
  * 用于将各表的属性编号与属性名称对应起来
  */
-public class NumberToName {
+public class NumberToName implements Serializable {
+    private static final long serialVersionUID = 6320941908222932112L;
     private Map<String,String> CourseNoToName;
     private Map<String,String> DepartmentNoToName;
     private Map<String,String> TeacherNoToName;

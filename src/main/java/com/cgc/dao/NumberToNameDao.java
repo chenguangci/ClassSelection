@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NumberToNameDao {
-    DBAccess dbAccess = DBAccess.getInstance();
+    private DBAccess dbAccess = DBAccess.getInstance();
 
     public Map<String,String> CourseNoToName(){
         Map<String,String> courses = new HashMap<String, String>();

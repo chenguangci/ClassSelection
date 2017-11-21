@@ -10,7 +10,7 @@
     <script>
         $(document).ready(function(){
             $("#addTable").click(function(){
-                var tr="<td><input type=\"text\" name=\"teacherNo\"></td>"+
+                var tr="<tr><td><input type=\"text\" name=\"teacherNo\"></td>"+
                     "<td><input type=\"text\" name=\"teacherName\"></td>"+
                     "<td><select name=\"teacherSex\"><option value=\"男\">男</option><option value=\"女\" >女</option></select></td>"+
                     "<td><input type=\"text\" name=\"teacherAge\"></td>"+
@@ -24,8 +24,14 @@
             });
         })
     </script>
+    <%
+        if (request.getParameter("error")!=null){
+            out.print("<script type=\"text/javascript\">function a(){alert(\"执行操作失败，请查看输入数据是否合法\");} a();</script>");
+        }
+    %>
 </head>
 <body>
+<a href="selectTeacher.action">返回</a>
 <form method="post" action="insertTeacher.action">
     <table id="table1">
         <tr>
@@ -54,7 +60,6 @@
     <input type="button" value="增加" id="addTable"/><br>
     <input type="submit" value="提交">&nbsp;&nbsp;
     <input type="reset" value="重置">
-
 </form>
 </body>
 </html>

@@ -31,7 +31,7 @@ public class InsertDepartmentServlet extends HttpServlet {
         if (service.insertDepartments(Info)) {
             response.sendRedirect("/selectDepartment.action");
         } else {
-            //失败
+            request.getRequestDispatcher("WEB-INF/jsp/department/insertDepartment.jsp?error=1").forward(request,response);
         }
     }
 }

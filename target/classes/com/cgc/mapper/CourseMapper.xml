@@ -8,35 +8,67 @@
         <result column="coursePriorNo" property="coursePriorNo"/>
         <result column="courseCredit" property="courseCredit"/>
     </resultMap>
-
+    <!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
+    <select id="courseNumber" resultType="java.lang.Integer">
+        SELECT count(*) FROM course
+        <where>
+            <if test="course.courseNo!=null and !&quot;&quot;.equals(course.courseNo.trim())">
+                AND courseNo LIKE '%' #{course.courseNo} '%'
+            </if>
+            <if test="course.courseName!=null and !&quot;&quot;.equals(course.courseName.trim())">
+                AND courseName LIKE '%' #{course.courseName} '%'
+            </if>
+            <if test="course.coursePriorNo!=null and !&quot;&quot;.equals(course.coursePriorNo.trim())">
+                AND coursePriorNo LIKE '%' #{course.coursePriorNo} '%'
+            </if>
+            <if test="course.courseCredit!=null">
+                AND courseCredit = #{course.courseCredit}
+            </if>
+        </where>
+    </select>
     <!--按条件查询-->
     <select id="selectCourse" parameterType="com.cgc.bean.Course" resultType="com.cgc.bean.Course">
         SELECT * FROM course
         <where>
-            <if test="courseNo!=null and !&quot;&quot;.equals(courseNo.trim())">
-                AND courseNo LIKE '%' #{courseNo} '%'
+            <if test="course.courseNo!=null and !&quot;&quot;.equals(course.courseNo.trim())">
+                AND courseNo LIKE '%' #{course.courseNo} '%'
             </if>
-            <if test="courseName!=null and !&quot;&quot;.equals(courseName.trim())">
-                AND courseName LIKE '%' #{courseName} '%'
+            <if test="course.courseName!=null and !&quot;&quot;.equals(course.courseName.trim())">
+                AND courseName LIKE '%' #{course.courseName} '%'
             </if>
-            <if test="coursePriorNo!=null and !&quot;&quot;.equals(coursePriorNo.trim())">
-                AND coursePriorNo LIKE '%' #{coursePriorNo} '%'
+            <if test="course.coursePriorNo!=null and !&quot;&quot;.equals(course.coursePriorNo.trim())">
+                AND coursePriorNo LIKE '%' #{course.coursePriorNo} '%'
+            </if>
+            <if test="course.courseCredit!=null">
+                AND courseCredit = #{course.courseCredit}
             </if>
         </where>
         ORDER BY courseNo
+        LIMIT #{limit},5
     </select>
 
     <insert id="insertCourses" parameterType="java.util.List">
         INSERT INTO course VALUES
             <foreach collection="list" item="course" separator=",">
-                (#{course.courseNo},#{course.courseName},#{course.coursePriorNo},#{course.courseCredit})
+                <choose>
+                    <when test="coursePriorNo==null||&quot;&quot;.equals(coursePriorNo.trim())">
+                        (#{course.courseNo},#{course.courseName},NULL ,#{course.courseCredit})
+                    </when>
+                    <otherwise>
+                        (#{course.courseNo},#{course.courseName},#{course.coursePriorNo},#{course.courseCredit})
+                    </otherwise>
+                </choose>
             </foreach>
     </insert>
 
     <delete id="deleteCoursesById" parameterType="java.util.List">
         DELETE FROM course WHERE courseNo IN (
         <foreach collection="list" item="item" separator=",">
-            "'" #{item} "'"
+            #{item}
         </foreach>
         )
     </delete>

@@ -8,28 +8,45 @@
         <result column="teacherNo" property="teacherNo"/>
         <result column="grade" property="grade"/>
     </resultMap>
+    <cache eviction="FIFO"
+           size="128"
+           readOnly="true"
+           flushInterval="60000"/>
     <insert id="insertSelectCourses" parameterType="java.util.List">
         INSERT INTO selectcourse VALUES
             <foreach collection="list" item="item" separator=",">
                 (#{item.studentNo},#{item.courseNo},#{item.teacherNo},#{item.grade})
             </foreach>
     </insert>
-
+    <select id="selectNumber" resultType="java.lang.Integer">
+        SELECT count(*) FROM selectcourse
+        <where>
+            <if test="selectCourse.studentNo!=null and !&quot;&quot;.equals(selectCourse.studentNo.trim())">
+                AND studentNo LIKE '%' #{selectCourse.studentNo} '%'
+            </if>
+            <if test="selectCourse.courseNo!=null and !&quot;&quot;.equals(selectCourse.courseNo.trim())">
+                AND courseNo LIKE '%' #{selectCourse.courseNo} '%'
+            </if>
+            <if test="selectCourse.teacherNo!=null and !&quot;&quot;.equals(selectCourse.teacherNo.trim())">
+                AND teacherNo LIKE '%' #{selectCourse.teacherNo} '%'
+            </if>
+        </where>
+    </select>
     <!--按条件查询-->
     <select id="selectSelectCourse" parameterType="com.cgc.bean.SelectCourse" resultType="com.cgc.bean.SelectCourse">
         SELECT * FROM selectcourse
         <where>
-            <if test="studentNo!=null and !&quot;&quot;.equals(studentNo.trim())">
-                AND studentNo LIKE '%' #{studentNo} '%'
+            <if test="selectCourse.studentNo!=null and !&quot;&quot;.equals(selectCourse.studentNo.trim())">
+                AND studentNo LIKE '%' #{selectCourse.studentNo} '%'
             </if>
-            <if test="courseNo!=null and !&quot;&quot;.equals(courseNo.trim())">
-                AND courseNo LIKE '%' #{courseNo} '%'
+            <if test="selectCourse.courseNo!=null and !&quot;&quot;.equals(selectCourse.courseNo.trim())">
+                AND courseNo LIKE '%' #{selectCourse.courseNo} '%'
             </if>
-            <if test="teacherNo!=null and !&quot;&quot;.equals(teacherNo.trim())">
-                AND teacherNo LIKE '%' #{teacherNo} '%'
+            <if test="selectCourse.teacherNo!=null and !&quot;&quot;.equals(selectCourse.teacherNo.trim())">
+                AND teacherNo LIKE '%' #{selectCourse.teacherNo} '%'
             </if>
         </where>
-        ORDER BY studentNo
+        ORDER BY studentNo LIMIT #{limit},5
     </select>
 
     <delete id="deleteSelectCourses" parameterType="java.util.List">

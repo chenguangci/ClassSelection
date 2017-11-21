@@ -10,11 +10,7 @@ import java.util.List;
 @Service(value = "selectCourseService")
 public class SelectCourseService {
     private SelectCourseDao selectCourseDao = new SelectCourseDao();
-    /**
-     * 查询选课信息
-     */
-    @Cacheable(cacheNames = "selectSelectCourse")
-    public List<SelectCourse> selectSelectCourse(String[] Info){
+    public int selectNumber(String[] Info) {
         SelectCourse selectCourse = new SelectCourse();
         selectCourse.setStudentNo(Info[0]);
         selectCourse.setCourseNo(Info[1]);
@@ -24,7 +20,23 @@ public class SelectCourseService {
         } else {
             selectCourse.setGrade(null);
         }
-        return selectCourseDao.selectSelectCourse(selectCourse);
+        return selectCourseDao.selectNumber(selectCourse);
+    }
+    /**
+     * 查询选课信息
+     */
+    @Cacheable(cacheNames = "selectSelectCourse")
+    public List<SelectCourse> selectSelectCourse(String[] Info,int limit){
+        SelectCourse selectCourse = new SelectCourse();
+        selectCourse.setStudentNo(Info[0]);
+        selectCourse.setCourseNo(Info[1]);
+        selectCourse.setTeacherNo(Info[2]);
+        if (Info[3]!=null&&!"".equals(Info[3].trim())) {
+            selectCourse.setGrade(Integer.parseInt(Info[3]));
+        } else {
+            selectCourse.setGrade(null);
+        }
+        return selectCourseDao.selectSelectCourse(selectCourse,limit);
     }
     /**
      * 录入选课信息

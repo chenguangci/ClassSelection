@@ -8,99 +8,156 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca20b655-7457-4013-9d25-d62475bf384c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-4.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/Student.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/NumberToName.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/NumberToName.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/Page.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/User.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/bean/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/CourseDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/CourseDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/DepartmentDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/DepartmentDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/NumberToNameDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/NumberToNameDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/SelectCourseDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/SelectCourseDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/StudentDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/StudentDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/TeacherDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/TeacherDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/db/DBAccess.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/db/DBAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/CourseMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/CourseMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/DepartmentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/SelectCourseMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/SelectCourseMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/StudentMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/StudentMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/TeacherMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/TeacherMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/UserMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/CourseService.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/CourseService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/DepartmentService.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/DepartmentService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/SelectCourseService.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/SelectCourseService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/StudentService.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/StudentService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/TeacherService.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/service/TeacherService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/LoginFilter.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/LoginFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/LoginServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/DeleteCourseServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/DeleteCourseServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/InsertCourseServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/InsertCourseServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/SelectCourseServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/course/SelectCourseServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/department/InsertDepartmentServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/department/InsertDepartmentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/department/SelectDepartment.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/department/SelectDepartment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/select/SelectServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/select/SelectServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/student/InsertStudentServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/student/InsertStudentServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/student/SelectStudentServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/student/SelectStudentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/teacher/InsertTeacherServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/teacher/InsertTeacherServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/teacher/SelectTeacherServlet.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/servlet/teacher/SelectTeacherServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/test/ForTest.class" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/test/ForTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/bean/NumberToName.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/bean/NumberToName.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/bean/Page.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/bean/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/bean/User.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/bean/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/CourseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/CourseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/DepartmentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/DepartmentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/NumberToNameDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/NumberToNameDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/SelectCourseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/SelectCourseDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/StudentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/StudentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/TeacherDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/TeacherDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/CourseMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/CourseMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/DepartmentMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/DepartmentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/SelectCourseMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/SelectCourseMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/StudentMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/StudentMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/TeacherMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/TeacherMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/UserMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/CourseService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/CourseService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/DepartmentService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/DepartmentService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/SelectCourseService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/SelectCourseService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/StudentService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/StudentService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/TeacherService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/TeacherService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/LoginFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/LoginFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/LoginServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/DeleteCourseServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/DeleteCourseServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/InsertCourseServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/InsertCourseServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/SelectCourseServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/course/SelectCourseServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/department/InsertDepartmentServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/department/InsertDepartmentServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/department/SelectDepartment.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/department/SelectDepartment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/select/SelectServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/select/SelectServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/InsertStudentServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/InsertStudentServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/SelectStudentServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/SelectStudentServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/UpdateStudentServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/student/UpdateStudentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/teacher/InsertTeacherServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/teacher/InsertTeacherServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/teacher/SelectTeacherServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/teacher/SelectTeacherServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/servlet/user/SelectUserServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/servlet/user/SelectUserServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/test/ForTest.class" afterPath="$PROJECT_DIR$/target/classes/com/cgc/test/ForTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ClassSelection_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ClassSelection_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/BeiYi.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/BeiYi.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClassSelection.iml" afterPath="$PROJECT_DIR$/ClassSelection.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/bean/Page.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/bean/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/bean/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/bean/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/NumberToNameDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/NumberToNameDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/mapper/UserMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/service/DepartmentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/service/DepartmentService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/service/SelectCourseService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/service/SelectCourseService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/service/StudentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/service/StudentService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/service/TeacherService.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/service/TeacherService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/DeleteCourseServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/DeleteCourseServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/InsertCourseServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/InsertCourseServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/UpdateCourseServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/UpdateCourseServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/DeleteDepartmentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/DeleteDepartmentServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/InsertDepartmentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/InsertDepartmentServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/UpdateDepartmentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/UpdateDepartmentServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/DeleteSelectServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/DeleteSelectServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/InsertSelectServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/InsertSelectServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/UpdateSelectServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/UpdateSelectServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/DeleteStudentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/DeleteStudentServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/InsertStudentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/InsertStudentServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/UpdateStudentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/UpdateStudentServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/DeleteTeacherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/DeleteTeacherServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/InsertTeacherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/InsertTeacherServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/UpdateTeacherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/UpdateTeacherServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/SelectUserServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/SelectUserServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/UpdateUserServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/UpdateUserServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/begin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/begin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cgc/test/ForTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/cgc/test/ForTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/course.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/course.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/insertCourse.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/insertCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/updateCourse.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/updateCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/department.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/department.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/insertDepartment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/insertDepartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/insertSelectCourse.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/insertSelectCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/insertStudent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/insertStudent.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/Configuration.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/Configuration.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/CourseMapper.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/CourseMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/NumberToNameMapper.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/NumberToNameMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/SelectCourse.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/SelectCourse.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/Student.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/Student.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/TeacherMapper.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/TeacherMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/begin.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/begin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/classes/com/cgc/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/course.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/course.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/insertCourse.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/insertCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/updateCourse.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/course/updateCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/department/department.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/department/department.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/department/insertDepartment.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/department/insertDepartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/select/insertSelectCourse.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/select/insertSelectCourse.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/select/select.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/select/select.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/student/insertStudent.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/student/insertStudent.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/student/student.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/student/student.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/insertTeacher.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/insertTeacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/teacher.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/teacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/updateTeacher.jsp" afterPath="$PROJECT_DIR$/target/ClassSelection-1.0-SNAPSHOT/WEB-INF/jsp/teacher/updateTeacher.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/Configuration.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/Configuration.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/CourseMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/CourseMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/DepartmentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/NumberToNameMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/NumberToNameMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/SelectCourse.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/SelectCourse.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/Student.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/Student.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/TeacherMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/TeacherMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cgc/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/cgc/mapper/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -140,31 +197,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="student.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp">
+      <file leaf-file-name="Configuration.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="124" lean-forward="false" selection-start-line="11" selection-start-column="124" selection-end-line="11" selection-end-column="124" />
+            <state relative-caret-position="168">
+              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteStudentServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/DeleteStudentServlet.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teacher.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="12" column="131" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="131" />
+            <state relative-caret-position="250">
+              <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -175,9 +222,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -197,57 +244,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/BeginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/DeleteUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/InsertUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/UpdateUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/user.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/SelectUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/SelectCourseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/StudentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/TeacherService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/UpdateStudentServlet.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/insertCourse.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/insertDepartment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/updateDepartment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/updateCourse.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/insertSelectCourse.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/updateSelectCourse.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/InsertStudentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/updateStudent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/begin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/department.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/insertStudent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/DeleteCourseServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/UpdateCourseServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/InsertCourseServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/DeleteDepartmentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/InsertDepartmentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/UpdateDepartmentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/DeleteSelectServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/InsertSelectServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/UpdateSelectServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/DeleteTeacherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/InsertStudentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/InsertTeacherServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/UpdateTeacherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/insertDepartment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/insertSelectCourse.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/insertStudent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/test/ForTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/course.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/DepartmentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/SelectCourseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/service/TeacherService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/department.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/DeleteStudentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cgc/bean/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ehcache.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -307,6 +354,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,7 +407,90 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="department" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="select" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
@@ -375,53 +508,72 @@
               <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="teacher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassSelection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassSelection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cgc" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,6 +627,31 @@
       <option name="PACKAGE_NAME" value="com.cgc.test" />
       <option name="MAIN_CLASS_NAME" value="com.cgc.test.ForTest" />
       <option name="METHOD_NAME" value="courseTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ForTest.pageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.cgc.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ClassSelection" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.cgc.test" />
+      <option name="MAIN_CLASS_NAME" value="com.cgc.test.ForTest" />
+      <option name="METHOD_NAME" value="pageTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -785,19 +962,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.login" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.ForTest.courseTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ForTest.studentTest" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.ForTest.teacherTest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.ForTest.userTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ForTest.pageTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ForTest.userTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ForTest.studentTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ForTest.teacherTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ForTest.courseTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ForTest.pageTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ForTest.courseTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ForTest.userTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ForTest.studentTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ForTest.teacherTest" />
       </list>
     </recent_temporary>
   </component>
@@ -822,43 +1001,44 @@
       <workItem from="1510989466971" duration="972000" />
       <workItem from="1510997211368" duration="5430000" />
       <workItem from="1511009856800" duration="23313000" />
+      <workItem from="1511155508084" duration="37728000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ForTest_studentTest - 2017.11.09 at 22h 26m 18s.xml">
-      <configuration name="ForTest.studentTest" configurationId="JUnit" />
+    <history-entry file="ForTest_courseTest - 2017.11.21 at 09h 45m 11s.xml">
+      <configuration name="ForTest.courseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_teacherTest - 2017.11.08 at 23h 47m 47s.xml">
-      <configuration name="ForTest.teacherTest" configurationId="JUnit" />
+    <history-entry file="ForTest_courseTest - 2017.11.21 at 09h 46m 23s.xml">
+      <configuration name="ForTest.courseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_teacherTest - 2017.11.08 at 23h 48m 42s.xml">
-      <configuration name="ForTest.teacherTest" configurationId="JUnit" />
+    <history-entry file="ForTest_courseTest - 2017.11.21 at 09h 46m 52s.xml">
+      <configuration name="ForTest.courseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_teacherTest - 2017.11.08 at 23h 49m 00s.xml">
-      <configuration name="ForTest.teacherTest" configurationId="JUnit" />
+    <history-entry file="ForTest_courseTest - 2017.11.21 at 09h 49m 14s.xml">
+      <configuration name="ForTest.courseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_teacherTest - 2017.11.08 at 23h 51m 45s.xml">
-      <configuration name="ForTest.teacherTest" configurationId="JUnit" />
+    <history-entry file="ForTest_courseTest - 2017.11.21 at 09h 49m 39s.xml">
+      <configuration name="ForTest.courseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_teacherTest - 2017.11.08 at 23h 52m 08s.xml">
-      <configuration name="ForTest.teacherTest" configurationId="JUnit" />
+    <history-entry file="ForTest_pageTest - 2017.11.21 at 09h 50m 08s.xml">
+      <configuration name="ForTest.pageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_userTest - 2017.11.09 at 22h 30m 02s.xml">
-      <configuration name="ForTest.userTest" configurationId="JUnit" />
+    <history-entry file="ForTest_pageTest - 2017.11.21 at 10h 07m 49s.xml">
+      <configuration name="ForTest.pageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_userTest - 2017.11.09 at 22h 31m 48s.xml">
-      <configuration name="ForTest.userTest" configurationId="JUnit" />
+    <history-entry file="ForTest_pageTest - 2017.11.21 at 10h 07m 59s.xml">
+      <configuration name="ForTest.pageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_userTest - 2017.11.09 at 22h 35m 14s.xml">
-      <configuration name="ForTest.userTest" configurationId="JUnit" />
+    <history-entry file="ForTest_pageTest - 2017.11.21 at 10h 17m 08s.xml">
+      <configuration name="ForTest.pageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ForTest_userTest - 2017.11.09 at 22h 35m 35s.xml">
-      <configuration name="ForTest.userTest" configurationId="JUnit" />
+    <history-entry file="ForTest_pageTest - 2017.11.21 at 10h 26m 57s.xml">
+      <configuration name="ForTest.pageTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138660000" />
+    <option name="totallyTimeSpent" value="176388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -882,10 +1062,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3165939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47598255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609808" sideWeight="0.49563318" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20149253" sideWeight="0.49563318" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20469083" sideWeight="0.5043668" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -910,205 +1090,441 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/updateSelectCourse.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/UpdateSelectServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/CourseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="120">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/DepartmentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="96">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/user.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/DepartmentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="72">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/SelectUserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/CourseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        <state relative-caret-position="107">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/SelectCourseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/DepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/SelectCourseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+        <state relative-caret-position="120">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/SelectCourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/DepartmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/StudentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="144">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/mapper/TeacherMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/dao/TeacherDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/tomcat/apache-tomcat-9.0.0.M22/lib/servlet-api.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/TeacherService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="71" column="53" lean-forward="false" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+        <state relative-caret-position="-72">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/course.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510989400735" expanded="true" signature="647:1213" ph="SELECT * FRO... course" />
-            <marker date="1510989400735" expanded="true" signature="1612:1769" ph="DELETE FROM " />
-            <marker date="1510989400735" expanded="true" signature="1854:2050" ph="UPDATE cours... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/jquery-1.8.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/updateSelectCourse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/InsertUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/updateStudent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/begin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/updateCourse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/insertCourse.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/insertDepartment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/updateDepartment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="432">
+          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/department/department.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="528">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/insertSelectCourse.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2232">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-422">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="85" column="8" lean-forward="true" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/UpdateTeacherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <caret line="50" column="48" lean-forward="false" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/insertStudent.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/user/SelectUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/spring-cache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/service/CourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="86" column="42" lean-forward="true" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="70" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/NumberToName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/SelectCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <marker date="1511248463032" expanded="true" signature="612:699" ph="SELECT role the_user" />
+            <marker date="1511248463032" expanded="true" signature="768:817" ph="SELECT user_... the_user" />
+            <marker date="1511248463032" expanded="true" signature="903:964" ph="INSERT INTO the_user... " />
+            <marker date="1511248463032" expanded="true" signature="1039:1085" ph="DELETE FROM " />
+            <marker date="1511248463032" expanded="true" signature="1137:1283" ph="UPDATE the_u... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/TeacherMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <marker date="1511248463094" expanded="true" signature="1075:1103" ph="SELECT count... teacher" />
+            <marker date="1511248463094" expanded="true" signature="2628:4057" ph="SELECT * FRO... teacher" />
+            <marker date="1511248463094" expanded="true" signature="2628:4075" ph="SELECT * FRO... teacher" />
+            <marker date="1511248463094" expanded="true" signature="4589:4764" ph="DELETE FROM " />
+            <marker date="1511248463094" expanded="true" signature="4850:5049" ph="UPDATE teach... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/Student.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <marker date="1511248462923" expanded="true" signature="762:790" ph="SELECT count... student" />
+            <marker date="1511248462923" expanded="true" signature="1817:2883" ph="SELECT a.stu... student" />
+            <marker date="1511248462923" expanded="true" signature="1817:2901" ph="SELECT a.stu... student" />
+            <marker date="1511248462923" expanded="true" signature="3313:3488" ph="DELETE FROM " />
+            <marker date="1511248462923" expanded="true" signature="3574:3773" ph="UPDATE stude... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/SelectCourse.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <marker date="1511248463032" expanded="true" signature="995:1028" ph="SELECT count... selectcourse" />
+            <marker date="1511248463032" expanded="true" signature="1803:2473" ph="SELECT * FRO... selectcourse" />
+            <marker date="1511248463032" expanded="true" signature="1803:2490" ph="SELECT * FRO... selectcourse" />
+            <marker date="1511248463032" expanded="true" signature="2649:2767" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/NumberToNameMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <marker date="1511248463094" expanded="true" signature="390:428" ph="SELECT cours... course" />
+            <marker date="1511248463094" expanded="true" signature="515:565" ph="SELECT depar... department" />
+            <marker date="1511248463094" expanded="true" signature="649:690" ph="SELECT teach... teacher" />
+            <marker date="1511248463094" expanded="true" signature="774:815" ph="SELECT stude... student" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/DepartmentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <marker date="1511248463016" expanded="true" signature="942:973" ph="SELECT count... department" />
+            <marker date="1511248463016" expanded="true" signature="1752:2433" ph="SELECT * FRO... department" />
+            <marker date="1511248463016" expanded="true" signature="1752:2450" ph="SELECT * FRO... department" />
+            <marker date="1511248463016" expanded="true" signature="2545:2726" ph="DELETE FROM " />
+            <marker date="1511248463016" expanded="true" signature="2815:3023" ph="UPDATE depar... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/mapper/CourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1511248462969" expanded="true" signature="771:798" ph="SELECT count... course" />
+            <marker date="1511248462969" expanded="true" signature="1647:2402" ph="SELECT * FRO... course" />
+            <marker date="1511248462969" expanded="true" signature="1647:2427" ph="SELECT * FRO... course" />
+            <marker date="1511248462969" expanded="true" signature="3170:3319" ph="DELETE FROM " />
+            <marker date="1511248462969" expanded="true" signature="3404:3600" ph="UPDATE cours... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/cgc/Configuration.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
@@ -1116,210 +1532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/UpdateStudentServlet.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/InsertStudentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/SelectCourseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/UpdateCourseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/DeleteCourseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/course/InsertCourseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="58" lean-forward="false" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/DeleteDepartmentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="62" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/InsertDepartmentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="62" lean-forward="false" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/UpdateDepartmentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/department/SelectDepartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/SelectServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/DeleteSelectServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="64" lean-forward="true" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/InsertSelectServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/select/UpdateSelectServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="27" column="64" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/SelectStudentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/SelectTeacherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/DeleteTeacherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/InsertTeacherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/teacher/UpdateTeacherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/course/course.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/select/select.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/updateTeacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/insertTeacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="44" column="108" lean-forward="false" selection-start-line="44" selection-start-column="108" selection-end-line="44" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/teacher/teacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="12" column="131" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student/student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="124" lean-forward="false" selection-start-line="11" selection-start-column="124" selection-end-line="11" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cgc/servlet/student/DeleteStudentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="93" column="19" lean-forward="false" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
           <folding />
         </state>
       </provider>
