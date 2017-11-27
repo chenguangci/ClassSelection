@@ -13,14 +13,13 @@ import java.util.Map;
 @Service(value = "courseService")
 public class CourseService {
     private CourseDao courseDao = new CourseDao();
-    private Map<String,String> maps;
+    private List<Map<String,String>> maps;
 
     public int courseNumber(String[] info) {
         Course course = new Course();
         /*为实体赋值*/
         course.setCourseNo(info[0]);
         course.setCourseName(info[1]);
-        /*根据传递过来的课程名，找到对应的课程编号*/
         course.setCoursePriorNo(info[2]);
         if (info[3]!=null&&!"".equals(info[3].trim())&&info[3].matches("^\\d+$"))
             course.setCourseCredit(Integer.parseInt(info[3]));
@@ -30,31 +29,13 @@ public class CourseService {
     }
     /**
      * 获取编号和名称
-     * @param name 课程名
      * @return 课程名对应的Number
      */
-    private String getCourseNoByName(String name) {
-        if (name == null)
-            return null;
+    public List<Map<String,String>> getCourseNoAndName() {
         NumberToNameDao numberToNameDao = new NumberToNameDao();
-        String number = null;
-        if (maps != null) {
-            for (Map.Entry<String,String> entry : maps.entrySet()){
-                if (name.equals(entry.getValue())){
-                    number = entry.getKey();
-                    break;
-                }
-            }
-        } else {
-            maps = numberToNameDao.CourseNoToName();
-            for (Map.Entry<String,String> entry : maps.entrySet()){
-                if (name.equals(entry.getValue())){
-                    number = entry.getKey();
-                    break;
-                }
-            }
-        }
-        return number;
+        if (maps == null)
+            maps = numberToNameDao.CourseNoAndName();
+        return maps;
     }
     /**
      * 查询课表信息
@@ -65,7 +46,6 @@ public class CourseService {
         /*为实体赋值*/
         course.setCourseNo(dates[0]);
         course.setCourseName(dates[1]);
-        /*根据传递过来的课程名，找到对应的课程编号*/
         course.setCoursePriorNo(dates[2]);
         if (dates[3]!=null&&!"".equals(dates[3].trim())&&dates[3].matches("^\\d+$"))
             course.setCourseCredit(Integer.parseInt(dates[3]));

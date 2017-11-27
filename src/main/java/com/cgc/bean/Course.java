@@ -7,7 +7,16 @@ public class Course implements Serializable{
     private String courseNo;
     private String courseName;
     private String coursePriorNo;
+    private String coursePriorName;
     private Integer courseCredit;
+
+    public String getCoursePriorName() {
+        return coursePriorName;
+    }
+
+    public void setCoursePriorName(String coursePriorName) {
+        this.coursePriorName = coursePriorName;
+    }
 
     public String getCourseNo() {
         return courseNo;

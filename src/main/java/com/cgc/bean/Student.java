@@ -10,6 +10,15 @@ public class Student implements Serializable {
     private String studentSex;
     private Integer studentAge;
     private String  departmentNo ;
+    private String departmentName;
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
 
     public String getStudentNo() {
         return studentNo;

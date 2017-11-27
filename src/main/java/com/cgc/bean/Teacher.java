@@ -13,6 +13,33 @@ public class Teacher implements Serializable {
     private String courseNo1;
     private String courseNo2;
     private String courseNo3;
+    private String courseName1;
+    private String courseName2;
+    private String courseName3;
+
+    public String getCourseName1() {
+        return courseName1;
+    }
+
+    public void setCourseName1(String courseName1) {
+        this.courseName1 = courseName1;
+    }
+
+    public String getCourseName2() {
+        return courseName2;
+    }
+
+    public void setCourseName2(String courseName2) {
+        this.courseName2 = courseName2;
+    }
+
+    public String getCourseName3() {
+        return courseName3;
+    }
+
+    public void setCourseName3(String courseName3) {
+        this.courseName3 = courseName3;
+    }
 
     public String getTeacherNo() {
         return teacherNo;

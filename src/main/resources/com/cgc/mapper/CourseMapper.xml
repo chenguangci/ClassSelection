@@ -7,6 +7,7 @@
         <result column="courseName" property="courseName"/>
         <result column="coursePriorNo" property="coursePriorNo"/>
         <result column="courseCredit" property="courseCredit"/>
+        <result column="course_prior_name" property="coursePriorName"/>
     </resultMap>
     <!--<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>-->
     <cache eviction="FIFO"
@@ -31,22 +32,24 @@
         </where>
     </select>
     <!--按条件查询-->
-    <select id="selectCourse" parameterType="com.cgc.bean.Course" resultType="com.cgc.bean.Course">
-        SELECT * FROM course
+    <select id="selectCourse" parameterType="com.cgc.bean.Course" resultMap="course">
+        SELECT a.courseNo,a.courseName,a.coursePriorNo,b.courseName course_prior_name,a.courseCredit FROM course a
+        LEFT JOIN course AS b ON b.courseNo = a.coursePriorNo
         <where>
             <if test="course.courseNo!=null and !&quot;&quot;.equals(course.courseNo.trim())">
-                AND courseNo LIKE '%' #{course.courseNo} '%'
+                AND a.courseNo LIKE '%' #{course.courseNo} '%'
             </if>
             <if test="course.courseName!=null and !&quot;&quot;.equals(course.courseName.trim())">
-                AND courseName LIKE '%' #{course.courseName} '%'
+                AND a.courseName LIKE '%' #{course.courseName} '%'
             </if>
             <if test="course.coursePriorNo!=null and !&quot;&quot;.equals(course.coursePriorNo.trim())">
-                AND coursePriorNo LIKE '%' #{course.coursePriorNo} '%'
+                AND a.coursePriorNo LIKE '%' #{course.coursePriorNo} '%'
             </if>
             <if test="course.courseCredit!=null">
-                AND courseCredit = #{course.courseCredit}
+                AND a.courseCredit = #{course.courseCredit}
             </if>
         </where>
+
         ORDER BY courseNo
         LIMIT #{limit},5
     </select>

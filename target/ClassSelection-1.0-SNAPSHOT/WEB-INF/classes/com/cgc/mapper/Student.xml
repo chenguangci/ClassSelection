@@ -8,6 +8,7 @@
         <result column="studentSex" property="studentSex"/>
         <result column="studentAge" property="studentAge"/>
         <result column="departmentNo" property="departmentNo"/>
+        <result column="departmentName" property="departmentName"/>
     </resultMap>
     <cache eviction="FIFO"
            size="128"
@@ -35,7 +36,8 @@
     </select>
     <!--按条件查询-->
     <select id="selectStudents" parameterType="com.cgc.bean.Student" resultMap="student">
-        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo FROM student a
+        SELECT a.studentNo studentNo,a.studentName studentName,a.studentSex studentSex,a.studentAge studentAge,a.departmentNo,d.departmentName departmentName FROM student a
+        LEFT JOIN department AS d ON a.departmentNo = d.departmentNo
         <where>
             <if test="student.studentNo!=null and !&quot;&quot;.equals(student.studentNo.trim())">
                 AND a.studentNo LIKE '%' #{student.studentNo} '%'
@@ -53,7 +55,7 @@
                 AND a.departmentNo LIKE '%' #{student.departmentNo} '%'
             </if>
         </where>
-        ORDER BY studentNo LIMIT #{limit},20
+        ORDER BY studentNo LIMIT #{limit},10
     </select>
 
     <insert id="insertStudents" parameterType="java.util.List">

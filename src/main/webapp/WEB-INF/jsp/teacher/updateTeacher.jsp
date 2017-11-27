@@ -6,6 +6,7 @@
     <title>更新教师信息</title>
 </head>
 <body>
+<a href="selectTeacher.action">返回</a>
 <%
     Teacher teacher = ((List<Teacher>) request.getAttribute("teachers")).get(0);
 %>

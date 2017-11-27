@@ -6,6 +6,7 @@
     <title>更新选课信息</title>
 </head>
 <body>
+<a href="selectSelectCourse.action">返回</a>
 <%
     SelectCourse selectCourse = ((List<SelectCourse>)request.getAttribute("selects")).get(0);
 %>

@@ -5,14 +5,15 @@ import com.cgc.mapper.NumberToNameMapper;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class NumberToNameDao {
     private DBAccess dbAccess = DBAccess.getInstance();
 
-    public Map<String,String> CourseNoToName(){
-        Map<String,String> courses = new HashMap<String, String>();
+    public List<Map<String,String>> CourseNoAndName(){
+        List<Map<String,String>> courses = new ArrayList<Map<String,String>>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
@@ -28,8 +29,8 @@ public class NumberToNameDao {
         return courses;
     }
 
-    public Map<String,String> DepartmentNoToName(){
-        Map<String,String> departments = new HashMap<String, String>();
+    public List<Map<String,String>> DepartmentAndToName(){
+        List<Map<String,String>> departments = new ArrayList<Map<String, String>>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
@@ -45,8 +46,8 @@ public class NumberToNameDao {
         return departments;
     }
 
-    public Map<String,String> StudentNoToName(){
-        Map<String,String> students = new HashMap<String, String>();
+    public List<Map<String,String>> StudentNoAndName(){
+        List<Map<String,String>> students = new ArrayList<Map<String, String>>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
@@ -62,8 +63,8 @@ public class NumberToNameDao {
         return students;
     }
 
-    public Map<String,String> TeacherNoToName(){
-        Map<String,String> teachers = new HashMap<String, String>();
+    public List<Map<String,String>> TeacherNoAndName(){
+        List<Map<String,String>> teachers = new ArrayList<Map<String, String>>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();

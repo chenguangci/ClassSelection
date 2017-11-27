@@ -1,26 +1,29 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: BeiYi
-  Date: 2017/11/7
-  Time: 21:10
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>欢迎</title>
-    <style type="text/css">
-        form{
-            text-align: center;
-        }
-    </style>
+    <link href="${path}resource/css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="login.action" method="post">
-    用户名：<input type="text" name="username"><br>
-    密&nbsp;&nbsp;码：<input type="password" name="password"><br>
-    <input type="submit" value="提交">
-</form>
+<img src="resource/image/title.png">
+<div id="form-main">
+    <div id="form-div">
+        <form class="form" id="form1" action="login.action" method="post">
+            <p class="name">
+                <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="用户名" id="name" />
+            </p>
+            <p class="password">
+                <input name="password" type="password" class="validate[required,custom[email]] feedback-input" id="password" placeholder="密码" />
+            </p>
 
+            <button onclick="sub2()" onmouseover="style.backgroundImage='url(/resource/image/login2.png)';"
+                    onmouseout="style.backgroundImage='url(/resource/image/login.png)';"
+                    style="background: url(/resource/image/login.png);border: 0;width: 127px;height: 60px">
+            </button>
+
+        </form>
+    </div>
 </body>
 </html>

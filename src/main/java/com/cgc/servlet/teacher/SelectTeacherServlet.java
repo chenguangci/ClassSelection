@@ -33,7 +33,7 @@ public class SelectTeacherServlet extends HttpServlet {
         Info[6] = request.getParameter("course");
         request.setAttribute("teacherNo",Info[0]);
         request.setAttribute("teacherName",Info[1]);
-        request.setAttribute("sex",Info[2]);
+        request.setAttribute("teacherSex",Info[2]);
         request.setAttribute("teacherAge",Info[3]);
         request.setAttribute("education",Info[4]);
         request.setAttribute("title",Info[5]);

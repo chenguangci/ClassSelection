@@ -12,6 +12,7 @@
     <title>更新院系信息</title>
 </head>
 <body>
+<a href="selectDepartment.action">返回</a>
 <%
     Department department = ((List<Department>)request.getAttribute("departments")).get(0);
 %>

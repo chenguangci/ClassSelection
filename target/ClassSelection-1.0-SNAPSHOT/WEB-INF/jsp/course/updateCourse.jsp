@@ -12,6 +12,7 @@
     <title>更新课程信息</title>
 </head>
 <body>
+<a href="selectCourse.action">返回</a>
     <%
         Course course = ((List<Course>)request.getAttribute("courses")).get(0);
     %>
@@ -19,7 +20,7 @@
         <input type="hidden" name="courseNo" value="<%=course.getCourseNo()%>">
         课程号：<%=course.getCourseNo()%><br>
         课程名称：<input type="text" name="courseName" value="<%=course.getCourseName()%>"><br>
-        先修课程号：<input type="text" name="coursePriorNo" value="<%=course.getCoursePriorNo()%>"><br>
+        先修课程号：<input type="text" name="coursePriorNo" value="<%=course.getCoursePriorNo()==null?"":course.getCoursePriorNo()%>"><br>
         课程学分：<input type="text" name="courseCredit" value="<%=course.getCourseCredit()%>"><br>
         <input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
     </form>

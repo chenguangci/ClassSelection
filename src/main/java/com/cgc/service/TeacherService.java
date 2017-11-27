@@ -1,6 +1,7 @@
 package com.cgc.service;
 
 import com.cgc.bean.Teacher;
+import com.cgc.dao.NumberToNameDao;
 import com.cgc.dao.TeacherDao;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,25 @@ public class TeacherService {
         teacher.setEducation(Info[4]);
         teacher.setProfessionalTitle(Info[5]);
         teacher.setCourseNo1(Info[6]);
-        return teacherDao.selectTeachers(teacher,limit);
+        //查找教师信息
+        List<Teacher> teachers = teacherDao.selectTeachers(teacher,limit);
+
+        //找出教师的授课编号对应的课程名
+        NumberToNameDao dao = new NumberToNameDao();
+        List<Map<String, String>> maps = dao.CourseNoAndName();
+        Map<String, String> courses = new HashMap<String, String>();
+        for (Map<String, String> map : maps) {
+            courses.put(map.get("courseNo"), map.get("courseName"));
+        }
+        for (Teacher teacher1 : teachers) {
+            if (teacher1.getCourseNo1() != null)
+                teacher1.setCourseName1(courses.get(teacher1.getCourseNo1()));
+            if (teacher1.getCourseNo2() != null)
+                teacher1.setCourseName2(courses.get(teacher1.getCourseNo2()));
+            if (teacher1.getCourseNo3() != null)
+                teacher1.setCourseName3(courses.get(teacher1.getCourseNo3()));
+        }
+        return teachers;
     }
     /**
      * 插入

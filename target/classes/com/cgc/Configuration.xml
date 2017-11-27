@@ -28,5 +28,6 @@
         <mapper resource="com/cgc/mapper/Student.xml"/>
         <mapper resource="com/cgc/mapper/TeacherMapper.xml"/>
         <mapper resource="com/cgc/mapper/UserMapper.xml"/>
+        <mapper resource="com/cgc/mapper/ReportForm.xml"/>
     </mappers>
 </configuration>

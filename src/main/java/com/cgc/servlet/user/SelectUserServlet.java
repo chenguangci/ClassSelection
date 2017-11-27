@@ -1,7 +1,6 @@
 package com.cgc.servlet.user;
 
 import com.cgc.service.UserService;
-import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
+
+/**
+ * 用户权限
+ * 1：查看
+ * 2：查看+下载
+ * 3：查看+下载+报表
+ * 4：查看+下载+报表+修改+删除
+ * 5：用户信息修改
+ */
 @WebServlet(value = "/selectUser.action")
 public class SelectUserServlet extends HttpServlet {
     @Override

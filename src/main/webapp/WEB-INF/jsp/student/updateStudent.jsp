@@ -1,11 +1,13 @@
 <%@ page import="com.cgc.bean.Student" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>更新学生信息</title>
 </head>
 <body>
+<a href="selectStudent.action">返回</a>
     <%
         Student student = ((List<Student>) request.getAttribute("students")).get(0);
     %>
@@ -28,7 +30,25 @@
         %>
         </select><br>
         年龄：<input type="text" name="age" value="<%=student.getStudentAge()%>"><br>
-        系编号：<input type="text" name="departmentNo" value="<%=student.getDepartmentNo()%>"><br>
+        系编号：
+        <%
+            Map<String,String> department = (Map<String, String>) request.getAttribute("department");
+        %>
+        <select name="departmentNo">
+            <%
+                for (Map.Entry entry:department.entrySet()) {
+                    if (student.getDepartmentNo().equals(entry.getKey())){
+            %>
+                    <option value="<%=entry.getKey()%>" selected><%=entry.getValue()%></option>
+            <%
+                    }else{
+            %>
+                    <option value="<%=entry.getKey()%>"><%=entry.getValue()%></option>
+            <%
+                }
+            }
+            %>
+        </select><br>
         <input type="submit" value="提交">&nbsp;&nbsp;<input type="reset" value="重置">
     </form>
 </body>

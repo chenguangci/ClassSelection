@@ -7,6 +7,9 @@
         <result column="courseNo" property="courseNo"/>
         <result column="teacherNo" property="teacherNo"/>
         <result column="grade" property="grade"/>
+        <result column="studentName" property="studentName"/>
+        <result column="teacherName" property="teacherName"/>
+        <result column="courseName" property="courseName"/>
     </resultMap>
     <cache eviction="FIFO"
            size="128"
@@ -33,20 +36,23 @@
         </where>
     </select>
     <!--按条件查询-->
-    <select id="selectSelectCourse" parameterType="com.cgc.bean.SelectCourse" resultType="com.cgc.bean.SelectCourse">
-        SELECT * FROM selectcourse
+    <select id="selectSelectCourse" parameterType="com.cgc.bean.SelectCourse" resultMap="selectCourse">
+        SELECT a.studentNo,a.courseNo,a.teacherNo,b.studentName studentName,c.courseName courseName,d.teacherName teacherName FROM selectcourse a
+        LEFT JOIN student AS b ON a.studentNo = b.studentNo
+        LEFT JOIN course AS c ON a.courseNo = c.courseNo
+        LEFT JOIN teacher AS d ON a.teacherNo = d.teacherNo
         <where>
             <if test="selectCourse.studentNo!=null and !&quot;&quot;.equals(selectCourse.studentNo.trim())">
-                AND studentNo LIKE '%' #{selectCourse.studentNo} '%'
+                AND a.studentNo LIKE '%' #{selectCourse.studentNo} '%'
             </if>
             <if test="selectCourse.courseNo!=null and !&quot;&quot;.equals(selectCourse.courseNo.trim())">
-                AND courseNo LIKE '%' #{selectCourse.courseNo} '%'
+                AND a.courseNo LIKE '%' #{selectCourse.courseNo} '%'
             </if>
             <if test="selectCourse.teacherNo!=null and !&quot;&quot;.equals(selectCourse.teacherNo.trim())">
-                AND teacherNo LIKE '%' #{selectCourse.teacherNo} '%'
+                AND a.teacherNo LIKE '%' #{selectCourse.teacherNo} '%'
             </if>
         </where>
-        ORDER BY studentNo LIMIT #{limit},5
+        ORDER BY a.studentNo LIMIT #{limit},5
     </select>
 
     <delete id="deleteSelectCourses" parameterType="java.util.List">

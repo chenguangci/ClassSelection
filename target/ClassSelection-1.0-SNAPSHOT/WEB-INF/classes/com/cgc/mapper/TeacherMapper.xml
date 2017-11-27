@@ -12,6 +12,9 @@
         <result column="courseNo1" property="courseNo1"/>
         <result column="courseNo2" property="courseNo2"/>
         <result column="courseNo3" property="courseNo3"/>
+        <result column="courseName1" property="courseName1"/>
+        <result column="courseName2" property="courseName2"/>
+        <result column="courseName3" property="courseName3"/>
     </resultMap>
     <cache eviction="FIFO"
            size="128"
@@ -46,7 +49,8 @@
     </select>
     <!--按条件查询-->
     <select id="selectTeachers" parameterType="com.cgc.bean.Teacher" resultType="com.cgc.bean.Teacher">
-        SELECT * FROM teacher
+        SELECT a.teacherNo,a.teacherName,a.teacherSex,a.teacherAge,a.education,a.professionalTitle,a.courseNo1,a.courseNo2,a.courseNo3
+        FROM teacher a
         <where>
             <if test="teacher.teacherNo!=null and !&quot;&quot;.equals(teacher.teacherNo.trim())">
                 AND teacherNo LIKE '%' #{teacher.teacherNo} '%'

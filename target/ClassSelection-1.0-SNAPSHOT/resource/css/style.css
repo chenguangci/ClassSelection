@@ -1,0 +1,113 @@
+html { overflow-y: scroll; }
+body {
+    align-content: center;
+    text-align: center;
+    background: #ffffff ;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1;
+    color: #585858;
+    padding: 22px 10px 55px;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong, b { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; border: 0 }
+img { border: 0; max-width: 100%; }
+
+h1 {
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 2.5em;
+
+    text-align: center;
+    margin: 0 auto 15px;
+}
+#keywords {
+    font-size: 18px;
+    margin: 0 auto 15px;
+}
+#keywords thead {
+    cursor: pointer;
+    background: #c9dff0;
+}
+#keywords thead tr th {
+    font-weight: bold;
+    padding: 12px 30px 12px 42px;
+}
+#keywords thead tr th span {
+    padding-right: 20px;
+    background: no-repeat 100% 100%;
+}
+#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+    background: #acc8dd;
+}
+#keywords tbody tr td {
+    background: #fefefefe;
+    text-align: center;
+    padding: 10px 6px;
+}
+
+.basic-slide {
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 150px;
+    padding: 3px;
+    font-family: "Open Sans", sans;
+    font-weight: normal;
+    color: #585858;
+    background: #efefef;
+    font-size: 15px;
+    outline: 0;
+    text-indent: 30px;
+}
+.basic-slide:focus,
+.basic-slide:active {
+    color: #377D6A;
+    text-indent: 0;
+    background: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+h2.left_top{
+    position: relative;
+    left: -390px;
+}
+div.left{
+    position: relative;
+    left: -800px;
+}
+
+/*下拉框样式*/
+.styled-select{
+    background: #efefef;
+    width: 180px;
+    padding: 3px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 29px;
+    -webkit-appearance: none; /*for chrome*/
+}
+#sex{
+    background: #efefef;
+    width: 100px;
+    padding: 3px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 29px;
+    -webkit-appearance: none;
+}
+.mySelect{
+    background: #efefef;
+    width: 100px;
+    padding: 3px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 29px;
+    -webkit-appearance: none; /*for chrome*/
+}
+
