@@ -23,7 +23,7 @@
             <if test="course.courseName!=null and !&quot;&quot;.equals(course.courseName.trim())">
                 AND courseName LIKE '%' #{course.courseName} '%'
             </if>
-            <if test="course.coursePriorNo!=null and !&quot;&quot;.equals(course.coursePriorNo.trim())">
+            <if test="course.coursePriorNo!=null and !&quot;&quot;.equals(course.coursePriorNo.trim())and !&quot;&quot;.equals(course.coursePriorNo.trim())">
                 AND coursePriorNo LIKE '%' #{course.coursePriorNo} '%'
             </if>
             <if test="course.courseCredit!=null">
@@ -48,24 +48,18 @@
             <if test="course.courseCredit!=null">
                 AND a.courseCredit = #{course.courseCredit}
             </if>
+            <if test="true">
+                AND a.courseNo != '0000'
+            </if>
         </where>
 
         ORDER BY courseNo
         LIMIT #{limit},5
     </select>
 
-    <insert id="insertCourses" parameterType="java.util.List">
+    <insert id="insertCourses" parameterType="com.cgc.bean.Course">
         INSERT INTO course VALUES
-            <foreach collection="list" item="course" separator=",">
-                <choose>
-                    <when test="coursePriorNo==null||&quot;&quot;.equals(coursePriorNo.trim())">
-                        (#{course.courseNo},#{course.courseName},NULL ,#{course.courseCredit})
-                    </when>
-                    <otherwise>
-                        (#{course.courseNo},#{course.courseName},#{course.coursePriorNo},#{course.courseCredit})
-                    </otherwise>
-                </choose>
-            </foreach>
+            (#{courseNo},#{courseName},#{coursePriorNo},#{courseCredit})
     </insert>
 
     <delete id="deleteCoursesById" parameterType="java.util.List">

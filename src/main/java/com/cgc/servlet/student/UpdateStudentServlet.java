@@ -26,10 +26,17 @@ public class UpdateStudentServlet extends HttpServlet {
         Info[3] = request.getParameter("age");
         Info[4] = request.getParameter("departmentNo");
         StudentService service = new StudentService();
+        response.setContentType("text/javascript;charset=utf-8");
         if (service.updateStudent(Info)) {
-            response.sendRedirect("/selectStudent.action");
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改成功\"}");
+            out.flush();
+            out.close();
         } else {
-            //失败
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改失败，请查看输入的信息是否有误\"}");
+            out.flush();
+            out.close();
         }
     }
 }

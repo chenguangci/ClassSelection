@@ -33,16 +33,18 @@ public class DepartmentService {
     /**
      * 录入系信息
      */
-    public boolean insertDepartments(String[][] Info){
-        List<Department> departments = new ArrayList<Department>();
-        for (String[] info1:Info){
+    public int[] insertDepartments(String[][] Info){
+        int[] total = new int[Info.length];
+        for (int i=0; i< Info.length; i++){
             Department department = new Department();
-            department.setDepartmentNo(info1[0]);
-            department.setDepartmentName(info1[1]);
-            department.setManager(info1[2]);
-            departments.add(department);
+            department.setDepartmentNo(Info[i][0]);
+            department.setDepartmentName(Info[i][1]);
+            department.setManager(Info[i][2]);
+            if (departmentDao.insertDepartments(department)){
+                total[i] = 1;
+            }
         }
-        return departmentDao.insertDepartments(departments);
+        return total;
     }
     /**
      * 删除系信息

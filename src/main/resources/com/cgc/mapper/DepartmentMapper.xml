@@ -11,11 +11,9 @@
            size="128"
            readOnly="true"
            flushInterval="60000"/>
-    <insert id="insertDepartments" parameterType="java.util.List">
+    <insert id="insertDepartments" parameterType="com.cgc.bean.Department">
         INSERT INTO department VALUES
-            <foreach collection="list" item="item" separator=",">
-                (#{item.departmentNo},#{item.departmentName},#{item.manager})
-            </foreach>
+        (#{departmentNo},#{departmentName},#{manager})
     </insert>
     <select id="departmentNumber" resultType="java.lang.Integer">
         SELECT count(*) FROM department

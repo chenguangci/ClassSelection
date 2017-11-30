@@ -1,0 +1,51 @@
+        
+        body {
+            background: #acc8dd;
+            /*background: url(/resource/image/background.png);*/
+            background-size: 100%;
+        }
+
+        body .container {width: 80%; margin: 0 auto;padding-top: 150px}
+
+        .col4 {width: 33.333%;float: left; position: relative; text-align: center;}
+        .col4 .box-fx {background-color:rgba(220,220,220,0.6); margin: 20px; padding: 50px;}
+        .center {margin: 0 auto;}
+        .transition {-webkit-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease;  transition: all .5s ease;}
+
+        .btn {padding: 15px; text-transform: uppercase; display: inline-block; line-height: 0; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none;}
+        
+        .btn-fx1 {margin: 0 15px;padding: 10px; background-color: #2a232c; color: #fff; animation: button1 1s ease infinite;}
+        .btn-fx1:hover, .btn-fx1:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        .btn-fx2 {margin: 0 15px; padding: 10px;background-color: #2a232c; color: #fff; animation: button2 1s ease infinite;}
+        .btn-fx2:hover, .btn-fx1:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        .btn-fx3 {margin: 0 15px; background-color: #2a232c; color: #fff; animation: button3 1s ease infinite;}
+        .btn-fx3:hover, .btn-fx2:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        .btn-fx4 {margin: 0 15px; background-color: #2a232c; color: #fff; animation: button4 1s ease infinite;}
+        .btn-fx4:hover, .btn-fx2:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        .btn-fx5 {margin: 0 15px; background-color: #2a232c; color: #fff; animation: button5 1s ease infinite;}
+        .btn-fx5:hover, .btn-fx2:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        .btn-fx6 {margin: 0 15px; background-color: #2a232c; color: #fff; animation: button6 1s ease infinite;}
+        .btn-fx6:hover, .btn-fx2:focus {background-color: #602a8f; animation: hoverfx 1s ease 1;}
+        
+        @keyframes hoverfx {
+            0% {-moz-transform: scale(1); -webkit-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1);}
+            50% {-moz-transform: scale(.9); -webkit-transform: scale(.9); -o-transform: scale(.9); -ms-transform: scale(.9); transform: scale(.9);}
+            100% {-moz-transform: scale(1); -webkit-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1);}
+        }
+        
+        
+        
+        @media screen and (max-width: 991px) {
+            .col4 {width: 50%;}
+            .fx5 a .item h4 {font-size: 13px;}
+        }   
+        
+        @media screen and (max-width: 580px) {
+            .col4 {width: 100%;}
+        }
+

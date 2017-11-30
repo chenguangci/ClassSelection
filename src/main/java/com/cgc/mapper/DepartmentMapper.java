@@ -11,7 +11,7 @@ public interface DepartmentMapper {
     /*按条件查询*/
     List<Department> selectDepartment(@Param("department") Department department, @Param("limit") int limit);
     /*录入系别信息*/
-    void insertDepartments(List<Department> departments);
+    void insertDepartments(Department department);
     /*删除系别信息*/
     void deleteDepartmentsById(List<String> ids);
     /*更新系别信息*/

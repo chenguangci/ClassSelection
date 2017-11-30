@@ -15,11 +15,9 @@
            size="128"
            readOnly="true"
            flushInterval="60000"/>
-    <insert id="insertSelectCourses" parameterType="java.util.List">
+    <insert id="insertSelectCourses" parameterType="com.cgc.bean.SelectCourse">
         INSERT INTO selectcourse VALUES
-            <foreach collection="list" item="item" separator=",">
-                (#{item.studentNo},#{item.courseNo},#{item.teacherNo},#{item.grade})
-            </foreach>
+        (#{studentNo},#{courseNo},#{teacherNo},#{grade})
     </insert>
     <select id="selectNumber" resultType="java.lang.Integer">
         SELECT count(*) FROM selectcourse

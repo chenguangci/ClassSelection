@@ -46,6 +46,9 @@ public class CourseService {
         /*为实体赋值*/
         course.setCourseNo(dates[0]);
         course.setCourseName(dates[1]);
+        if ("0000".equals(dates[2])){
+            dates[2] = null;
+        }
         course.setCoursePriorNo(dates[2]);
         if (dates[3]!=null&&!"".equals(dates[3].trim())&&dates[3].matches("^\\d+$"))
             course.setCourseCredit(Integer.parseInt(dates[3]));
@@ -56,24 +59,27 @@ public class CourseService {
     /**
      * 录入课表信息
      */
-    public boolean insertCourses(String[][] dates) {
-
-        List<Course> courses = new ArrayList<Course>();
-
-        for (String[] date : dates){
+    public int[] insertCourses(String[][] dates) {
+        int[] total = new int[dates.length];
+        for (int i=0; i<dates.length; i++){
+            String[] date = dates[i];
             Course course = new Course();
             /*为实体赋值*/
             course.setCourseNo(date[0]);
             course.setCourseName(date[1]);
+            if (date[2]==null || "".equals(date[2].trim()))
+                date[2] = "0000";
             course.setCoursePriorNo(date[2]);
             if (date[3]!=null&&!"".equals(date[3].trim())&&date[3].matches("^\\d+$"))
                 course.setCourseCredit(Integer.parseInt(date[3]));
             else
                 course.setCourseCredit(null);
-            courses.add(course);
+            if (courseDao.insertCourses(course)){
+                total[i] = 1;
+            }
         }
 
-        return courseDao.insertCourses(courses);
+        return total;
     }
     /**
      * 删除课表信息
@@ -88,6 +94,8 @@ public class CourseService {
         Map<String,Object> course = new HashMap<String,Object>();
         course.put("courseNo",dates[0]);
         course.put("courseName",dates[1]);
+        if (dates[2]==null || "".equals(dates[2].trim()))
+            dates[2] = "0000";
         course.put("coursePriorNo",dates[2]);
         if (dates[3]!=null&&dates[3].matches("^\\d+$"))
             course.put("courseCredit",dates[3]);

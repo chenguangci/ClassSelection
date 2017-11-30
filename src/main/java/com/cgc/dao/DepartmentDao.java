@@ -51,12 +51,12 @@ public class DepartmentDao {
     /**
      * 录入系信息
      */
-    public boolean insertDepartments(List<Department> departments){
+    public boolean insertDepartments(Department department){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
-            departmentMapper.insertDepartments(departments);
+            departmentMapper.insertDepartments(department);
             return true;
         } catch (Exception e) {
             return false;

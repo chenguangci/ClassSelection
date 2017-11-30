@@ -39,21 +39,23 @@ public class StudentService {
     /**
      * 录入学生信息
      */
-    public boolean insertStudents(String[][] Info){
-        List<Student> students = new ArrayList<Student>();
-        for (String [] info1:Info){
+    public int[] insertStudents(String[][] Info){
+        int[] total = new int[Info.length];
+        for (int i=0; i<Info.length; i++){
             Student student = new Student();
-            student.setStudentNo(info1[0]);
-            student.setStudentName(info1[1]);
-            student.setStudentSex(info1[2]);
-            if (info1[3]!=null&&!"".equals(info1[3].trim())&&info1[3].matches("^\\d+$"))
-                student.setStudentAge(Integer.parseInt(info1[3]));
+            student.setStudentNo(Info[i][0]);
+            student.setStudentName(Info[i][1]);
+            student.setStudentSex(Info[i][2]);
+            if (Info[i][3]!=null&&!"".equals(Info[i][3].trim())&&Info[i][3].matches("^\\d+$"))
+                student.setStudentAge(Integer.parseInt(Info[i][3]));
             else
                 student.setStudentAge(null);
-            student.setDepartmentNo(info1[4]);
-            students.add(student);
+            student.setDepartmentNo(Info[i][4]);
+            if (studentDao.insertStudents(student)) {
+                total[i] = 1;
+            }
         }
-        return studentDao.insertStudents(students);
+        return total;
     }
     /**
      * 删除学生信息

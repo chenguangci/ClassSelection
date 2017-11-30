@@ -7,7 +7,7 @@
     <link href="${path}resource/css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<img src="resource/image/title.png">
+<img src="${path}resource/image/title.png">
 <div id="form-main">
     <div id="form-div">
         <form class="form" id="form1" action="login.action" method="post">
@@ -25,5 +25,6 @@
 
         </form>
     </div>
+</div>
 </body>
 </html>

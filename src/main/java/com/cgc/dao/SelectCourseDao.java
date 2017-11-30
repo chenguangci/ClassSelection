@@ -50,12 +50,12 @@ public class SelectCourseDao {
     /**
      * 录入选课信息
      */
-    public boolean insertSelectCourses(List<SelectCourse> selectCourses) {
+    public boolean insertSelectCourses(SelectCourse selectCourse) {
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
-            selectCourseMapper.insertSelectCourses(selectCourses);
+            selectCourseMapper.insertSelectCourses(selectCourse);
             return true;
         } catch (Exception e) {
             return false;

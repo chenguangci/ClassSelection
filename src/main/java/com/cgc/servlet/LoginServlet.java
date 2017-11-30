@@ -14,13 +14,19 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        if (request.getParameter("out")!=null) {
+            session.removeAttribute("username");
+            session.removeAttribute("password");
+            session.removeAttribute("role");
+            request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request,response);
+        }
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (username!=null && password!=null && !"".equals(username.trim()) && !"".equals(password.trim())) {
             UserService service = new UserService();
             Integer role = service.checkUser(username,password);
             if (role!=null) {
-                HttpSession session = request.getSession();
                 session.setAttribute("username",username);
                 session.setAttribute("password",password);
                 session.setAttribute("role",role);

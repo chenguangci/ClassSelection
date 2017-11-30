@@ -51,7 +51,7 @@ public class TeacherDao {
     /**
      * 录入教师信息
      */
-    public boolean insertTeachers(List<Teacher> teachers){
+    public boolean insertTeachers(Teacher teachers){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
@@ -59,6 +59,7 @@ public class TeacherDao {
             teacherMapper.insertTeachers(teachers);
             return true;
         } catch (Exception e) {
+
             return false;
         }finally {
             if (sqlSession!=null){
@@ -78,6 +79,7 @@ public class TeacherDao {
             teacherMapper.deleteTeachersById(ids);
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }finally {
             if (sqlSession!=null){

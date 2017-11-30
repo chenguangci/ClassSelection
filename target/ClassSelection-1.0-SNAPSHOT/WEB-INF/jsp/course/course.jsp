@@ -6,8 +6,8 @@
 <html>
 <head>
     <title>课程信息</title>
-    <link href="${path}resource/css/style.css" type="text/css" rel="stylesheet">
-    <script src="resource/js/jquery-1.8.0.min.js"></script>
+    <link href="${path}/resource/css/style.css" type="text/css" rel="stylesheet">
+    <script src="${path}/resource/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         function up(page) {
             $("#page").val(page);
@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="resource/image/return.png" width="110" height="45"></a></div>
+<div class="left"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="46"></a></div>
 <div>
     <form id="show" method="post" action="selectCourse.action">
         <h1>
@@ -39,7 +39,7 @@
             </button><br>
         </h1>
         <h2><input type="hidden"></h2>
-        <h2 class="left_top"><a href="selectStudent.action?insert=1"><img src="/resource/image/course.png" width="120" height="40" style="text-align: left"></a></h2>
+        <h2 class="left_top"><a href="selectCourse.action?insert=1"><img src="${path}/resource/image/course.png" width="120" height="40" style="text-align: left"></a></h2>
         <table border="1px" id="keywords" cellspacing="0" cellpadding="0">
             <thead>
             <tr>
@@ -55,7 +55,7 @@
             <%
                 List<Course> courses = (List<Course>) request.getAttribute("courses");
                 for (int i = 0; i < courses.size(); i++) {
-                    out.print("<tr>");
+                    out.print("<tr id=\"tr"+i+"\">");
                     out.print("<td>" + (i + 1) + "</td>");
                     out.print("<td>" + courses.get(i).getCourseNo() + "</td>");
                     out.print("<td>" + courses.get(i).getCourseName() + "</td>");
@@ -66,8 +66,8 @@
                     out.print("<td>" + courses.get(i).getCourseCredit() + "</td>");
             %>
             <td>
-                <a href="<%=request.getContextPath()%>/deleteCourse.action?courseNo=<%=courses.get(i).getCourseNo()%>">删除</a>&nbsp;&nbsp;
-                <a href="<%=request.getContextPath()%>/selectCourse.action?courseNo=<%=courses.get(i).getCourseNo()%>&update=1">修改</a>
+                <a href="javascript:" onclick="deleteById('<%=courses.get(i).getCourseNo()%>','<%=courses.get(i).getCourseName()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
+                <a href="${path}/selectCourse.action?courseNo=<%=courses.get(i).getCourseNo()%>&update=1">修改</a>
                 <input type="hidden" value="<%=courses.get(i).getCoursePriorNo()%>">
             </td>
             <%
@@ -97,5 +97,26 @@
         </button>
     </form>
 </div>
+<script>
+    function deleteById(id, label,i) {
+        var r = confirm('确定要删除"'+label+'"吗？');
+        if (r) {
+            $.ajax({
+                url: '${path}/deleteCourse.action?courseNo='+id,
+                dataType:'json',
+                type:'POST',
+                success:function (data) {
+                    if (data.success) {
+                        alert('成功');
+                        $('#tr'+i).remove();
+                    } else {
+                        alert('删除失败');
+                    }
+                }
+            });
+
+        }
+    }
+</script>
 </body>
 </html>

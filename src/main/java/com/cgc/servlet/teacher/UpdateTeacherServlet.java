@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet(value = "/updateTeacher.action")
 public class UpdateTeacherServlet extends HttpServlet {
     @Override
@@ -28,10 +30,17 @@ public class UpdateTeacherServlet extends HttpServlet {
         Info[7] = request.getParameter("course2");
         Info[8] = request.getParameter("course3");
         TeacherService service = new TeacherService();
+        response.setContentType("text/javascript;charset=utf-8");
         if (service.updateTeacher(Info)) {
-            response.sendRedirect("/selectTeacher.action");
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改成功\"}");
+            out.flush();
+            out.close();
         } else {
-
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改失败，请查看输入的课程号等信息是否正确\"}");
+            out.flush();
+            out.close();
         }
     }
 }

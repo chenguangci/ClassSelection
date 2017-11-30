@@ -11,7 +11,7 @@ public interface CourseMapper {
     /*按条件查询*/
     List<Course> selectCourse(@Param("course") Course course,  @Param("limit") int limitNumber);
     /*录入课表信息*/
-    void insertCourses(List<Course> courses);
+    void insertCourses(Course course);
     /*删除课表信息*/
     void deleteCoursesById(List<String> ids);
     /*更新课表信息*/

@@ -77,15 +77,16 @@
         ORDER BY teacherNo LIMIT #{limit},10
     </select>
         
-    <insert id="insertTeachers" parameterType="java.util.List">
+    <insert id="insertTeachers" parameterType="com.cgc.bean.Teacher">
         INSERT INTO teacher VALUES
-            <foreach collection="list" item="item" separator=",">
-                (#{item.teacherNo},#{item.teacherName},#{item.teacherSex},#{item.teacherAge},
-                #{item.education},#{item.professionalTitle},#{item.courseNo1},#{item.courseNo2},#{item.courseNo3})
-            </foreach>
+        (#{teacherNo},#{teacherName},#{teacherSex},#{teacherAge},#{education},#{professionalTitle},#{courseNo1},#{courseNo2},#{courseNo3})
+            <!--<foreach collection="list" item="item" separator=",">-->
+                <!--(#{item.teacherNo},#{item.teacherName},#{item.teacherSex},#{item.teacherAge},-->
+                <!--#{item.education},#{item.professionalTitle},#{item.courseNo1},#{item.courseNo2},#{item.courseNo3})-->
+            <!--</foreach>-->
     </insert>
 
-    <delete id="deleteTeachersById" parameterType="java.lang.String">
+    <delete id="deleteTeachersById" parameterType="java.util.List">
         DELETE FROM teacher WHERE teacherNo IN (
                 <foreach collection="list" item="item" separator=",">
                     #{item}

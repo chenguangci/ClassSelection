@@ -164,7 +164,7 @@
             <%
                 List<Teacher> teachers = (List<Teacher>) request.getAttribute("teachers");
                 for (int i = 0; i < teachers.size(); i++) {
-                    out.print("<tr>");
+                    out.print("<tr id=\"tr"+i+"\">");
                     out.print("<td>" + (i + 1) + "</td>");
                     out.print("<td>" + teachers.get(i).getTeacherNo() + "</td>");
                     out.print("<td>" + teachers.get(i).getTeacherName() + "</td>");
@@ -180,7 +180,7 @@
                 <input type="hidden" name="course1" value="<%=teachers.get(i).getCourseNo1()%>">
                 <input type="hidden" name="course2" value="<%=teachers.get(i).getCourseNo2()%>">
                 <input type="hidden" name="course3" value="<%=teachers.get(i).getCourseNo3()%>">
-                <a href="<%=request.getContextPath()%>/deleteTeacher.action?teacherNo=<%=teachers.get(i).getTeacherNo()%>">删除</a>&nbsp;&nbsp;
+                <a href="javascript:" onclick="deleteById('<%=teachers.get(i).getTeacherNo()%>','<%=teachers.get(i).getTeacherName()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
                 <a href="<%=request.getContextPath()%>/selectTeacher.action?teacherNo=<%=teachers.get(i).getTeacherNo()%>&update=1">修改</a>
             </td>
             <%
@@ -207,10 +207,31 @@
         <input type="hidden" name="teacherSex" value="<%=request.getAttribute("teacherSex")%>">
         <input type="hidden" name="education" value="<%=request.getAttribute("education")%>">
         <input type="hidden" name="professionalTitle" value="<%=request.getAttribute("professionalTitle")%>">
+        <input type="hidden" name="course1" value="<%=request.getAttribute("course")%>">
         <button onclick="sub2()"
                 style="background: url(/resource/image/table.png);border: 0;width: 160px;height: 40px">
         </button>
     </form>
 </div>
+<script>
+    function deleteById(id, label,i) {
+        var r = confirm('确定要删除"'+label+'"吗？');
+        if (r) {
+            $.ajax({
+                url: '${path}/deleteTeacher.action?teacherNo='+id,
+                dataType:'json',
+                type:'POST',
+                success:function (data) {
+                    if (data.success) {
+                        alert('成功');
+                        $('#tr'+i).remove();
+                    } else {
+                        alert('删除失败');
+                    }
+                }
+            });
+        }
+    }
+</script>
 </body>
 </html>

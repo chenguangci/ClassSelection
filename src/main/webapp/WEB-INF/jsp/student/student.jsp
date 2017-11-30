@@ -101,7 +101,7 @@
             <%
                 List<Student> students = (List<Student>) request.getAttribute("students");
                 for (int i = 0; i < students.size(); i++) {
-                    out.print("<tr>");
+                    out.print("<tr id=\"tr"+i+"\">");
                     out.print("<td>" + (i + 1) + "</td>");
                     out.print("<td>" + students.get(i).getStudentNo() + "</td>");
                     out.print("<td>" + students.get(i).getStudentName() + "</td>");
@@ -111,7 +111,7 @@
             %>
             <td>
                 <input type="hidden" name="departmentNo" value="<%=students.get(i).getDepartmentNo()%>">
-                <a href="<%=request.getContextPath()%>/deleteStudent.action?studentNo=<%=students.get(i).getStudentNo()%>">删除</a>&nbsp;&nbsp;
+                <a href="javascript:" onclick="deleteById('<%=students.get(i).getStudentNo()%>','<%=students.get(i).getStudentName()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
                 <a href="<%=request.getContextPath()%>/selectStudent.action?studentNo=<%=students.get(i).getStudentNo()%>&update=1">修改</a>
             </td>
             <%
@@ -141,6 +141,26 @@
             style="background: url(/resource/image/table.png);border: 0;width: 160px;height: 40px">
     </button>
 </form>
+    <script>
+        function deleteById(id, label,i) {
+            var r = confirm('确定要删除"'+label+'"吗？');
+            if (r) {
+                $.ajax({
+                    url: '${path}/deleteStudent.action?studentNo='+id,
+                    dataType:'json',
+                    type:'POST',
+                    success:function (data) {
+                        if (data.success) {
+                            alert('成功');
+                            $('#tr'+i).remove();
+                        } else {
+                            alert('删除失败');
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 </div>
 </body>
 </html>

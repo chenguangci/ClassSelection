@@ -43,6 +43,7 @@ public class TeacherService {
         teacher.setEducation(Info[4]);
         teacher.setProfessionalTitle(Info[5]);
         teacher.setCourseNo1(Info[6]);
+
         //查找教师信息
         List<Teacher> teachers = teacherDao.selectTeachers(teacher,limit);
 
@@ -53,22 +54,31 @@ public class TeacherService {
         for (Map<String, String> map : maps) {
             courses.put(map.get("courseNo"), map.get("courseName"));
         }
+        String str;
         for (Teacher teacher1 : teachers) {
-            if (teacher1.getCourseNo1() != null)
-                teacher1.setCourseName1(courses.get(teacher1.getCourseNo1()));
-            if (teacher1.getCourseNo2() != null)
-                teacher1.setCourseName2(courses.get(teacher1.getCourseNo2()));
-            if (teacher1.getCourseNo3() != null)
-                teacher1.setCourseName3(courses.get(teacher1.getCourseNo3()));
+            if (teacher1.getCourseNo1() != null || "0000".equals(teacher1.getCourseNo1())) {
+                str = courses.get(teacher1.getCourseNo1());
+                teacher1.setCourseName1(str==null?"":str);
+            }
+            if (teacher1.getCourseNo2() != null || "0000".equals(teacher1.getCourseNo2())) {
+                str = courses.get(teacher1.getCourseNo2());
+                teacher1.setCourseName2(str==null?"":str);
+            }
+
+            if (teacher1.getCourseNo3() != null || "0000".equals(teacher1.getCourseNo3())) {
+                str = courses.get(teacher1.getCourseNo3());
+                teacher1.setCourseName3(str==null?"":str);
+            }
         }
         return teachers;
     }
     /**
      * 插入
      */
-    public boolean insertTeachers(String[][] Info){
-        List<Teacher> teachers = new ArrayList<Teacher>();
-        for (String[] info:Info){
+    public int[] insertTeachers(String[][] Info){
+        int[] total = new int[Info.length];
+        for (int i = 0; i<Info.length; i++){
+            String[] info = Info[i];
             Teacher teacher = new Teacher();
             teacher.setTeacherNo(info[0]);
             teacher.setTeacherName(info[1]);
@@ -79,12 +89,20 @@ public class TeacherService {
                 teacher.setTeacherAge(null);
             teacher.setEducation(info[4]);
             teacher.setProfessionalTitle(info[5]);
+            if (info[6]==null || "".equals(info[6]))
+                info[6] = "0000";
+            if (info[7]==null || "".equals(info[7]))
+                info[7] = "0000";
+            if (info[8]==null || "".equals(info[8]))
+                info[8] = "0000";
             teacher.setCourseNo1(info[6]);
             teacher.setCourseNo2(info[7]);
             teacher.setCourseNo3(info[8]);
-            teachers.add(teacher);
+            if (teacherDao.insertTeachers(teacher)){
+                total[i] = 1;
+            }
         }
-        return teacherDao.insertTeachers(teachers);
+        return total;
     }
     /**
      * 删除
@@ -108,6 +126,12 @@ public class TeacherService {
             teacher.put("teacherAge",null);
         teacher.put("education",Info[4]);
         teacher.put("professionalTitle",Info[5]);
+        if (Info[6]==null || "".equals(Info[6]))
+            Info[6] = "0000";
+        if (Info[7]==null || "".equals(Info[7]))
+            Info[7] = "0000";
+        if (Info[8]==null || "".equals(Info[8]))
+            Info[8] = "0000";
         teacher.put("courseNo1",Info[6]);
         teacher.put("courseNo2",Info[7]);
         teacher.put("courseNo3",Info[8]);

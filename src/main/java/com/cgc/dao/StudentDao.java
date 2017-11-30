@@ -48,12 +48,12 @@ public class StudentDao {
     /**
      * 录入学生信息
      */
-    public boolean insertStudents(List<Student> students){
+    public boolean insertStudents(Student student){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-            studentMapper.insertStudents(students);
+            studentMapper.insertStudents(student);
             return true;
         } catch (Exception e) {
             return false;

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(value = "/deleteSelectCourse.action")
 public class DeleteSelectServlet extends HttpServlet {
@@ -30,9 +31,15 @@ public class DeleteSelectServlet extends HttpServlet {
         }
         SelectCourseService service = new SelectCourseService();
         if (service.deleteSelectCourses(Info)) {
-            response.sendRedirect("/selectSelectCourse.action");
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true}");
+            out.flush();
+            out.close();
         } else {
-
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":false,\"msg\":\"删除数据失败\"}");
+            out.flush();
+            out.close();
         }
     }
 }

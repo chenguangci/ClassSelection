@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(value = "/updateDepartment.action")
 public class UpdateDepartmentServlet extends HttpServlet {
@@ -23,10 +24,17 @@ public class UpdateDepartmentServlet extends HttpServlet {
         Info[1] = request.getParameter("departmentName");
         Info[2] = request.getParameter("manager");
         DepartmentService service = new DepartmentService();
-        if(service.updateDepartment(Info)) {
-            response.sendRedirect("/selectDepartment.action");
+        response.setContentType("text/javascript;charset=utf-8");
+        if (service.updateDepartment(Info)) {
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改成功\"}");
+            out.flush();
+            out.close();
         } else {
-            //失败
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改失败，请查看输入的信息是否有误\"}");
+            out.flush();
+            out.close();
         }
     }
 }

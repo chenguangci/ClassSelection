@@ -14,10 +14,6 @@
             $("#show").submit();
         }
 
-        function sub() {
-            $("#show").submit();
-        }
-
         function sub2() {
             $("#show2").submit();
         }
@@ -40,9 +36,9 @@
             </button>
             <br>
             <h2><input type="hidden"></h2>
-            <h2 class="left_top"><a href="selectSelectCourse.action?insert=1"><img src="/resource/image/student.png"
-                                                                              width="120" height="40"
-                                                                              style="text-align: left"></a></h2>
+            <h2 class="left_top"><a href="selectSelectCourse.action?insert=1"><img src="${path}/resource/image/select.png"
+                                                                                   width="120" height="40"
+                                                                                   style="text-align: left"></a></h2>
         </h1>
         <table border="1px" id="keywords" cellspacing="0" cellpadding="0">
             <thead>
@@ -59,7 +55,7 @@
             <%
                 List<SelectCourse> selectCourses = (List<SelectCourse>) request.getAttribute("selects");
                 for (int i = 0; i < selectCourses.size(); i++) {
-                    out.print("<tr>");
+                    out.print("<tr id=\"tr"+i+"\">");
                     out.print("<td>" + (i + 1) + "</td>");
                     out.print("<td>" + selectCourses.get(i).getStudentNo() + "</td>");
                     out.print("<td>" + selectCourses.get(i).getCourseNo() + "</td>");
@@ -67,7 +63,7 @@
                     out.print("<td>" + selectCourses.get(i).getGrade() + "</td>");
             %>
             <td>
-                <a href="<%=request.getContextPath()%>/deleteSelectCourse.action?studentNo=<%=selectCourses.get(i).getStudentNo()%>&courseNo=<%=selectCourses.get(i).getCourseNo()%>&teacherNo=<%=selectCourses.get(i).getTeacherNo()%>">删除</a>&nbsp;&nbsp;
+                <a href="javascript:" onclick="deleteById('<%=selectCourses.get(i).getCourseNo()%>','<%=selectCourses.get(i).getStudentNo()%>','<%=selectCourses.get(i).getTeacherNo()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
                 <a href="<%=request.getContextPath()%>/selectSelectCourse.action?studentNo=<%=selectCourses.get(i).getStudentNo()%>&courseNo=<%=selectCourses.get(i).getCourseNo()%>&teacherNo=<%=selectCourses.get(i).getTeacherNo()%>&update=1">修改</a>
             </td>
             <%
@@ -96,5 +92,28 @@
         </button>
     </form>
 </div>
+<script>
+    function deleteById(c,s,t,i) {
+        var r = confirm('确定要删除吗？');
+        if (r) {
+            $.ajax({
+                url: '${path}/deleteSelectCourse.action?courseNo='+c+'&studentNo='+s+'&teacherNo='+t,
+                data: {
+                    id:id
+                },
+                dataType:'json',
+                type:'POST',
+                success:function (data) {
+                    if (data.success) {
+                        alert('成功');
+                        $('#tr'+i).remove();
+                    } else {
+                        alert('删除失败');
+                    }
+                }
+            });
+        }
+    }
+</script>
 </body>
 </html>

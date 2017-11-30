@@ -28,7 +28,7 @@ public class CourseDao {
             if (sqlSession!=null)
                 sqlSession.close();
         }
-        return number;
+        return number>0?(number-1):0;
     }
     /**
      * 查询课表信息
@@ -53,12 +53,12 @@ public class CourseDao {
     /**
      * 录入课表信息
      */
-    public boolean insertCourses(List<Course> courses){
+    public boolean insertCourses(Course course){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             CourseMapper courseMapper = sqlSession.getMapper(CourseMapper.class);
-            courseMapper.insertCourses(courses);
+            courseMapper.insertCourses(course);
             return true;
         } catch (Exception e) {
             return false;
@@ -99,6 +99,7 @@ public class CourseDao {
             courseMapper.updateCourse(course);
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         } finally {
             if (sqlSession!=null){

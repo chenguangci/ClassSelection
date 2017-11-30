@@ -41,21 +41,23 @@ public class SelectCourseService {
     /**
      * 录入选课信息
      */
-    public boolean insertSelectCourses(String[][] Info){
-        List<SelectCourse> selectCourses = new ArrayList<SelectCourse>();
-        for (String[] info:Info){
+    public int[] insertSelectCourses(String[][] Info){
+        int[] total = new int[Info.length];
+        for (int i=0; i<Info.length; i++){
             SelectCourse selectCourse = new SelectCourse();
-            selectCourse.setStudentNo(info[0]);
-            selectCourse.setCourseNo(info[1]);
-            selectCourse.setTeacherNo(info[2]);
-            if (info[3]!=null&&!"".equals(info[3].trim())){
-                selectCourse.setGrade(Integer.parseInt(info[3]));
+            selectCourse.setStudentNo(Info[i][0]);
+            selectCourse.setCourseNo(Info[i][1]);
+            selectCourse.setTeacherNo(Info[i][2]);
+            if (Info[i][3]!=null&&!"".equals(Info[i][3].trim())){
+                selectCourse.setGrade(Integer.parseInt(Info[i][3]));
             } else {
                 selectCourse.setGrade(null);
             }
-            selectCourses.add(selectCourse);
+            if (selectCourseDao.insertSelectCourses(selectCourse)) {
+                total[i] = 1;
+            }
         }
-        return selectCourseDao.insertSelectCourses(selectCourses);
+        return total;
     }
     /**
      * 删除选课信息

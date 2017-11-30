@@ -58,11 +58,9 @@
         ORDER BY studentNo LIMIT #{limit},10
     </select>
 
-    <insert id="insertStudents" parameterType="java.util.List">
+    <insert id="insertStudents" parameterType="com.cgc.bean.Student">
         INSERT INTO student VALUES
-            <foreach collection="list" item="item" separator=",">
-                (#{item.studentNo},#{item.studentName},#{item.studentSex},#{item.studentAge},#{item.departmentNo})
-            </foreach>
+        (#{studentNo},#{studentName},#{studentSex},#{studentAge},#{departmentNo})
     </insert>
 
     <delete id="deleteStudentsById" parameterType="java.lang.String">

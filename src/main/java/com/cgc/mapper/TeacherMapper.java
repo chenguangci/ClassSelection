@@ -12,7 +12,7 @@ public interface TeacherMapper {
     /*按条件查询*/
     List<Teacher> selectTeachers(@Param("teacher") Teacher teacher, @Param("limit") int limit);
     /*录入教师信息*/
-    void insertTeachers(List<Teacher> teachers);
+    void insertTeachers(Teacher teachers);
     /*删除教师信息*/
     void deleteTeachersById(List<String> ids);
     /*更新教师信息*/

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(value = "/updateSelectCourse.action")
 public class UpdateSelectServlet extends HttpServlet {
@@ -24,10 +25,17 @@ public class UpdateSelectServlet extends HttpServlet {
         Info[2] = request.getParameter("teacherNo");
         Info[3] = request.getParameter("grade");
         SelectCourseService service = new SelectCourseService();
+        response.setContentType("text/javascript;charset=utf-8");
         if (service.updateSelectCourse(Info)) {
-            response.sendRedirect("/selectSelectCourse.action");
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改成功\"}");
+            out.flush();
+            out.close();
         } else {
-
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"修改失败，请查看输入的各个编号是否正确\"}");
+            out.flush();
+            out.close();
         }
     }
 }

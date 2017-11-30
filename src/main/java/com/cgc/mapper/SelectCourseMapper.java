@@ -10,7 +10,7 @@ public interface SelectCourseMapper {
     /*按条件查询*/
     List<SelectCourse> selectSelectCourse(@Param("selectCourse") SelectCourse selectCourse, @Param("limit") int limit);
     /*录入选课信息*/
-    void insertSelectCourses(List<SelectCourse> selectCourses);
+    void insertSelectCourses(SelectCourse selectCourse);
     /*删除选课信息*/
     void deleteSelectCourses(List<SelectCourse> selectCourses);
     /*更新选课信息*/

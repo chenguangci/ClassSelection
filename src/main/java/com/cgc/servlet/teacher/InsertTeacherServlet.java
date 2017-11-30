@@ -1,6 +1,7 @@
 package com.cgc.servlet.teacher;
 
 import com.cgc.service.TeacherService;
+import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
 
 @WebServlet(value = "/insertTeacher.action")
 public class InsertTeacherServlet extends HttpServlet {
@@ -39,12 +42,31 @@ public class InsertTeacherServlet extends HttpServlet {
             Info[i][6] = course1[i];
             Info[i][7] = course2[i];
             Info[i][8] = course3[i];
+            System.out.println(no[i]);
         }
         TeacherService service = new TeacherService();
-        if (service.insertTeachers(Info)) {
-            response.sendRedirect("/selectTeacher.action");
+        int[] total = service.insertTeachers(Info);
+        StringBuilder msg = new StringBuilder("第");
+        boolean isSuccess = true;
+        for (int i=0; i<total.length; i++) {
+            if (total[i] == 0) {
+                isSuccess = false;
+                msg.append(String.valueOf((i+1))).append(",");
+            }
+        }
+
+        response.setContentType("text/javascript;charset=utf-8");
+        if (isSuccess) {
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"插入数据成功\"}");
+            out.flush();
+            out.close();
         } else {
-            request.getRequestDispatcher("WEB-INF/jsp/teacher/insertTeacher.jsp").forward(request,response);
+            PrintWriter out = response.getWriter();
+            String array = (JSONArray.fromObject(total)).toString();
+            out.write("{\"success\":false,\"msg\":\""+msg.toString().substring(0,msg.toString().length()-1)+"条数据插入失败\",\"array\":\""+array+"\"}");
+            out.flush();
+            out.close();
         }
     }
 }

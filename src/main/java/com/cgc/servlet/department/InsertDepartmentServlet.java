@@ -1,6 +1,7 @@
 package com.cgc.servlet.department;
 
 import com.cgc.service.DepartmentService;
+import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet(value = "/insertDepartment.action")
 public class InsertDepartmentServlet extends HttpServlet {
     @Override
@@ -28,10 +31,28 @@ public class InsertDepartmentServlet extends HttpServlet {
             Info[i][2] = manager[i];
         }
         DepartmentService service = new DepartmentService();
-        if (service.insertDepartments(Info)) {
-            response.sendRedirect("/selectDepartment.action");
+        int[] total = service.insertDepartments(Info);
+        StringBuilder msg = new StringBuilder("第");
+        boolean isSuccess = true;
+        for (int i=0; i<total.length; i++) {
+            if (total[i] == 0) {
+                isSuccess = false;
+                msg.append(String.valueOf((i+1))).append(",");
+            }
+        }
+
+        response.setContentType("text/javascript;charset=utf-8");
+        if (isSuccess) {
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"插入数据成功\"}");
+            out.flush();
+            out.close();
         } else {
-            request.getRequestDispatcher("WEB-INF/jsp/department/insertDepartment.jsp?error=1").forward(request,response);
+            PrintWriter out = response.getWriter();
+            String array = (JSONArray.fromObject(total)).toString();
+            out.write("{\"success\":false,\"msg\":\""+msg.toString().substring(0,msg.toString().length()-1)+"条数据插入失败\",\"array\":\""+array+"\"}");
+            out.flush();
+            out.close();
         }
     }
 }

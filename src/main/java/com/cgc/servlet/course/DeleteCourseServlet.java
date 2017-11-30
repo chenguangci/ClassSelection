@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
 @WebServlet(value = "/deleteCourse.action")
@@ -19,13 +20,18 @@ public class DeleteCourseServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] id = request.getParameterValues("courseNo");
-        System.out.println("课程号为："+id[0]);
         List<String> ids = Arrays.asList(id);
         CourseService service = new CourseService();
         if (service.deleteCoursesById(ids)) {
-            response.sendRedirect("/selectCourse.action");
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true}");
+            out.flush();
+            out.close();
         } else {
-
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":false,\"msg\":\"删除数据失败\"}");
+            out.flush();
+            out.close();
         }
     }
 }

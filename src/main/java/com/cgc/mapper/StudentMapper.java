@@ -11,7 +11,7 @@ public interface StudentMapper {
     /*按条件查询*/
     List<Student> selectStudents(@Param("student") Student student, @Param("limit") int limit);
     /*录入学生信息*/
-    void insertStudents(List<Student> students);
+    void insertStudents(Student student);
     /*删除学生信息*/
     void deleteStudentsById(List<String> ids);
     /*更新学生信息*/

@@ -5,6 +5,8 @@ import com.cgc.bean.Student;
 import com.cgc.bean.Teacher;
 import com.cgc.dao.NumberToNameDao;
 import com.cgc.service.*;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Test;
 
@@ -30,8 +32,8 @@ public class ForTest {
 //        }
 
         //插入
-//        String[][] dates = {{"0003", "数据库管理", null, "4"}};
-//        courseService.insertCourses(dates);
+        String[][] dates = {{"0016", "springMVC", "0002", "4"}};
+        System.out.println(courseService.insertCourses(dates));
         /*
         //删除
         String[] ids = {"0001"};
@@ -41,12 +43,12 @@ public class ForTest {
         Object[] date4 = {"0002","Java程序设计",null,4};
         courseService.updateCourse(date4);*/
 
-        List<Map<String, String>> lists = courseService.getCourseNoAndName();
-        for (Map<String, String> list : lists) {
-            for (Map.Entry entry : list.entrySet()) {
-                System.out.println(entry.getKey() + " " + entry.getValue());
-            }
-        }
+//        List<Map<String, String>> lists = courseService.getCourseNoAndName();
+//        for (Map<String, String> list : lists) {
+//            for (Map.Entry entry : list.entrySet()) {
+//                System.out.println(entry.getKey() + " " + entry.getValue());
+//            }
+//        }
     }
 
     @Test
@@ -137,6 +139,16 @@ public class ForTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void teststr(){
+//        String str = "第1，3条";
+//        System.out.println(str.substring(1,str.length()-1));
+        int[] i = {1,2,3,4,5,6};
+//        JSONArray object = JSONArray.fromObject(i);
+//        System.out.println(object.toString());
+        System.out.println(i.toString());
     }
 
 }

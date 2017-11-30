@@ -1,6 +1,7 @@
 package com.cgc.servlet.student;
 
 import com.cgc.service.StudentService;
+import net.sf.json.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet(value = "/insertStudent.action")
 public class InsertStudentServlet extends HttpServlet {
     @Override
@@ -34,12 +37,28 @@ public class InsertStudentServlet extends HttpServlet {
         }
 
         StudentService service = new StudentService();
-        if (service.insertStudents(Info)) {
-            //成功
-            response.sendRedirect("/selectStudent.action");
+        int[] total = service.insertStudents(Info);
+        StringBuilder msg = new StringBuilder("第");
+        boolean isSuccess = true;
+        for (int i=0; i<total.length; i++) {
+            if (total[i] == 0) {
+                isSuccess = false;
+                msg.append(String.valueOf((i+1))).append(",");
+            }
+        }
+
+        response.setContentType("text/javascript;charset=utf-8");
+        if (isSuccess) {
+            PrintWriter out = response.getWriter();
+            out.write("{\"success\":true,\"msg\":\"插入数据成功\"}");
+            out.flush();
+            out.close();
         } else {
-            //失败
-            request.getRequestDispatcher("WEB-INF/jsp/student/insertStudent.jsp").forward(request,response);
+            PrintWriter out = response.getWriter();
+            String array = (JSONArray.fromObject(total)).toString();
+            out.write("{\"success\":false,\"msg\":\""+msg.toString().substring(0,msg.toString().length()-1)+"条数据插入失败\",\"array\":\""+array+"\"}");
+            out.flush();
+            out.close();
         }
     }
 }

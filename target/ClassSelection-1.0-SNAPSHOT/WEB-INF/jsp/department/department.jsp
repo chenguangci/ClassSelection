@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="resource/image/return.png" width="110" height="45"></a></div>
+<div class="left"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="45"></a></div>
 <div>
 <form id="show" method="post" action="selectDepartment.action">
     <h1>
@@ -36,7 +36,7 @@
             style="background: url(/resource/image/search.png);width: 113px;height: 40px;border: 0;">
     </button><br>
     <h2><input type="hidden"></h2>
-    <h2 class="left_top"><a href="selectDepartment.action?insert=1"><img src="/resource/image/department.png" width="120" height="40" style="text-align: left"></a></h2>
+    <h2 class="left_top"><a href="selectDepartment.action?insert=1"><img src="${path}/resource/image/department.png" width="120" height="40" style="text-align: left"></a></h2>
     </h1>
     <input type="hidden" name="page" id="page" value="<%=request.getAttribute("page")%>"/>
     <table border="1px" id="keywords" cellspacing="0" cellpadding="0">
@@ -53,15 +53,15 @@
         <%
             List<Department> departments = (List<Department>) request.getAttribute("departments");
             for (int i = 0; i < departments.size(); i++) {
-                out.print("<tr>");
+                out.print("<tr id=\"tr"+i+"\">");
                 out.print("<td>" + (i + 1) + "</td>");
                 out.print("<td>" + departments.get(i).getDepartmentNo() + "</td>");
                 out.print("<td>" + departments.get(i).getDepartmentName() + "</td>");
                 out.print("<td>" + departments.get(i).getManager() + "</td>");
         %>
         <td>
-            <a href="<%=request.getContextPath()%>/deleteDepartment.action?departmentNo=<%=departments.get(i).getDepartmentNo()%>">删除</a>&nbsp;&nbsp;
-            <a href="<%=request.getContextPath()%>/selectDepartment.action?departmentNo=<%=departments.get(i).getDepartmentNo()%>&update=1">修改</a>
+            <a href="javascript:" onclick="deleteById('<%=departments.get(i).getDepartmentNo()%>','<%=departments.get(i).getDepartmentName()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
+            <a href="${path}/selectDepartment.action?departmentNo=<%=departments.get(i).getDepartmentNo()%>&update=1">修改</a>
         </td>
         <%
                 out.print("</tr>");
@@ -88,5 +88,25 @@
         </button>
     </form>
 </div>
+<script>
+    function deleteById(id, label,i) {
+        var r = confirm('确定要删除"'+label+'"吗？');
+        if (r) {
+            $.ajax({
+                url: '${path}/deleteDepartment.action?departmentNo='+id,
+                dataType:'json',
+                type:'POST',
+                success:function (data) {
+                    if (data.success) {
+                        alert('成功');
+                        $('#tr'+i).remove();
+                    } else {
+                        alert('删除失败');
+                    }
+                }
+            });
+        }
+    }
+</script>
 </body>
 </html>
