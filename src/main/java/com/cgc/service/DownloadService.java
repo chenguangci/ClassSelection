@@ -5,6 +5,7 @@ import org.apache.poi.hssf.usermodel.*;
 
 import javax.servlet.annotation.WebServlet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,15 +13,39 @@ public class DownloadService {
 
     private HSSFWorkbook workbook = new HSSFWorkbook();
 
-    public HSSFWorkbook select(String type){
+    private List<Map<String,Object>> getList(String type, Map<String,String[]> parameter) {
         Download download = new Download();
+
+        Map<String, Object> param = new HashMap<String, Object>();
+        for (Map.Entry<String,String[]> entry:parameter.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue()[0];
+            System.out.println("key值："+key+" value值："+value+";");
+            //忽略type值
+            if ("type".equals(key)){
+                continue;
+            }
+            if (value == null || "".equals(value.trim()) || "null".equals(value)){
+                param.put(key, null);
+            } else if ("courseCredit".equals(key) || "grade".equals(key) || "studentAge".equals(key) || "teacherAge".equals(key)) {
+                param.put(key, Integer.valueOf(value));
+            } else {
+                param.put(key, value);
+            }
+        }
+        return download.select(type, param);
+    }
+
+    public HSSFWorkbook select(String type, Map<String,String[]> parameter){
         List<String[]> model = new ArrayList<String[]>();
-        List<Map<String,Object>> objects = download.select(type);
+        List<Map<String,Object>> objects = getList(type,parameter);
 
         if ("course".equals(type)) {
             for (Map<String,Object> object:objects) {
                 String[] course = new String[4];
                 course[0] =(String) object.get("courseNo");
+                if ("0000".equals(course[0]))
+                    continue;
                 course[1] =(String) object.get("courseName");
                 course[2] =(String) object.get("coursePriorNo");
                 course[3] = (object.get("courseCredit")).toString();
@@ -100,9 +125,9 @@ public class DownloadService {
             cell.setCellValue(titles[i]);
             cell.setCellStyle(style);
         }
-        for (int i=1; i<models.size(); i++) {
-            row = sheet.createRow(i);
-            String[] model = models.get(i-1);
+        for (int i=0; i<models.size(); i++) {
+            row = sheet.createRow(i+1);
+            String[] model = models.get(i);
             for (int j=0; j<model.length; j++) {
                 row.createCell(j).setCellValue(model[j]);
             }

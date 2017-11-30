@@ -10,12 +10,12 @@ import java.util.Map;
 
 public class Download {
     private DBAccess dbAccess = DBAccess.getInstance();
-    public List<Map<String,Object>> select(String table) {
+    public List<Map<String,Object>> select(String table, Map<String,Object> parameter) {
         List<Map<String,Object>> objects = null;
         try {
             SqlSession sqlSession = dbAccess.getSqlSession();
             DownloadMapper downloadMapper = sqlSession.getMapper(DownloadMapper.class);
-            objects = downloadMapper.select(table);
+            objects = downloadMapper.select(table, parameter);
         } catch (IOException e) {
             e.printStackTrace();
         }

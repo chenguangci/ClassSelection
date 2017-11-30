@@ -3,6 +3,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cgc.mapper.DownloadMapper">
     <select id="select" resultType="java.util.Map">
-        SELECT * FROM ${table}
+        SELECT * FROM ${table} WHERE 1 = 1
+        <foreach collection="parameter" item="value" index="key">
+            <choose>
+                <when test="value  instanceof Integer">
+                    AND ${key} = #{value}
+                </when>
+                <when test="value != null and !&quot;&quot;.equals(value.trim())">
+                    AND ${key} like '%' #{value} '%'
+                </when>
+            </choose>
+        </foreach>
     </select>
 </mapper>

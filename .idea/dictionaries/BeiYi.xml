@@ -2,6 +2,8 @@
   <dictionary name="BeiYi">
     <words>
       <w>classselectionmanagement</w>
+      <w>instanceof</w>
+      <w>interger</w>
       <w>onreadystatechange</w>
     </words>
   </dictionary>

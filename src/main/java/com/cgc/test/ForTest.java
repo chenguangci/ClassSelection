@@ -3,6 +3,7 @@ package com.cgc.test;
 import com.cgc.bean.Page;
 import com.cgc.bean.Student;
 import com.cgc.bean.Teacher;
+import com.cgc.dao.Download;
 import com.cgc.dao.NumberToNameDao;
 import com.cgc.service.*;
 import net.sf.json.JSONArray;
@@ -126,29 +127,31 @@ public class ForTest {
         System.out.println(page.getLimitNumber(2) + "   " + page.getTotalPage());
     }
 
-    @Test
-    public void download() {
-        DownloadService downloadService = new DownloadService();
-        HSSFWorkbook workbook = downloadService.select("student");
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream("G:/Members.xls");
-            workbook.write(fileOutputStream);
-            fileOutputStream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    @Test
+//    public void download() {
+//        DownloadService downloadService = new DownloadService();
+//        HSSFWorkbook workbook = downloadService.select("student");
+//        try {
+//            FileOutputStream fileOutputStream = new FileOutputStream("G:/Members.xls");
+//            workbook.write(fileOutputStream);
+//            fileOutputStream.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Test
-    public void teststr(){
-//        String str = "第1，3条";
-//        System.out.println(str.substring(1,str.length()-1));
-        int[] i = {1,2,3,4,5,6};
-//        JSONArray object = JSONArray.fromObject(i);
-//        System.out.println(object.toString());
-        System.out.println(i.toString());
+    public void testStr(){
+        Download download = new Download();
+        Map<String, Object> param = new HashMap<String, Object>();
+        param.put("courseNo","1");
+        //param.put("courseName","C");
+        //param.put("coursePriorNo","2");
+        param.put("courseCredit",null);
+        System.out.println(null instanceof Integer);
+        //List<Map<String,Object>> objects = download.select("course", param);
     }
 
 }

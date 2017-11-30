@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
 @WebServlet(value = "/download.action")
 public class DownloadServlet extends HttpServlet {
     @Override
@@ -21,8 +24,13 @@ public class DownloadServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String type = request.getParameter("type");
+        Map<String,String[]> parameter = request.getParameterMap();
+        //无法修改这个值
+        //parameter.remove("type");
         DownloadService service = new DownloadService();
-        HSSFWorkbook workbook = service.select(type);
+        HSSFWorkbook workbook = service.select(type, parameter);
+
+        //生成表单
         OutputStream out = null;
         try {
             out = response.getOutputStream();

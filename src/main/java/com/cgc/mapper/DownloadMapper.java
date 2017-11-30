@@ -6,5 +6,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface DownloadMapper {
-    public List<Map<String,Object>> select(@Param("table") String table);
+    List<Map<String,Object>> select(@Param("table") String table, @Param("parameter") Map<String,Object> parameter);
 }
