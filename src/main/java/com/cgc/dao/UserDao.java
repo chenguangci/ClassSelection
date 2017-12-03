@@ -11,13 +11,13 @@ import java.util.List;
 
 public class UserDao {
     private DBAccess dbAccess = DBAccess.getInstance();
-    public List<User> selectUser() {
+    public List<User> selectUser(String username, int role) {
         List<User> users = new ArrayList<User>();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-            users = userMapper.selectUser();
+            users = userMapper.selectUser(username, role);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

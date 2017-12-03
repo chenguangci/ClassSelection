@@ -20,7 +20,6 @@ public class DownloadService {
         for (Map.Entry<String,String[]> entry:parameter.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue()[0];
-            System.out.println("key值："+key+" value值："+value+";");
             //忽略type值
             if ("type".equals(key)){
                 continue;

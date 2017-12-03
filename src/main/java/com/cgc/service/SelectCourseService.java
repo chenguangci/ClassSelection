@@ -62,20 +62,17 @@ public class SelectCourseService {
     /**
      * 删除选课信息
      */
-    public boolean deleteSelectCourses(String[][] Info){
-        List<SelectCourse> selectCourses = new ArrayList<SelectCourse>();
-        for (String[] info:Info) {
-            SelectCourse selectCourse = new SelectCourse();
-            selectCourse.setStudentNo(info[0]);
-            selectCourse.setCourseNo(info[1]);
-            selectCourse.setTeacherNo(info[2]);
-        }
-        return selectCourseDao.deleteSelectCourses(selectCourses);
+    public boolean deleteSelectCourses(String[] info){
+        SelectCourse selectCourse = new SelectCourse();
+        selectCourse.setStudentNo(info[0]);
+        selectCourse.setCourseNo(info[1]);
+        selectCourse.setTeacherNo(info[2]);
+        return selectCourseDao.deleteSelectCourses(selectCourse);
     }
     /**
-     * 更新选课信息,以
+     * 更新选课信息
      */
-    public boolean updateSelectCourse(String[] Info){
+    public boolean updateSelectCourse(String[] Info,String id){
         SelectCourse selectCourse = new SelectCourse();
         selectCourse.setStudentNo(Info[0]);
         selectCourse.setCourseNo(Info[1]);
@@ -85,6 +82,6 @@ public class SelectCourseService {
         } else {
             selectCourse.setGrade(null);
         }
-        return selectCourseDao.updateSelectCourse(selectCourse);
+        return selectCourseDao.updateSelectCourse(selectCourse,id);
     }
 }

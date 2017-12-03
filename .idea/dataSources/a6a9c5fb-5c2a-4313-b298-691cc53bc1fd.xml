@@ -74,32 +74,42 @@
       <ColNames>departmentNo</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="30" parent="15" name="studentNo">
+    <column id="30" parent="15" name="id">
       <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="15" name="studentNo">
+      <Position>2</Position>
       <DataType>varchar(9)|0</DataType>
     </column>
-    <column id="31" parent="15" name="courseNo">
-      <Position>2</Position>
+    <column id="32" parent="15" name="courseNo">
+      <Position>3</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <column id="32" parent="15" name="teacherNo">
-      <Position>3</Position>
+    <column id="33" parent="15" name="teacherNo">
+      <Position>4</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="33" parent="15" name="grade">
-      <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+    <column id="34" parent="15" name="grade">
+      <Position>5</Position>
+      <DataType>int(4)|0</DataType>
     </column>
-    <index id="34" parent="15" name="fk_courseNo">
+    <index id="35" parent="15" name="fk_courseNo">
       <ColNames>courseNo</ColNames>
     </index>
-    <index id="35" parent="15" name="fk_studentNo">
+    <index id="36" parent="15" name="fk_studentNo">
       <ColNames>studentNo</ColNames>
     </index>
-    <index id="36" parent="15" name="fk_teacherNo">
+    <index id="37" parent="15" name="fk_teacherNo">
       <ColNames>teacherNo</ColNames>
     </index>
-    <foreign-key id="37" parent="15" name="fk_studentNo">
+    <key id="38" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="15" name="fk_studentNo">
       <ColNames>studentNo</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>student</RefTableName>
@@ -107,7 +117,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="38" parent="15" name="fk_courseNo">
+    <foreign-key id="40" parent="15" name="fk_courseNo">
       <ColNames>courseNo</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>course</RefTableName>
@@ -115,7 +125,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="39" parent="15" name="fk_teacherNo">
+    <foreign-key id="41" parent="15" name="fk_teacherNo">
       <ColNames>teacherNo</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>teacher</RefTableName>
@@ -123,36 +133,36 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="40" parent="16" name="studentNo">
+    <column id="42" parent="16" name="studentNo">
       <Position>1</Position>
       <DataType>varchar(9)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="16" name="studentName">
+    <column id="43" parent="16" name="studentName">
       <Position>2</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="42" parent="16" name="studentSex">
+    <column id="44" parent="16" name="studentSex">
       <Position>3</Position>
       <DataType>varchar(2)|0</DataType>
     </column>
-    <column id="43" parent="16" name="studentAge">
+    <column id="45" parent="16" name="studentAge">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="44" parent="16" name="departmentNo">
+    <column id="46" parent="16" name="departmentNo">
       <Position>5</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <index id="45" parent="16" name="fk_departmentNo">
+    <index id="47" parent="16" name="fk_departmentNo">
       <ColNames>departmentNo</ColNames>
     </index>
-    <key id="46" parent="16" name="PRIMARY">
+    <key id="48" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>studentNo</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="47" parent="16" name="fk_departmentNo">
+    <foreign-key id="49" parent="16" name="fk_departmentNo">
       <ColNames>departmentNo</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>department</RefTableName>
@@ -160,58 +170,58 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="48" parent="17" name="teacherNo">
+    <column id="50" parent="17" name="teacherNo">
       <Position>1</Position>
       <DataType>varchar(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="17" name="teacherName">
+    <column id="51" parent="17" name="teacherName">
       <Position>2</Position>
       <DataType>varchar(8)|0</DataType>
     </column>
-    <column id="50" parent="17" name="teacherSex">
+    <column id="52" parent="17" name="teacherSex">
       <Position>3</Position>
       <DataType>varchar(2)|0</DataType>
     </column>
-    <column id="51" parent="17" name="teacherAge">
+    <column id="53" parent="17" name="teacherAge">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="52" parent="17" name="education">
+    <column id="54" parent="17" name="education">
       <Position>5</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <column id="53" parent="17" name="professionalTitle">
+    <column id="55" parent="17" name="professionalTitle">
       <Position>6</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <column id="54" parent="17" name="courseNo1">
+    <column id="56" parent="17" name="courseNo1">
       <Position>7</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <column id="55" parent="17" name="courseNo2">
+    <column id="57" parent="17" name="courseNo2">
       <Position>8</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <column id="56" parent="17" name="courseNo3">
+    <column id="58" parent="17" name="courseNo3">
       <Position>9</Position>
       <DataType>varchar(6)|0</DataType>
     </column>
-    <index id="57" parent="17" name="fk_courseNo1">
+    <index id="59" parent="17" name="fk_courseNo1">
       <ColNames>courseNo1</ColNames>
     </index>
-    <index id="58" parent="17" name="fk_courseNo2">
+    <index id="60" parent="17" name="fk_courseNo2">
       <ColNames>courseNo2</ColNames>
     </index>
-    <index id="59" parent="17" name="fk_courseNo3">
+    <index id="61" parent="17" name="fk_courseNo3">
       <ColNames>courseNo3</ColNames>
     </index>
-    <key id="60" parent="17" name="PRIMARY">
+    <key id="62" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>teacherNo</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="61" parent="17" name="fk_courseNo1">
+    <foreign-key id="63" parent="17" name="fk_courseNo1">
       <ColNames>courseNo1</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>course</RefTableName>
@@ -219,7 +229,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="62" parent="17" name="fk_courseNo2">
+    <foreign-key id="64" parent="17" name="fk_courseNo2">
       <ColNames>courseNo2</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>course</RefTableName>
@@ -227,7 +237,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="63" parent="17" name="fk_courseNo3">
+    <foreign-key id="65" parent="17" name="fk_courseNo3">
       <ColNames>courseNo3</ColNames>
       <RefSchemaName>classselectionmanagement</RefSchemaName>
       <RefTableName>course</RefTableName>
@@ -235,20 +245,20 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="64" parent="18" name="user_name">
+    <column id="66" parent="18" name="user_name">
       <Position>1</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="18" name="user_password">
+    <column id="67" parent="18" name="user_password">
       <Position>2</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <column id="66" parent="18" name="role">
+    <column id="68" parent="18" name="role">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <key id="67" parent="18" name="PRIMARY">
+    <key id="69" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_name</ColNames>
       <Primary>1</Primary>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助</title>
+    <link href="resource/css/layui.css" rel="stylesheet" type="text/css">
+    <link href="resource/css/style.css" rel="stylesheet" type="text/css">
+    <script src="resource/js/layui.all.js"></script>
+</head>
+<body style="background-color: #ffffff">
+<div class="left"><a href="begin.action"><img src="resource/image/return.png" width="110" height="46"></a></div>
+<div class="layui-tab" >
+    <ul class="layui-tab-title">
+        <li class="layui-this">查询操作</li>
+        <li>修改操作</li>
+        <li>删除操作</li>
+        <li>增加操作</li>
+        <li>报表操作</li>
+        <li>用户管理</li>
+    </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" style="align-content: center">
+            <h1>
+                用户进入相应页面，页面通过表格展示相关数据，在表格上方有相应的查询框，<br>用户可以根据需要查询相关数据示例<br><br>
+                用户查询页面：<br>
+                <img src="resource/image/example/select.png"  style="border: 7px double #009688"><br><br>
+                根据需要在选择框中选择相应条件，点击查看即可获取相应数据<br>
+                <img src="resource/image/example/select2.png"  style="border: 7px double #009688"><br>
+            </h1>
+
+        </div>
+        <div class="layui-tab-item">
+            <h1>
+                用户单击需要修改的数据所在表格行右侧的修改按钮，进入修改页面，修改相应数据，点击提交<br>
+                温馨提示：请确保修改的数据是合法的，另外，修改数据需要一定的用户权限，如果修改数据非法<br>或者用户权限不足，系统会提示修改失败<br><br>
+                单击相应数据右侧的修改按钮<br>
+                <img src="resource/image/example/update1.png" style="border: 7px double #009688"><br><br>
+                修改数据后点击提交，确认提交即可<br>
+                <img src="resource/image/example/update3.png" style="border: 7px double #009688"><br><br>
+                系统将会提示修改后的结果（成功，数据非法，权限不足等）：<br>
+                <img src="resource/image/example/update4.png" style="border: 7px double #009688"><br><br>
+                <img src="resource/image/example/update5.png" style="border: 7px double #009688"><br><br>
+                <img src="resource/image/example/update6.png" style="border: 7px double #009688">
+            </h1>
+        </div>
+        <div class="layui-tab-item">
+            <h1>
+                用户单击需要删除的数据所在表格行右侧的删除按钮，系统会提示是否确定删除，确定后系统会提示是否删除成功<br><br>
+                根据删除结果，系统会做相应提示：<br>
+                <img src="resource/image/example/delete2.png" style="border: 7px double #009688"><br>
+                <img src="resource/image/example/delete3.png" style="border: 7px double #009688"><br>
+            </h1>
+        </div>
+        <div class="layui-tab-item">
+            <h1>
+                用户单击表格左上角的添加按钮，进入添加数据的相应页面，如需批量添加可单击增加按钮<br>
+                请勿提交空数据，如果不慎点击到增加按钮，可单击移除按钮移除该行，确认数据无误后可<br>
+                点击提交，系统会提示是否添加成功，如有非法数据，系统会提示该行插入失败，并移去添<br>
+                加成功的行，温馨提示：删除操作需要相应的用户权限，权限不足系统将会提示<br><br>
+                单击表格左上角的添加按钮可添加信息：<br>
+                <img src="resource/image/example/insert1.png" style="border: 7px double #009688"><br>
+                单击增加可添加行：<br>
+                <img src="resource/image/example/insert2.png" style="border: 7px double #009688"><br>
+                单击移除可移除相应的行：<br>
+                <img src="resource/image/example/insert3.png" style="border: 7px double #009688"><br>
+                点击提交后再确认提交即可：<br>
+                <img src="resource/image/example/insert4.png" style="border: 7px double #009688"><br>
+                系统会返回相应的结果：<br>
+                <img src="resource/image/example/insert7.png" style="border: 7px double #009688"><br>
+                <img src="resource/image/example/insert5.png" style="border: 7px double #009688"><br>
+                <img src="resource/image/example/insert6.png" style="border: 7px double #009688"><br>
+            </h1>
+        </div>
+        <div class="layui-tab-item">
+            <h1>
+                用户可根据需要查询需要的数据，之后点击生成报表按钮，系统会将相应的数据生成excel表<br><br>
+                1.选择需要的数据：<br>
+                <img src="resource/image/example/download1.png" style="border: 7px double #009688"><br><br>
+                2.点击生成报表：<br>
+                <img src="resource/image/example/download2.png" style="border: 7px double #009688"><br><br>
+                3.生成的excel表即是客户需要的数据：<br>
+                <img src="resource/image/example/download3.png" style="border: 7px double #009688">
+            </h1>
+        </div>
+        <div class="layui-tab-item"  style="text-align: center">
+            <h1>
+                用户管理只有超级管理员才有相应权限，该管理员可以对系统的其他管理员进行增删改查操作<br>
+                温馨提示：对其他管理员的删改操作需要拥有被修改管理员的密码，所以超级管理员也是不可以为所欲为的。<br><br>
+
+                弹出提示框：<br>
+                <img src="resource/image/example/user1.png" style="border: 7px double #009688"><br><br>
+                要求输入密码：<br>
+                <img src="resource/image/example/user2.png" style="border: 7px double #009688"><br><br>
+                如果输入错误，系统将做出相应提示：<br>
+                <img src="resource/image/example/user3.png" style="border: 7px double #009688"><br><br>
+                <img src="resource/image/example/user4.png" style="border: 7px double #009688"><br><br>
+                <img src="resource/image/example/user5.png" style="border: 7px double #009688"><br><br>
+                修改成功：<br>
+                <img src="resource/image/example/user6.png" style="border: 7px double #009688">
+            </h1>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('element', function(){
+        var element = layui.element;
+        element.on('tab(demo)', function(data){
+            console.log(data);
+        });
+    });
+</script>
+</body>
+</html>

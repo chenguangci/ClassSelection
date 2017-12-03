@@ -7,7 +7,8 @@
 <head>
     <title>选课信息</title>
     <link href="${path}resource/css/style.css" type="text/css" rel="stylesheet">
-    <script src="resource/js/jquery-1.8.0.min.js"></script>
+    <link href="${path}/resource/css/layui.css" type="text/css" rel="stylesheet">
+    <script src="${path}/resource/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         function up(page) {
             $("#page").val(page);
@@ -20,7 +21,7 @@
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="resource/image/return.png" width="110" height="45"></a></div>
+<div class="left" style="margin-top: 30px"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="45"></a></div>
 <div>
     <form method="post" action="selectSelectCourse.action">
         <h1>
@@ -44,9 +45,12 @@
             <thead>
             <tr>
                 <th>序号</th>
-                <th>学号</th>
                 <th>课程号</th>
+                <th>课程名</th>
+                <th>学号</th>
+                <th>学生姓名</th>
                 <th>教师编号</th>
+                <th>教师姓名</th>
                 <th>成绩</th>
                 <th>操作</th>
             </tr>
@@ -57,14 +61,21 @@
                 for (int i = 0; i < selectCourses.size(); i++) {
                     out.print("<tr id=\"tr"+i+"\">");
                     out.print("<td>" + (i + 1) + "</td>");
-                    out.print("<td>" + selectCourses.get(i).getStudentNo() + "</td>");
                     out.print("<td>" + selectCourses.get(i).getCourseNo() + "</td>");
+                    out.print("<td>" + selectCourses.get(i).getCourseName() + "</td>");
+                    out.print("<td>" + selectCourses.get(i).getStudentNo() + "</td>");
+                    out.print("<td>" + selectCourses.get(i).getStudentName() + "</td>");
                     out.print("<td>" + selectCourses.get(i).getTeacherNo() + "</td>");
-                    out.print("<td>" + selectCourses.get(i).getGrade() + "</td>");
+                    out.print("<td>" + selectCourses.get(i).getTeacherName() + "</td>");
+                    if (selectCourses.get(i).getGrade()==null) {
+                        out.print("<td></td>");
+                    } else {
+                        out.print("<td>" + selectCourses.get(i).getGrade() + "</td>");
+                    }
             %>
             <td>
                 <a href="javascript:" onclick="deleteById('<%=selectCourses.get(i).getCourseNo()%>','<%=selectCourses.get(i).getStudentNo()%>','<%=selectCourses.get(i).getTeacherNo()%>','<%=i%>')">删除</a>&nbsp;&nbsp;
-                <a href="<%=request.getContextPath()%>/selectSelectCourse.action?studentNo=<%=selectCourses.get(i).getStudentNo()%>&courseNo=<%=selectCourses.get(i).getCourseNo()%>&teacherNo=<%=selectCourses.get(i).getTeacherNo()%>&update=1">修改</a>
+                <a href="${path}/selectSelectCourse.action?studentNo=<%=selectCourses.get(i).getStudentNo()%>&courseNo=<%=selectCourses.get(i).getCourseNo()%>&teacherNo=<%=selectCourses.get(i).getTeacherNo()%>&update=1">修改</a>
             </td>
             <%
                     out.print("</tr>");
@@ -98,9 +109,6 @@
         if (r) {
             $.ajax({
                 url: '${path}/deleteSelectCourse.action?courseNo='+c+'&studentNo='+s+'&teacherNo='+t,
-                data: {
-                    id:id
-                },
                 dataType:'json',
                 type:'POST',
                 success:function (data) {
@@ -108,7 +116,7 @@
                         alert('成功');
                         $('#tr'+i).remove();
                     } else {
-                        alert('删除失败');
+                        alert(data.msg);
                     }
                 }
             });

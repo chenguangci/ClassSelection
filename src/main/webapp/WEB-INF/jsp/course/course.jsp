@@ -7,6 +7,7 @@
 <head>
     <title>课程信息</title>
     <link href="${path}/resource/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${path}/resource/css/layui.css" type="text/css" rel="stylesheet">
     <script src="${path}/resource/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         function up(page) {
@@ -16,13 +17,11 @@
         function sub() {
             $("#show").submit();
         }
-        function sub2() {
-            $("#show2").submit();
-        }
+
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="46"></a></div>
+<div class="left" style="margin-top: 30px"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="46"></a></div>
 <div>
     <form id="show" method="post" action="selectCourse.action">
         <h1>
@@ -110,12 +109,27 @@
                         alert('成功');
                         $('#tr'+i).remove();
                     } else {
-                        alert('删除失败');
+                        alert(data.msg);
                     }
                 }
             });
 
         }
+    }
+    function sub2() {
+        var a = $.ajax({
+            url: '${path}/download.action?type=course',
+            dataType:'json',
+            timeout : 1000,
+            type:'POST',
+            success:function (data) {
+                $.ajax({
+                    url: '/selectCourse.action',
+                    type:'POST'
+                });
+                alert(data.msg);
+            }
+        });
     }
 </script>
 </body>

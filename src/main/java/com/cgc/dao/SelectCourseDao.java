@@ -69,14 +69,15 @@ public class SelectCourseDao {
     /**
      * 删除选课信息
      */
-    public boolean deleteSelectCourses(List<SelectCourse> selectCourses){
+    public boolean deleteSelectCourses(SelectCourse selectCourse){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
-            selectCourseMapper.deleteSelectCourses(selectCourses);
+            selectCourseMapper.deleteSelectCourses(selectCourse);
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         } finally {
             if (sqlSession!=null){
@@ -88,14 +89,15 @@ public class SelectCourseDao {
     /**
      * 更新选课信息,没有主键可以标识，后面在修改
      */
-    public boolean updateSelectCourse(SelectCourse selectCourse){
+    public boolean updateSelectCourse(SelectCourse selectCourse, String id){
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             SelectCourseMapper selectCourseMapper = sqlSession.getMapper(SelectCourseMapper.class);
-            selectCourseMapper.updateSelectCourse(selectCourse);
+            selectCourseMapper.updateSelectCourse(selectCourse,id);
             return true;
         } catch (Exception e) {
+            e.printStackTrace();
             return false;
         } finally {
             if (sqlSession!=null){

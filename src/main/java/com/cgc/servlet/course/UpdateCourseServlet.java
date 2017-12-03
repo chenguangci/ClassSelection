@@ -24,7 +24,6 @@ public class UpdateCourseServlet extends HttpServlet {
         Info[1] = request.getParameter("courseName");
         Info[2] = request.getParameter("coursePriorNo");
         Info[3] = request.getParameter("courseCredit");
-        System.out.println(Info[1]);
         CourseService service = new CourseService();
         response.setContentType("text/javascript;charset=utf-8");
         if (service.updateCourse(Info)) {

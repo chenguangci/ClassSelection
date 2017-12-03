@@ -19,16 +19,10 @@ public class DeleteSelectServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String[] student = request.getParameterValues("studentNo");
-        String[] course = request.getParameterValues("courseNo");
-        String[] teacher = request.getParameterValues("teacherNo");
-        int len = student.length;
-        String[][] Info = new String[100][3];
-        for (int i=0;i<len;i++) {
-            Info[i][1] = course[i];
-            Info[i][2] = teacher[i];
-            Info[i][0] = student[i];
-        }
+        String Info[] = new String[3];
+        Info[0] = request.getParameter("studentNo");
+        Info[1] = request.getParameter("courseNo");
+        Info[2] = request.getParameter("teacherNo");
         SelectCourseService service = new SelectCourseService();
         if (service.deleteSelectCourses(Info)) {
             PrintWriter out = response.getWriter();

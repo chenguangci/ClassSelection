@@ -16,6 +16,14 @@
     </select>
     <select id="selectUser" resultMap="user">
         SELECT user_name,user_password,role FROM the_user
+        <where>
+            <if test="username!=null and !&quot;&quot;.equals(username.trim())">
+                AND user_name like '%' #{username} '%'
+            </if>
+            <if test="true">
+                AND role >= #{role}
+            </if>
+        </where>
     </select>
     <insert id="insertUser" parameterType="com.cgc.bean.User">
         INSERT INTO the_user VALUES (#{username},#{password},#{role})

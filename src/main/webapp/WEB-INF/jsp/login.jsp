@@ -10,6 +10,7 @@
 <img src="${path}resource/image/title.png">
 <div id="form-main">
     <div id="form-div">
+        <h3 style="color: red"><%=request.getAttribute("error")==null?"":request.getAttribute("error")%></h3>
         <form class="form" id="form1" action="login.action" method="post">
             <p class="name">
                 <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="用户名" id="name" />

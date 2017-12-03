@@ -50,13 +50,15 @@
                 AND a.teacherNo LIKE '%' #{selectCourse.teacherNo} '%'
             </if>
         </where>
-        ORDER BY a.studentNo LIMIT #{limit},5
+        ORDER BY a.courseNo LIMIT #{limit},5
     </select>
 
-    <delete id="deleteSelectCourses" parameterType="java.util.List">
-        <foreach collection="list" item="item" separator=";">
-            DELETE FROM selectcourse WHERE studentNo = #{item.studentNo},courseNo = #{item.courseNo},teacherNo = #{item.teacherNo}
-        </foreach>
+    <delete id="deleteSelectCourses" parameterType="com.cgc.bean.SelectCourse">
+        DELETE FROM selectcourse WHERE studentNo = #{studentNo} AND courseNo = #{courseNo} AND teacherNo = #{teacherNo}
     </delete>
 
+    <update id="updateSelectCourse">
+        UPDATE selectcourse SET id = #{selectCourse.id},studentNo = #{selectCourse.studentNo},courseNo = #{selectCourse.courseNo},teacherNo = #{selectCourse.teacherNo}
+        WHERE id = #{id}
+    </update>
 </mapper>

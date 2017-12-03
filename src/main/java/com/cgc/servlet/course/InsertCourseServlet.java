@@ -26,14 +26,7 @@ public class InsertCourseServlet extends HttpServlet {
         String[] credit = request.getParameterValues("courseCredit");
         int len = no.length;
         String[][] Info = new String[len][4];
-        boolean isNull = false;
         for (int i=0;i<len;i++){
-            System.out.println(no[i]+"; "+name[i]+"; "+pNo[i]+"; "+credit[i]);
-            if (no[i]==null||"".equals(no[i].trim())||name[i]==null||"".equals(name[i].trim())||credit[i]==null||"".equals(credit[i].trim())){
-                isNull = true;
-                System.out.println("数据出错");
-                break;
-            }
             Info[i][0] = no[i];
             Info[i][1] = name[i];
             Info[i][2] = pNo[i];

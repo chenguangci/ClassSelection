@@ -7,7 +7,8 @@
 <head>
     <title>院系信息</title>
     <link href="${path}resource/css/style.css" type="text/css" rel="stylesheet">
-    <script src="resource/js/jquery-1.8.0.min.js"></script>
+    <link href="${path}/resource/css/layui.css" type="text/css" rel="stylesheet">
+    <script src="${path}/resource/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         function up(page) {
             $("#page").val(page);
@@ -22,7 +23,7 @@
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="45"></a></div>
+<div class="left" style="margin-top: 30px"><a href="begin.action"><img src="${path}/resource/image/return.png" width="110" height="45"></a></div>
 <div>
 <form id="show" method="post" action="selectDepartment.action">
     <h1>
@@ -101,7 +102,7 @@
                         alert('成功');
                         $('#tr'+i).remove();
                     } else {
-                        alert('删除失败');
+                        alert(data.msg);
                     }
                 }
             });

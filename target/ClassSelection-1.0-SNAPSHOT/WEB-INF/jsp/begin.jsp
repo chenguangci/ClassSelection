@@ -7,7 +7,24 @@
     <link rel="stylesheet" type="text/css" href="${path}resource/css/first.css">
 </head>
 <body style="background: url(/resource/image/background.png);background-size: 100%">
-<div><a href="login.action?out=1" style="padding-left: 100px;padding-top: 20px"><img src="${path}resource/image/out.png"></a></div>
+<%
+    if (request.getAttribute("error")!=null) {
+%>
+    <script type="text/javascript">
+        alert("对不起，您的权限不足，无法查看用户信息")
+    </script>
+<%
+    }
+%>
+<div style="margin-top: 30px">
+    <div style="float: left">
+        <a href="login.action?out=1" style="padding-left: 100px;padding-top: 20px"><img src="${path}resource/image/out.png"></a>
+    </div>
+    <div style="float: right">
+        <a href="${path}/help.html" style="padding-right: 100px;padding-top: 20px"><img src="${path}/resource/image/help.png"></a>
+    </div>
+
+</div>
  <div class="container">
      <div class="col4">
          <div class="box-fx">
@@ -51,7 +68,7 @@
 
      <div class="col4">
          <div class="box-fx">
-             <a class="btn btn-fx6" href="#">
+             <a class="btn btn-fx6" href="selectUser.action">
                  <img src="${path}resource/image/6.png">
              </a>
          </div>

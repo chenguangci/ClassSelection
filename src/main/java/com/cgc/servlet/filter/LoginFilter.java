@@ -1,4 +1,4 @@
-package com.cgc.servlet;
+package com.cgc.servlet.filter;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -20,13 +20,7 @@ public class LoginFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse)resp;
         HttpSession session = request.getSession();
         req.setCharacterEncoding("utf-8");
-        if (request.getRequestURI().contains("/login.action")){
-            chain.doFilter(req, resp);
-        }
-        if (request.getRequestURI().contains("/resource")){
-            chain.doFilter(req, resp);
-        }
-        if (session.getAttribute("username")!=null&&session.getAttribute("password")!=null){
+        if ((session.getAttribute("username")!=null&&session.getAttribute("password")!=null) || request.getRequestURI().contains("/login.action") || request.getRequestURI().contains("/resource")) {
             chain.doFilter(req, resp);
         } else {
             request.getRequestDispatcher("/login.action").forward(request,response);

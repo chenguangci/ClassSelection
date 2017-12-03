@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("role",role);
                 request.getRequestDispatcher("/WEB-INF/jsp/begin.jsp").forward(request,response);
             } else {
+                request.setAttribute("error","用户名或密码错误！");
                 request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request,response);
             }
         } else {

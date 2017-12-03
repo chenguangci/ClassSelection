@@ -20,9 +20,8 @@ img { border: 0; max-width: 100%; }
 h1 {
     font-family: 'Amarante', Tahoma, sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 2.5em;
-
     text-align: center;
     margin: 0 auto 15px;
 }
@@ -110,4 +109,5 @@ div.left{
     height: 29px;
     -webkit-appearance: none; /*for chrome*/
 }
+
 

@@ -24,11 +24,11 @@
 %>
 <form action="updateSelectCourse.action" method="post" id="form1">
     <h1>
-    <input type="hidden" name="departmentNo" value="<%=selectCourse.getStudentNo()%>">
+        <input type="hidden" name="id" value="<%=selectCourse.getStudentNo()+selectCourse.getCourseNo()+selectCourse.getTeacherNo()%>">
     学号：<input type="text" name="studentNo" class="basic-slide" value="<%=selectCourse.getStudentNo()%>"><br>
     课程号：<input type="text" name="courseNo" class="basic-slide" value="<%=selectCourse.getCourseNo()%>"><br>
     教师号：<input type="text" name="teacherNo" class="basic-slide" value="<%=selectCourse.getTeacherNo()%>"><br>
-    学分：<input type="text" name="grade" class="basic-slide" value="<%=selectCourse.getGrade()%>"><br>
+    成绩：<input type="text" name="grade" class="basic-slide" value="<%=selectCourse.getGrade()==null?"":selectCourse.getGrade()%>"><br>
         <input type="button" onclick="sub()" value="" style="background: url(${path}/resource/image/submit.png);width: 95px;height: 40px;border: 0">
     </h1>
 </form>
@@ -37,12 +37,12 @@
     function sub() {
         var r = confirm('确定要提交数据吗');
         if (r) {
-            var datas = $('#form1').serialize();
+            var data = $('#form1').serialize();
             $.ajax({
                 type: 'POST',
                 url: '/updateSelectCourse.action',
                 dataType: 'json',
-                data:datas,
+                data:data,
                 success: function (data) {
                     alert(data.msg);
                 }

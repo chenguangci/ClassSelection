@@ -75,10 +75,7 @@ body{
     background: url(/resource/image/key.png) no-repeat 11px 8px;
 }
 
-#comment{
-    background-size: 30px 30px;
-    background: url(/resource/image/key.svg) no-repeat 11px 8px;
-}
+
 
 .submit{
     background: url(/resource/image/login2.png);

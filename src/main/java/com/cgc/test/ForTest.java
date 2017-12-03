@@ -153,5 +153,11 @@ public class ForTest {
         System.out.println(null instanceof Integer);
         //List<Map<String,Object>> objects = download.select("course", param);
     }
+    @Test
+    public void test1(){
+        Object str = null;
+        Integer i = Integer.valueOf((String)str);
+        System.out.println(i);
+    }
 
 }

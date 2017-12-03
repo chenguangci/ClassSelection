@@ -67,4 +67,8 @@ public class SelectCourse implements Serializable {
     public void setGrade(Integer grade) {
         this.grade = grade;
     }
+
+    public String getId() {
+        return this.studentNo+this.courseNo+this.teacherNo;
+    }
 }

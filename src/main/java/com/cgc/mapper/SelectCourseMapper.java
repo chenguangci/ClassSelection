@@ -12,7 +12,7 @@ public interface SelectCourseMapper {
     /*录入选课信息*/
     void insertSelectCourses(SelectCourse selectCourse);
     /*删除选课信息*/
-    void deleteSelectCourses(List<SelectCourse> selectCourses);
+    void deleteSelectCourses(SelectCourse selectCourse);
     /*更新选课信息*/
-    void updateSelectCourse(SelectCourse selectCourse);
+    void updateSelectCourse(@Param("selectCourse") SelectCourse selectCourse, @Param("id")String id);
 }

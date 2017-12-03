@@ -11,6 +11,7 @@
 <head>
     <title>学生信息</title>
     <link href="${path}resource/css/style.css" type="text/css" rel="stylesheet">
+    <link href="${path}/resource/css/layui.css" type="text/css" rel="stylesheet">
     <script src="${path}resource/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript">
         function up(page) {
@@ -26,7 +27,7 @@
     </script>
 </head>
 <body>
-<div class="left"><a href="begin.action"><img src="resource/image/return.png" width="110" height="45"></a></div>
+<div class="left" style="margin-top: 30px"><a href="begin.action"><img src="resource/image/return.png" width="110" height="45"></a></div>
 <div>
 <form id="show" method="post" action="selectStudent.action">
     <h1>
@@ -133,9 +134,9 @@
 </form>
 <form method="post" action="download.action?type=student" id="show2">
     <input type="hidden" name="studentNo" value="<%=request.getAttribute("studentNo")%>">
-    <input type="hidden" name="studentName" value="<%=request.getAttribute("studentName")%>">
-    <input type="hidden" name="studentSex" value="<%=request.getAttribute("studentSex")%>">
-    <input type="hidden" name="studentAge" value="<%=request.getAttribute("studentAge")%>">
+    <input type="hidden" name="studentName" value="<%=request.getAttribute("name")%>">
+    <input type="hidden" name="studentSex" value="<%=request.getAttribute("sex")%>">
+    <input type="hidden" name="studentAge" value="<%=request.getAttribute("age")%>">
     <input type="hidden" name="departmentNo" value="<%=request.getAttribute("departmentNo")%>">
     <button onclick="sub2()"
             style="background: url(/resource/image/table.png);border: 0;width: 160px;height: 40px">
@@ -154,7 +155,7 @@
                             alert('成功');
                             $('#tr'+i).remove();
                         } else {
-                            alert('删除失败');
+                            alert(data.msg);
                         }
                     }
                 });
